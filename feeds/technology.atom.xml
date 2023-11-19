@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>QCVersity - technology</title><link href="/" rel="alternate"></link><link href="/feeds/technology.atom.xml" rel="self"></link><id>/</id><updated>2023-11-17T18:40:00+01:00</updated><entry><title>Create a Static Website with Pelican</title><link href="/2023/my-super-post.html" rel="alternate"></link><published>2023-11-17T10:20:00+01:00</published><updated>2023-11-17T18:40:00+01:00</updated><author><name>Dr Saad Laouadi</name></author><id>tag:None,2023-11-17:/2023/my-super-post.html</id><summary type="html">&lt;p class="first last"&gt;An introductory post exploring the features and benefits of using Pelican for blogging.&lt;/p&gt;
+</summary><content type="html">&lt;div class="section" id="welcome-to-our-pelican-blog"&gt;
+&lt;h2&gt;Welcome to Our Pelican Blog!&lt;/h2&gt;
+&lt;p&gt;We are excited to launch our new blog using Pelican, a powerful static site generator that offers simplicity and flexibility for bloggers and developers alike.&lt;/p&gt;
+&lt;div class="section" id="why-pelican"&gt;
+&lt;h3&gt;Why Pelican?&lt;/h3&gt;
+&lt;p&gt;Pelican is an excellent choice for creating blogs due to its:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Ease of Use&lt;/strong&gt;: Writing content in Markdown or reStructuredText is straightforward and efficient.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Customizing themes and adding plugins allows for a unique and tailored blogging experience.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speed&lt;/strong&gt;: As a static site generator, Pelican creates fast-loading web pages, enhancing the user experience.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="getting-started-with-pelican"&gt;
+&lt;h3&gt;Getting Started with Pelican&lt;/h3&gt;
+&lt;p&gt;Getting started with Pelican is easy:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;strong&gt;Install Pelican&lt;/strong&gt;: You can install Pelican using pip: &lt;cite&gt;pip install pelican&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create a Project&lt;/strong&gt;: Initialize your blog with &lt;cite&gt;pelican-quickstart&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Write Content&lt;/strong&gt;: Start creating content in Markdown or reStructuredText&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Generate Your Site&lt;/strong&gt;: Run &lt;cite&gt;pelican content&lt;/cite&gt; to build your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Publish&lt;/strong&gt;: Deploy your site on a server or platforms like GitHub Pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="our-journey-ahead"&gt;
+&lt;h3&gt;Our Journey Ahead&lt;/h3&gt;
+&lt;p&gt;We are thrilled to start this journey and share insights, tutorials, and stories about technology, programming, and more. Stay tuned for our upcoming posts!&lt;/p&gt;
+&lt;p&gt;---
+&lt;em&gt;This post was authored by Dr Saad Laouadi.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="technology"></category><category term="pelican"></category><category term="blogging"></category></entry></feed>
