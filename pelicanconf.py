@@ -2,7 +2,7 @@
 # =====================
 AUTHOR = 'Dr Saad Laouadi'
 SITENAME = 'QCVersity'
-SITEURL = "https://qcversity.github.io/"
+SITEURL = "https://qcversity.github.io"
 
 # Content Configuration
 # =====================
@@ -73,8 +73,8 @@ SOCIAL = (
     ("Facebook", "https://www.facebook.com/drsaadlaouadi"),
     ("Instagram", "https://www.instagram.com/drsaadl"),
     ("GitHub", "https://github.com/DrSaadLa"),
-    ("YouTube", "https://www.youtube.com/channel/QuantCodingSpace"),
-    ("Telegram", "https://t.me/yourusername"),
+    ("YouTube", "https://www.youtube.com/@QuantCodingSpace"),
+    # ("Telegram", "https://t.me/yourusername"),
 )
 
 
