@@ -1,0 +1,48 @@
+[input]
+html_selector = "main"
+base_directory = "/Users/daas/_Academy/QCVSite/output"
+
+[[input.files]]
+path = "pages/home.html"
+url = "/pages/home.html"
+title = "Home"
+
+[[input.files]]
+path = "pages/about.html"
+url = "/pages/about.html"
+title = "About"
+
+[[input.files]]
+path = "pages/contact.html"
+url = "/pages/contact.html"
+title = "Contact"
+
+[[input.files]]
+path = "2023/the-rise-of-julia-a-new-star-in-data-science-and-scientific-computing.html"
+url = "/2023/the-rise-of-julia-a-new-star-in-data-science-and-scientific-computing.html"
+title = "The Rise of Julia: A New Star in Data Science and Scientific Computing"
+
+[[input.files]]
+path = "2023/external-python-code-example.html"
+url = "/2023/external-python-code-example.html"
+title = "External Python Code Example"
+
+[[input.files]]
+path = "2023/python-code-example.html"
+url = "/2023/python-code-example.html"
+title = "Python Code Example"
+
+[[input.files]]
+path = "2023/Launch Site.html"
+url = "/2023/Launch Site.html"
+title = "QuantCoding Versity Launch"
+
+[[input.files]]
+path = "2023/my-super-post.html"
+url = "/2023/my-super-post.html"
+title = "Create a Static Website with Pelican"
+
+[[input.files]]
+path = "2023/intro-to-cpp.html"
+url = "/2023/intro-to-cpp.html"
+title = "Introduction to C++ Programming"

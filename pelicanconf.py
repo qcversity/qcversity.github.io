@@ -1,3 +1,6 @@
+from pelican import signals
+from pelican.contents import Page
+
 # General Configuration
 # =====================
 AUTHOR = 'Dr Saad Laouadi'
@@ -12,6 +15,24 @@ ARTICLE_PATHS = ['articles']
 
 ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{slug}.html'
+
+PAGE_ORDER_BY = 'order'
+
+# Define the explicit order of pages
+PAGE_ORDER = ['Home', 'About', 'Contact']
+DISPLAY_CATEGORIES_ON_MENU = True
+
+
+CATEGORY_ORDER = {
+    'Home': 1,
+    'About': 2,
+    'Contact': 3,
+    'General': 4,
+    'Julia': 5,
+    'Programming': 6,
+    'Technology': 7
+}
+
 
 TIMEZONE = 'Europe/Rome'
 
@@ -28,12 +49,18 @@ PYGMENTS_STYLE = 'emacs'
 
 # PLUGIN_PATHS = ['path/to/your/plugins']
 
-PLUGINS = ['i18n_subsites']
+# PLUGINS = ['i18n_subsites']
 
-JINJA_ENVIRONMENT = {
-    'extensions': ['jinja2.ext.i18n'],
-}
+# JINJA_ENVIRONMENT = {
+#     'extensions': ['jinja2.ext.i18n'],
+# }
 
+# Variable to identify the home page
+# IS_HOME_PAGE = True
+
+# Content of the About Me section
+# ===============================
+ABOUT_ME = True
 # Metadata configuration
 # ======================
 # DEFAULT_METADATA = {
@@ -82,3 +109,45 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
+
+
+def add_order_to_pages(generator):
+    for page in generator.pages:
+        # Default to 999 if Order is not specified
+        order = page.metadata.get('Order', 999)
+        setattr(page, 'order', int(order))
+
+
+def register():
+    signals.page_generator_finalized.connect(add_order_to_pages)
+
+
+def sort_pages(pages):
+    return sorted(pages, key=lambda page: page.metadata.get('order', 0))
+
+
+TEMPLATE_CONTEXTS = {
+    'sort_pages': sort_pages,
+}
+
+
+def generate_ordered_pages(generator):
+    ordered_pages = sorted(generator.pages, key=lambda p: PAGE_ORDER.index(
+        p.title) if p.title in PAGE_ORDER else 999)
+    generator.context['ordered_pages'] = ordered_pages
+
+
+def register():
+    signals.page_generator_finalized.connect(generate_ordered_pages)
+
+
+def sorted_categories(categories):
+    return sorted(categories, key=lambda cat: CATEGORY_ORDER.get(cat[0], 999))
+
+
+def add_to_context(generator):
+    generator.context['sorted_categories'] = sorted_categories(
+        generator.context.get('categories', []))
+
+
+signals.generator_init.connect(add_to_context)

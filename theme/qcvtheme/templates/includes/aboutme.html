@@ -1,13 +1,30 @@
 <div id="aboutme">
-    {% if AVATAR %}
-        <p>
-            <img width="100%" class="img-thumbnail" src="{{ SITEURL }}/{{ AVATAR }}"/>
-        </p>
-    {% endif %}
-    {% if ABOUT_ME %}
+  {% if AVATAR %}
+  <p>
+    <img width="100%" class="img-thumbnail" src="{{ SITEURL }}/{{ AVATAR }}" />
+  </p>
+  {% endif %} {% if ABOUT_ME %}
+  <div class="bio no-hyphen well well-sm">
+    <p class="author well well-sm">Dr. Saad Laouadi</p>
+    <hr />
+    <h4><strong>Founder of Quant-Coding Versity</strong></h4>
     <p>
-      <strong>{{ _('About') }} {{ AUTHOR }}</strong><br/>
-        {{ ABOUT_ME }}
+      Dr. Saad Laouadi is a highly accomplished data scientist, programmer, and
+      economist with a Ph.D. in Economics. He is an expert in the field of
+      machine learning and has extensive experience using programming languages
+      such as Python, R, SAS, Matlab, and C++.
     </p>
-    {% endif %}
+    <p>
+      Dr. Laouadi is also a highly skilled educator, having taught courses on
+      data science, machine learning, and programming to numerous students
+      around the world. He is known for his ability to clearly explain complex
+      concepts and make them accessible to students of all levels.
+    </p>
+    <p>
+      Overall, Dr. Saad Laouadi is a respected leader in the field of data
+      science and machine learning, with a wealth of knowledge and experience to
+      share.
+    </p>
+  </div>
+  {% endif %}
 </div>
