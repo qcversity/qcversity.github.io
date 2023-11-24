@@ -192,20 +192,25 @@ figure.floatcenter,
   background-position: top center;
   background-attachment: scroll;
   background-size: cover;
-  background-color: #c4c4c4;
+  /* background-color: #c4c4c4; */
+  background-color: #51897e;
   margin: 0 0 20px;
-  padding: 70px 0; /*controls padding around inner text*/
+  padding: 20px 0; /*controls padding around inner text*/
   position: relative;
+  margin-left: auto;
 }
 
 #banner .copy {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
   display: inline;
   float: left;
-  max-width: 600px;
+  width: 1070;
+  max-width: 1080px;
   padding: 20px;
   position: relative;
   z-index: 1;
+  border-radius: 15px;
+  background-color: transparent;
 }
 
 #banner h1 {
@@ -214,12 +219,16 @@ figure.floatcenter,
     "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed",
     "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed",
     "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   font-stretch: condensed;
   font-weight: 700;
   line-height: 0.9;
   margin: 0;
   text-transform: uppercase;
+}
+
+#banner .container.custom-copy {
+  margin-right: 0;
 }
 #banner .intro {
   color: #fff;
@@ -266,28 +275,10 @@ figure.floatcenter,
   background-color: #104547;
 }
 
-.navbar-brand {
-  float: left;
-  height: 45px;
-  padding: 12px 15px;
-  font-size: 18px;
-  line-height: 19px;
-  font-weight: 500;
-}
-
 .navbar {
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 21px;
-}
-
-.navbar-brand {
-  float: left;
-  height: 45px;
-  padding: 12px 15px;
-  font-size: 28px;
-  line-height: 21px;
-  font-weight: 500;
 }
 
 /* ========================================= */
@@ -552,7 +543,7 @@ ol ol {
   padding: 12px 15px;
   font-size: 18px;
   line-height: 21px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .navbar-header {
@@ -562,4 +553,174 @@ ol ol {
 .row {
   margin-right: 0px;
   margin-left: 35px;
+}
+
+.author {
+  font-size: 26px;
+  font-weight: bold;
+  /* color: white; */
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.bio {
+  line-height: 1.5em;
+  /* background: #8fd6d7;
+   */
+  background-color: #d6f6f4;
+  padding: 24px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  /* Optional: Adding a border */
+  border: 1px solid #d4d4d4;
+}
+.no-hyphen {
+  hyphens: none;
+}
+
+.spec-footer {
+  width: 100%;
+  background: #161b22;
+}
+
+.copyright {
+  text-align: center;
+  /* margin-top: 20px; */
+  font-size: 14px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.copyright a {
+  color: #fff;
+/*  text-decoration: underline;*/
+}
+
+.copyright a:hover {
+  color: blue;
+}
+
+.copyright > h4 {
+  font-size: 16px;
+}
+
+h1#contact-us {
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+#footer {
+  padding: 1.5rem 0;
+  background-color: #014d4e;
+  color: #fff;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#footer ul a {
+  color: #999;
+  transition: color 0.4s ease;
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #footer ul a {
+    transition: none;
+  }
+}
+
+#footer ul a:hover {
+  color: #fff;
+}
+
+#footer .visible-xs .panel-group .panel .card-header .card-title > a {
+  background: #3a5aa0;
+}
+
+#footer .visible-xs .panel-group .panel .card-header .card-title > a.collapsed {
+  background: #383838;
+}
+
+#footer .visible-xs .panel-group .panel .panel-collapse .list-group-item {
+  background: #383838;
+  color: #fff;
+}
+
+#footer .social {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+#footer .social a {
+  display: flex;
+  margin-left: 15px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 50%;
+  /* background-color: none; */
+  transition: background-color 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #footer .social a {
+    transition: none;
+  }
+}
+
+#footer .social a i {
+  padding-top: 10px;
+}
+
+#footer .social a i.fa-facebook {
+  padding-top: 12px;
+}
+
+#footer .social a i.fa-google-plus {
+  padding-top: 12px;
+}
+
+#footer .social a i.fa-twitter {
+  padding-top: 12px;
+}
+
+#footer .social a:first-child {
+  margin: 0;
+}
+
+#footer .social a:hover {
+  background-color: #fff;
+}
+
+#footer .copyright {
+  font-size: 12px;
+  color: #999;
+}
+
+@media (min-width: 768px) {
+  #footer .social {
+    text-align: center;
+  }
+}
+footer .spec-hr-footer {
+  margin-top: 0;
+  margin-bottom: 10pt;
+  border: 5pt;
+  border-top: 1px solid #dddddd;
+}
+
+.icon-image {
+    height: 30px;
+    border-radius: 5px; /* Adjust the value for desired roundness */
+    border-width: 0;
 }
