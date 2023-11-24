@@ -567,7 +567,9 @@ ol ol {
   line-height: 1.5em;
   /* background: #8fd6d7;
    */
-  background-color: #d6f6f4;
+/*  background-color: #d6f6f4;*/
+  background-color:teal;
+  color:white;
   padding: 24px;
   margin-top: 10px;
   border-radius: 10px;
