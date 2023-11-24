@@ -1,19 +1,55 @@
-<footer>
+
+
+<footer id="footer" class="no-print">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-4">
+              <h4>Training Options</h4>
+              <ul>
+                  <li>
+                      <a href="/live-online-training/" title="Live Online">Live Online</a>
+                    </li>
+                    <li><a href="/customized-private-training/" title="Customized Online">Customized Online<a>
+                    </li>
+                    <li><a href="/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                  <h4>Course Catalog</h4>
+                  <ul>
+                    <li><a href="/course/catalog/" title="Full Catalog">Full Catalog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4">
+                <h4>About Us</h4>
+                <ul>
+                  <li><a href="/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                  <li><a href="/about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                <li><a href="privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                <li><a href="/terms.html" title="Terms of Use">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+</footer>
+
+<footer class="spec-footer copyright">
   <div class="container-lg{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-    <hr />
+    <hr class="spec-hr-footer">
     <div class="row">
       {% if articles %} {% if articles[0].modified %} {% set copy_date =
       articles[0].modified.strftime('%Y') %} {% else %} {% set copy_date =
       articles[0].date.strftime('%Y') %} {% endif %} {% else %} {% set copy_date
       = '' %} {% endif %}
       <div class="col-xs-10">
-        &copy; {{ copy_date }} {{ AUTHOR }} {%- if CC_LICENSE or
-        CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %} {% from
-        'includes/cc-license.html' import cc_license_mark %}
+        &copy; {{ copy_date }} {{ AUTHOR }}
+        {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
+         {% from 'includes/custom-license.html' import cc_license_mark %}
         <p>
-          <small
-            >{{
-            cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author
+          <small>{{
+            cc_license_mark(CC_LICENSE_NAME,CC_LICENSE_DERIVATIVES, attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author
             if article else AUTHOR,'url':SITEURL,'lang':DEFAULT_LANG}) }}</small
           >
         </p>

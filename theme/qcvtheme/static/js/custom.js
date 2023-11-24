@@ -1,12 +1,11 @@
-const allPreElement = window.document.querySelectorAll("pre");
-
-allPreElement.forEach((preEl) => {
-  preEl.parentElement.classList.add("highlight");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
+  const allPreElement = window.document.querySelectorAll("pre");
   const navbar = document.querySelector(".nav.navbar-nav");
   const orderedIds = ["nav-home", "nav-about", "nav-contact", "nav-general"];
+
+  allPreElement.forEach((preEl) => {
+    preEl.parentElement.classList.add("highlight");
+  });
 
   orderedIds.forEach(function (id) {
     var el = document.getElementById(id);
@@ -69,8 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (isHomePage) {
     // Apply classes for the home page
-    if (contentElement) contentElement.className = "container-lg";
-    if (sidebarElement) sidebarElement.className = "col-sm-4";
+    if (contentElement) {
+      contentElement.className = "container-lg";
+    }
+    if (sidebarElement) {
+      sidebarElement.className = "col-sm-4";
+    }
   } else {
     // Apply classes for other pages
     if (contentElement) {

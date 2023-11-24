@@ -47,6 +47,30 @@ THEME = 'theme/qcvtheme'
 
 PYGMENTS_STYLE = 'emacs'
 
+BANNER = "CC_BY"
+BANNER_SUBTITLE = "The Data Science and Programming Hub"
+
+# Creative Commons License Configuration
+# ======================================
+# Creative Commons License Configuration
+CC_LICENSE = True
+CC_LICENSE_NAME = "CC-BY-SA"
+CC_LICENSE_DERIVATIVES = "ShareAlike"
+CC_LICENSE_COMMERCIAL = "Yes"
+CC_LICENSE_BR_AFTER_ICON = False
+CC_LICENSE_ATTR_MARKUP = True
+CC_LICENSE_ATTR_PROPS = {
+    'lang': 'en',
+    'title': 'Quant Coding Versity',
+    'name': 'Dr Saad Laouadi',
+    'url': 'http://www.mywebsite.com'
+}
+
+# The following variables can be dynamically set based on above settings
+CC_LICENSE_TITLE = "Creative Commons Attribution-ShareAlike 4.0 International License"
+CC_LICENSE_URI = "https://creativecommons.org/licenses/by-sa/4.0/"
+CC_LICENSE_ICON = "//i.creativecommons.org/l/by-sa/4.0/80x15.png"
+
 # PLUGIN_PATHS = ['path/to/your/plugins']
 
 # PLUGINS = ['i18n_subsites']
