@@ -561,6 +561,8 @@ ol ol {
   /* color: white; */
   text-align: center;
   padding-bottom: 8px;
+  color:white;
+  background-color:teal;
 }
 
 .bio {
