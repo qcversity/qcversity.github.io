@@ -561,15 +561,15 @@ ol ol {
   /* color: white; */
   text-align: center;
   padding-bottom: 8px;
+  color:white;
+  background-color:teal;
 }
 
 .bio {
   line-height: 1.5em;
   /* background: #8fd6d7;
    */
-/*  background-color: #d6f6f4;*/
-  background-color:teal;
-  color:white;
+  background-color: #d6f6f4;
   padding: 24px;
   margin-top: 10px;
   border-radius: 10px;
