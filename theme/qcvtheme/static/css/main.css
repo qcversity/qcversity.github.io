@@ -817,3 +817,17 @@ footer .spec-hr-footer {
 .ms-custom {
   margin-left: 4rem;
 }
+
+.spec-nav-item .nav-item {
+  color: white;
+  list-style: none;
+}
+
+.spec-nav-item .nav-link {
+  color: white;
+  list-style: none;
+}
+
+ml-0{
+  margin-left: 0% !important;
+}
