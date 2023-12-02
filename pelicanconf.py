@@ -12,6 +12,8 @@ SITEURL = "https://qcversity.github.io"
 PATH = "content"
 PAGE_PATHS = ['pages']
 ARTICLE_PATHS = ['articles']
+STATIC_PATHS = ['static', 'images']
+
 
 ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{slug}.html'
@@ -49,6 +51,7 @@ PYGMENTS_STYLE = 'emacs'
 
 BANNER = "CC_BY"
 BANNER_SUBTITLE = "The Data Science and Programming Hub"
+BOOTSTRAP_FLUID = True
 
 # Creative Commons License Configuration
 # ======================================

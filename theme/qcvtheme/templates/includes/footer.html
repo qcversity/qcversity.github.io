@@ -1,67 +1,60 @@
-
-
+<!-- First Footer -->
 <footer id="footer" class="no-print">
   <div class="container">
       <div class="row">
           <div class="col-lg-3 col-md-4">
               <h4>Training Options</h4>
               <ul>
-                  <li>
-                      <a href="/live-online-training/" title="Live Online">Live Online</a>
-                    </li>
-                    <li><a href="/customized-private-training/" title="Customized Online">Customized Online<a>
-                    </li>
-                    <li><a href="/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-3 col-md-4">
-                  <h4>Course Catalog</h4>
-                  <ul>
-                    <li><a href="/course/catalog/" title="Full Catalog">Full Catalog</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-3 col-md-4">
-                <h4>About Us</h4>
-                <ul>
-                  <li><a href="/contact.html" title="Contact QCVersity">Contact Us</a></li>
-                  <li><a href="/about-us/" title="QCVersity">Quant Coding Versity</a></li>
-                <li><a href="privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
-                <li><a href="/terms.html" title="Terms of Use">Terms of Use</a></li>
+                  <li><a href="{{ SITEURL }}/live-online-training/" title="Live Online">Live Online</a></li>
+                  <li><a href="{{ SITEURL }}/customized-private-training/" title="Customized Online">Customized Online</a></li>
+                  <li><a href="{{ SITEURL }}/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
               </ul>
-            </div>
           </div>
-        </div>
+          <div class="col-lg-3 col-md-4">
+              <h4>Course Catalog</h4>
+              <ul>
+                  <li><a href="{{ SITEURL }}/static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+              <h4>About Us</h4>
+              <ul>
+                  <li><a href="{{ SITEURL }}/pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                  <li><a href="{{ SITEURL }}/about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                  <li><a href="{{ SITEURL }}/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                  <li><a href="{{ SITEURL }}/terms.html" title="Terms of Use">Terms of Use</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
 </footer>
 
+<!-- Second Footer -->
 <footer class="spec-footer copyright">
   <div class="container-lg{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-    <hr class="spec-hr-footer">
-    <div class="row">
-      {% if articles %} {% if articles[0].modified %} {% set copy_date =
-      articles[0].modified.strftime('%Y') %} {% else %} {% set copy_date =
-      articles[0].date.strftime('%Y') %} {% endif %} {% else %} {% set copy_date
-      = '' %} {% endif %}
-      <div class="col-xs-10">
-        &copy; {{ copy_date }} {{ AUTHOR }}
-        {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
-         {% from 'includes/custom-license.html' import cc_license_mark %}
-        <p>
-          <small>{{
-            cc_license_mark(CC_LICENSE_NAME,CC_LICENSE_DERIVATIVES, attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author
-            if article else AUTHOR,'url':SITEURL,'lang':DEFAULT_LANG}) }}</small
-          >
-        </p>
-        {% elif CUSTOM_LICENSE %}
-        <p><small>{{ CUSTOM_LICENSE }}</small></p>
-        {% endif %}
+      <hr class="spec-hr-footer">
+      <div class="row">
+          {% if articles %}
+              {% set copy_date = articles[0].modified.strftime('%Y') if articles[0].modified else articles[0].date.strftime('%Y') %}
+          {% else %}
+              {% set copy_date = '' %}
+          {% endif %}
+          <div class="col-xs-10">
+              &copy; {{ copy_date }} {{ AUTHOR }}
+              {%- if CC_LICENSE %}
+                  {% from 'includes/custom-license.html' import cc_license_mark %}
+                  <p>
+                      <small>{{ cc_license_mark(CC_LICENSE_NAME, CC_LICENSE_DERIVATIVES, attr_markup=CC_ATTR_MARKUP, attr_props={'title': SITENAME, 'name': article.author if article else AUTHOR, 'url': SITEURL, 'lang': DEFAULT_LANG}) }}</small>
+                  </p>
+              {% elif CUSTOM_LICENSE %}
+                  <p><small>{{ CUSTOM_LICENSE }}</small></p>
+              {% endif %}
+          </div>
+          <div class="col-xs-2">
+              <p class="pull-right">
+                  <i class="fa fa-arrow-up"></i> <a href="#">{{ 'Back to top' }}</a>
+              </p>
+          </div>
       </div>
-      <div class="col-xs-2">
-        <p class="pull-right">
-          <i class="fa fa-arrow-up"></i> <a href="#">{{ ('Back to top') }}</a>
-        </p>
-      </div>
-    </div>
   </div>
 </footer>
