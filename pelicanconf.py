@@ -46,11 +46,15 @@ DEFAULT_LANG = 'en'
 
 THEME_STATIC_DIR = 'theme/qcvtheme'
 THEME = 'theme/qcvtheme'
+# SITELOGO = 'images/ba-sa.svg'
+# SITELOGO_SIZE = 64, 64
+
+
 
 PYGMENTS_STYLE = 'emacs'
 
 BANNER = "CC_BY"
-BANNER_SUBTITLE = "The Data Science and Programming Hub"
+BANNER_SUBTITLE = "The Data Science and Programming Hub for Aspiring People"
 BOOTSTRAP_FLUID = True
 
 # Creative Commons License Configuration

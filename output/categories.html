@@ -17,64 +17,115 @@
     <!-- Twitter Cards -->
     <!-- Flattr ID -->
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="./theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
+    <!--         <link rel="stylesheet" href="./theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
+ -->
+    
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="./theme/qcvtheme/bootstrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="./theme/qcvtheme/bootstrap/css/bootstrap.min.css" type="text/css"/>
+
     <link href="./theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet">
     <link href="./theme/qcvtheme/css/pygments/emacs.css" rel="stylesheet">
     <link rel="stylesheet" href="./theme/qcvtheme/css/main.css" type="text/css"/>
+    <!-- <link rel="stylesheet" href="./theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="./theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
+
+    <!--  -->
+    <link rel="stylesheet" href="./theme/qcvtheme/css/main.css" type="text/css"/>
+    <!--  -->
     <!-- Feeds -->
+    <!--  -->
     <!-- Analytics -->
 </head>
 <body>
     <!-- Banner -->
     <!-- Navigation Bar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container-lg-fluid">
+    <nav class="navbar navbar-expand-lg navbar-bg fixed-top pd-0">
+    <div class="container-fluid">
             <!-- Navbar Header -->
-            <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span the="icon-bar"></span>
+            <div class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-ex1-collapse" aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    
+                    
                 <a href="./" class="navbar-brand">
 QCVersity                </a>
             </div>
-            <!-- Navbar Collapse -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Menu Items -->
-                    <!-- Pages on Menu -->
-                            <li><a href="./pages/home.html">Home</a></li>
-                            <li><a href="./pages/about.html">About</a></li>
-                            <li><a href="./pages/contact.html">Contact</a></li>
-                    <!-- Categories on Menu -->
-                </ul>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 spec-nav-item">
+                        <!-- Menu Items -->
+                        <!-- Pages on Menu -->
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="./pages/home.html">Home</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="./pages/about.html">About</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="./pages/contact.html">Contact</a>
+                                </li>
+                        <!-- Categories on Menu -->
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="./category/general.html">General</a>
+                                </li>
+                    </ul>
+                </div>
+                
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Search -->
                     <!-- Archives -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-        </div>
-    </div> <!-- /.navbar -->
+    </div> 
+</nav>
+    <!-- /.navbar -->
     <!-- Content Container -->
-    <div class="container-lg-fluid" id="content">
-        <div class="row ml-35">
-            <div class="col-sm-8">
+    
+
+<div class="container-fluid pd-l-35 mb-3 px-5" id="content" >
+    <div class="row mt-5">
+        <div class="col-sm-8">
   <section id="categories">
   <h1>All Categories for QCVersity</h1>
   <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a
+            data-toggle="collapse"
+            data-parent="#accordion"
+            href="#collapse-general"
+            >General
+            <span class="badge pull-right">1</span></a
+          >
+        </h4>
+      </div>
+      <div id="collapse-general" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+            <span class="categories-timestamp"
+              ><time datetime="2023-12-04T16:00:00+01:00"
+                >Mon 04 December 2023</time
+              ></span
+            >
+            <a href="./2023/Launch Site.html">QuantCoding Versity Launch</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-            </div>
-         <!-- Sidebar -->
-        <div class="col-sm-4" id="sidebar">
-            <aside>
-                <div id="about-me-container" style="display: none;">
+        </div>
+        <!-- Sidebar -->
+            <div class="col-sm-4" id="sidebar">
+                <aside>
+                    <div id="about-me-container" style="display: none;">
 <div id="aboutme">
-   <div class="bio no-hyphen well well-sm">
+   <!-- <div class="bio no-hyphen well well-sm">
     <p class="author well well-sm">Dr. Saad Laouadi</p>
     <hr />
     <h4><strong>Founder of Quant-Coding Versity</strong></h4>
@@ -95,8 +146,36 @@ QCVersity                </a>
       science and machine learning, with a wealth of knowledge and experience to
       share.
     </p>
+  </div> -->
+  <div class="card custom-bio-card">
+    <div class="card-body">
+      <h5 class="card-title author">Dr. Saad Laouadi</h5>
+      <h4 class="card-subtitle mb-2 light-teal" style="font-family: 'Snell Roundhand', 'cursive';text-align:center"><strong>Data Whisperer, Code Slinger, Knowledge Enthusiast</strong></h4>
+      <hr />
+      
+      <div class="text-ff-ddot">
+      <p>
+        With a PhD in Economics and a fervent passion for programming, I, Dr. Saad Laouadi, have crafted a unique niche in the realm of data science. My academic roots in economics fuel my approach to data analysis, enabling me to unravel the stories behind numbers and economic patterns.
+      </p>
+<p>
+        Beyond economics, my curiosity led me to master various programming languages, including Python, Rust, Julia, R, and C++. My expertise lies in turning complex data into meaningful insights and innovative strategies.
+
+      </p>
+      <p>
+        As a data scientist and software developer, I revel in the challenges of creating tools that enhance our interaction with data. For me, the synergy of economics, data science, and technology is not just a career – it's a playground of endless possibilities and learning.
+      </p>
+
+      <p>
+        In addition to my work in data science, I have a profound passion for teaching. Sharing knowledge is a joy for me, and I am dedicated to inspiring and educating others in the fields of data science and programming. My goal is to make complex concepts accessible and engaging, helping students and professionals alike to unlock their potential in this ever-evolving digital world.
+      </p>
+      <p>
+        Driven by a thirst for knowledge and innovation, each day is a new adventure at the intersection of data, economics, and technology.
+      </p>
+    </div>
+    </div>
   </div>
-</div>                </div>
+  
+</div>                    </div>
 <!-- Sidebar -->
 <section class="well well-sm">
   <ul class="list-group list-group-flush">
@@ -125,15 +204,16 @@ QCVersity                </a>
 <!-- End Sidebar/Social -->
   </ul>
 </section>
-<!-- End Sidebar -->            </aside>
-        </div>
+<!-- End Sidebar -->                </aside>
+            </div>
+    </div>
 </div>
-</div>
+
 <!-- End Content Container -->
 
 <!-- Footer -->
 <!-- First Footer -->
-<footer id="footer" class="no-print">
+<!-- <footer id="footer" class="no-print">
   <div class="container">
       <div class="row">
           <div class="col-lg-3 col-md-4">
@@ -161,7 +241,38 @@ QCVersity                </a>
           </div>
       </div>
   </div>
+</footer> -->
+
+<footer id="footer" class="no-print">
+    <div class="container-lg">
+        <div class="row d-flex justify-content-evenly">
+            <div class="col-lg-4 col-md-6">
+                <h4>Training Options</h4>
+                <ul>
+                    <li><a href="./pages/live-online-training/" title="Live Online">Live Online</a></li>
+                    <li><a href="./customized-private-training/" title="Customized Online">Customized Online</a></li>
+                    <li><a href="./enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h4>Course Catalog</h4>
+                <ul>
+                    <li><a href="./static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="./pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                    <li><a href="./about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                    <li><a href="./privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                    <li><a href="./terms.html" title="Terms of Use">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
+
 
 <!-- Second Footer -->
 <footer class="spec-footer copyright">
@@ -169,7 +280,7 @@ QCVersity                </a>
       <hr class="spec-hr-footer">
       <div class="row">
           <div class="col-xs-10">
-              &copy;  Dr Saad Laouadi                  <p>
+              &copy; 2023 Dr Saad Laouadi                  <p>
                       <small>
     <a  rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
     <img class="icon-image" alt="Creative Commons License" src="../images/by-sa.svg"/>
@@ -193,9 +304,11 @@ QCVersity                </a>
   </div>
 </footer>
 <!-- Scripts -->
-<script src="./theme/qcvtheme/js/jquery.min.js"></script>
-<script src="./theme/qcvtheme/js/bootstrap.min.js"></script>
-<script src="./theme/qcvtheme/js/respond.min.js"></script>
+<!-- <script src="./theme/qcvtheme/js/jquery.min.js"></script> -->
+<script src="./theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
+<script src="./theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
+<script src="./theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="./theme/qcvtheme/bootstrap/js/respond.min.js"></script> -->
 <script src="./theme/qcvtheme/js/custom.js"></script>
 
 

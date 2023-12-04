@@ -5,7 +5,7 @@
 @import url("fonts.css"); */
 
 body {
-  padding-top: 70px;
+  padding-top: 40px;
 }
 
 #sidebar .list-group,
@@ -568,9 +568,9 @@ ol ol {
   font-size: 26px;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
   color:white;
-  background-color:teal;
+  /* background-color:teal; */
 }
 
 .rounded-author {
@@ -828,6 +828,56 @@ footer .spec-hr-footer {
   list-style: none;
 }
 
-ml-0{
+.ml-0{
   margin-left: 0% !important;
+}
+
+.ml-35 {
+  margin-left: 35px;
+}
+
+.ml-50{
+  margin-left: 50px;
+}
+.ml-100 {
+  margin-left: 100px;
+}
+
+.mr-1 {
+  margin-right: 10px;
+}
+
+.custom-bio-card {
+  /* background-color: #263c53;
+   */
+   background-color: #51897e;
+  color: #fff; /* Adjust text color for readability */
+}
+
+.author {
+  color: #fff; /* Adjust author's name color for readability */
+}
+
+#social a, #social i {
+  color: #51897e;
+}
+
+#social a:hover {
+  color: darken(#51897e, 10%); /* Optional: darken the color slightly on hover */
+}
+
+.light-teal{
+  color:#c2dada;
+}
+
+.pd-l-35{
+  padding-left: 35px;
+}
+
+mb-30{
+  margin-bottom: 30px;
+}
+
+.text-ff-ddot{
+  font-family: 'Georgia', 'Didot', 'serif', 'Palatino', 'URW Palladio L';
 }

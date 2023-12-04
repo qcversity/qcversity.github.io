@@ -107,19 +107,17 @@
         {% block banner %}{% endblock %}
     {% endif %}
     <!-- Navigation Bar -->
-    <!-- <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation"> -->
-        <!-- <div class="container-lg{% if BOOTSTRAP_FLUID %}-fluid{% endif %}"> -->
     <nav class="navbar navbar-expand-lg navbar-bg fixed-top pd-0">
-    <div class="container-lg">
+    <div class="container-fluid">
             <!-- Navbar Header -->
             <div class="navbar-nav me-auto mb-2 mb-lg-0">
                 {% if MENUITEMS or (pages and DISPLAY_PAGES_ON_MENU) or (categories and DISPLAY_CATEGORIES_ON_MENU) %}
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+        
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-ex1-collapse" aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    
+                    
                 {% endif %}
                 <a href="{{ SITEURL }}/" class="navbar-brand">
                     {% if SITELOGO %}
@@ -189,7 +187,7 @@
     {% endif %}
     
 
-<div class="container-fluid ml-35" id="content" >
+<div class="container-fluid pd-l-35 mb-3 px-5" id="content" >
     <div class="row mt-5">
         <div class="{{ content_class }}">
             {% block breadcrumbs %}{% endblock %}
@@ -219,9 +217,11 @@
 {% include 'includes/footer.html' %}
 
 <!-- Scripts -->
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
-<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
+<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.js"></script>
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/respond.min.js"></script> -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/custom.js"></script>
 
 {% if CUSTOM_JS %}

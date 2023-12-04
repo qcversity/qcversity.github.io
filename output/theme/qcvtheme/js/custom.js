@@ -31,62 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Adjusting the layout for different pages
-  const mainContent = document.getElementById("content");
-  const sidebar = document.getElementById("sidebar");
+  // const mainContent = document.getElementById("content");
+  // const sidebar = document.getElementById("sidebar");
+
+
+
+  // const contentElement = document.getElementById("content");
+  // const sidebarElement = document.getElementById("sidebar");
 
   // if (isHomePage) {
-  //   // Apply styles for the home page
-  //   if (mainContent)
-  //     mainContent.className =
-  //       "col-sm-8" + ("{{ SIDEBAR_ON_LEFT }}" ? " col-sm-push-4" : "");
-  //   if (sidebar)
-  //     sidebar.className =
-  //       "col-sm-4" + ("{{ SIDEBAR_ON_LEFT }}" ? " col-sm-pull-8" : "");
+  //   // Apply classes for the home page
+  //   if (contentElement) {
+  //     contentElement.className = "container-lg mr-1 ml-100";
+  //   }
+  //   if (sidebarElement) {
+  //     sidebarElement.className = "col-sm-4";
+  //   }
   // } else {
-  //   // Apply styles for other pages
-  //   if (mainContent)
-  //     mainContent.className =
-  //       "col-sm-9" + ("{{ SIDEBAR_ON_LEFT }}" ? " col-sm-push-3" : "");
-  //   if (sidebar)
-  //     sidebar.className =
-  //       "col-sm-3" + ("{{ SIDEBAR_ON_LEFT }}" ? " col-sm-pull-9" : "");
+  //   // Apply classes for other pages
+  //   if (contentElement) {
+  //     contentElement.className = "container-lg mr-1 ml-100";
+  //     const rowElement = contentElement.querySelector(".row");
+  //     if (rowElement) {
+  //       const colElement = rowElement.querySelector('[class^="col-sm-"]');
+  //       if (colElement) {
+  //         // Change the class of the column element
+  //         colElement.className = "col-sm-9";
+  //       }
+  //     }
+  //   }
+  //   if (sidebarElement) sidebarElement.className = "col-sm-3";
   // }
-
-  // const contentClass = isHomePage ? "col-sm-8" : "col-sm-9";
-  // const sidebarClass = isHomePage ? "col-sm-4" : "col-sm-3";
-
-  // // Apply the classes to the elements
-  // if (document.getElementById("content")) {
-  //   document.getElementById("content").className = contentClass;
-  // }
-  // if (document.getElementById("sidebar")) {
-  //   document.getElementById("sidebar").className = sidebarClass;
-  // }
-
-  const contentElement = document.getElementById("content");
-  const sidebarElement = document.getElementById("sidebar");
-
-  if (isHomePage) {
-    // Apply classes for the home page
-    if (contentElement) {
-      contentElement.className = "container-lg";
-    }
-    if (sidebarElement) {
-      sidebarElement.className = "col-sm-4";
-    }
-  } else {
-    // Apply classes for other pages
-    if (contentElement) {
-      contentElement.className = "container-lg";
-      const rowElement = contentElement.querySelector(".row");
-      if (rowElement) {
-        const colElement = rowElement.querySelector('[class^="col-sm-"]');
-        if (colElement) {
-          // Change the class of the column element
-          colElement.className = "col-sm-9";
-        }
-      }
-    }
-    if (sidebarElement) sidebarElement.className = "col-sm-3";
-  }
 });

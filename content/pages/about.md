@@ -3,48 +3,91 @@ Title: About
 Order: 2
 ---
 
-# About Quant Coding Versity
 
-Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field.
+# The Founder of Quant Coding Versity
+--------------------------------------
 
-## Our Focus
+Meet the creator of quant coding versity, he is main author, maintainer and the educator. If you want to know more about me, you move down to the next sections.
 
-At Quant Coding Versity, we are passionate about:
+## Personal Information
+-----------------------
 
-- **Data Science and Machine Learning**: Exploring cutting-edge techniques and applications in data science and machine learning. We delve into various algorithms, methodologies, and their practical implementations.
+My name is Dr. Saad Laouadi and I am the founder of the Quant Coding Versity. I have a Ph.D in Economics. I am also data scientist, programmer, economist and a researcher. 
 
-- **Deep Learning**: Unraveling the complexities of deep learning. Our articles cover neural networks, deep learning frameworks, and real-world applications.
+My journey didn’t stop at economics; I delved into the world of programming out of sheer curiosity and a love for technology. Today, I am adept in several programming languages, including Python, Rust, Julia, R, and C++. Each language has been a different path to the same destination – understanding and solving complex data puzzles.
 
-- **Programming Languages**: Offering comprehensive guides and tutorials on languages such as R, Python, Julia, C, C++, Rust, Bash, and more. Whether you're starting out or looking to refine your skills, we have something for everyone.
+ As a data scientist, I find joy in unraveling these puzzles, turning data into insights and strategies. But my enthusiasm doesn’t end there – I also love developing software. It’s like creating a new tool, a new way to interact with data and make sense of it. This blend of economics, data science, and software development isn’t just my profession; it’s my playground.
 
-- **Technical Tools**: Providing insights into a plethora of tools essential for data analysis, visualization, and computational efficiency.
-
-- **Time Series and Econometrics**: Bridging the gap between theory and practice in time series analysis and econometrics. Our content ranges from introductory concepts to advanced modeling techniques.
-
-## Meet the Founder
-
-Dr. Saad Laouadi, the founder of Quant Coding Versity, is an accomplished individual with a Ph.D. in Economics, and a profound expertise in data science, econometrics, and programming. His journey in the academic and professional world has established him as a seasoned researcher and an adept programmer.
-
-With a rich background in several programming languages including R, Python, Julia, Rust, and C/C++, Dr. Laouadi has cultivated a diverse skill set that spans across various dimensions of data analysis and computational research.
-
-As a dedicated trainer, Dr. Laouadi is driven by his passion for research and education. He believes in empowering others by sharing knowledge and expertise, a principle that is deeply embedded in the ethos of Quant Coding Versity.
-
-Dr. Laouadi's research interests lie at the intersection of time series analysis and artificial intelligence. His work in these areas not only demonstrates his proficiency but also his commitment to advancing the fields of econometrics and AI.
+Every day, I’m driven by the quest for knowledge and the thrill of innovation. Whether it’s through crafting a new piece of software or diving deep into data analyses, I am on a perpetual journey to explore the limitless possibilities at the crossroads of my three passions.
 
 At Quant Coding Versity, Dr. Laouadi’s vision is to create a collaborative platform that nurtures learning, innovation, and the pursuit of excellence in data science and programming. He aims to build a community where ideas are exchanged, skills are honed, and the future of technology is shaped by collective effort and insight.
 
-## Our Commitment
+## Technical Skills
+-------------------
 
-We are committed to:
+I gathered during the last years skills in different programming languages and softwares
 
-- **Quality Content**: Ensuring that each article, tutorial, and guide is thorough, accurate, and valuable.
+- Programming languages: Python, R, Julia, Rust, C\C++, SQL, BASH
+- Softwares: SAS, Matlab, Stata, QGIS, ArcGIS.
+- Analytical Skills: Statistical Analysis, Time Series, Machine Learning, Deep learning. 
 
-- **Community Engagement**: Engaging with our readers through comments, forums, and social media. We value your feedback and aim to create an interactive learning community.
+## Educative skills
+-------------------
 
-- **Continuous Learning**: Staying abreast of the latest developments in the field to bring you the most current and relevant information.
+I am a highly skilled educator; in other words, my passion is teaching. I have taught many courses on data science, machine learning, deep learning, Statistical anlaysis, and programming to numerous students and employees around the world.
 
-## Stay Connected
+Since teaching is my passion, and I am talented in it. I believe talent is not sufficient, thus I worked hard to develop this talent, so I acquired an ability to clearly explain complex concepts and make them accessible to students of all levels.
 
-We invite you to explore our site, engage with our content, and join our growing community. For updates, follow us on [Social Media Link], subscribe to our newsletter, or reach out to us at [Contact Information].
+As a dedicated trainer, Dr. Laouadi is driven by his passion for research and education. He believes in empowering others by sharing knowledge and expertise, a principle that is deeply embedded in the ethos of Quant Coding Versity.
 
-Thank you for choosing Quant Coding Versity as your gateway to the world of quantitative and coding excellence!
+
+## Research Interests
+--------------------
+
+I have interests in research in many areas such as:
+
+1. Programming languages
+2. Machine learning
+3. Deep learning
+4. Time Series
+5. Image processing
+6. Remote Sensing
+
+
+Besides the analytical skills, I am also a full-stack web developer, I code my own website and blog using several tools such as CSS, bootsrap, JavaScript, and Python.
+
+## Purpose of This Blog
+----------------------
+
+I created this blog to share the experience and knowledge I gathered throughout the years.
+
+I also welcome any suggestions and co-authoring scientific articles.
+
+### Personal Interests
+
+- Besides the academy and research, I like to read, do sports such swimming and boxing. 
+
+### Contact
+
+If you have any questions, or you want to co-author an article with me feel free to send me an email through [Email Address](mailto:dr.saad.economist@outlook.com)
+
+### Follow Me
+
+If you want to get the updates about articles, news and workshops I conduct, you can always follow me on social media: 
+
+1. [LinkedIn Profile](https://www.linkedin.com/saadlaouadi)
+2. [Facebook Profile](https://www.instagram.com/drsaadlaouadi)
+3. [Instagram](DrSaadLaouadi)
+4. [YouTube Channel](QuantCodingVersity)
+5. [Github](DrSaadLa)
+
+
+
+
+
+
+
+
+
+
+
