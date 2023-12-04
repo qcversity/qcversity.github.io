@@ -6,10 +6,7 @@ Order: 1
 
 ![QCVersity Name](../images/qcvname.png)
 
-Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field.
-
-![QCVersity home](../images/qcvhome.png)
-
+Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field. ![QCVersity home](../images/qcvhome.png)
 
 ## The Name of Quant Coding Versity Meaning
 -------------------------------------------
