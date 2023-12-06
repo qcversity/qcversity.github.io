@@ -3,7 +3,7 @@ Title: Python Virtual Environment Tools
 Date: 2023-12-06 08:00
 Category: SoftTools
 Tags: python, blog
-Status: drafted
+Status: draft
 Slug: python-virstual-env-tools
 Author: Dr Saad Laouadi
 Series: Python Virtual Environment Tools
