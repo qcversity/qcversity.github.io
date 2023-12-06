@@ -28,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (aboutMeContainer) {
       aboutMeContainer.style.display = "block";
     }
+  };
+
+  const avatarContainer = document.getElementById("avatar-container");
+  if (avatarContainer) {
+    avatarContainer.style.display = "block";
   }
 
   // Adjusting the layout for different pages
