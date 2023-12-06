@@ -61,7 +61,9 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS %}
   </li>
   <li class="active">{{ article.title }}</li>
 </ol>
-{% endif %} {% endif %} {% endblock %} {% block content %}
+{% endif %} {% endif %} 
+{% endblock %}
+{% block content %}
 <section id="content">
   <article>
     <header class="page-header">
@@ -82,14 +84,75 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS %}
       {{ article.content }}
     </div>
     <!-- /.entry-content -->
-    {% include 'includes/related-posts.html' %} {% include
-    'includes/series.html' %} {% include 'includes/addthis.html' %} {% include
-    'includes/shariff.html' %} {% include 'includes/comments.html' %} {% include
-    'includes/show_source.html' %}
+    {% include 'includes/related-posts.html' %} 
+    {% include 'includes/series.html' %}
+    {% include 'includes/addthis.html' %} 
+    {% include'includes/shariff.html' %}
+    {% include 'includes/comments.html' %} 
+    {% include 'includes/show_source.html' %}
   </article>
 </section>
 
-{% endblock %} {% block scripts %} {% if ADDTHIS_PROFILE %} {% if
+<ul>
+  {% if article.prev_article %}
+      <li>
+          <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+              {{ article.prev_article.title }}
+          </a>
+      </li>
+  {% endif %}
+  {% if article.next_article %}
+      <li>
+          <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+              {{ article.next_article.title }}
+          </a>
+      </li>
+  {% endif %}
+</ul>
+<ul>
+  {% if article.prev_article_in_category %}
+      <li>
+          <a href="{{ SITEURL }}/{{ article.prev_article_in_category.url}}">
+              {{ article.prev_article_in_category.title }}
+          </a>
+      </li>
+  {% endif %}
+  {% if article.next_article_in_category %}
+      <li>
+          <a href="{{ SITEURL }}/{{ article.next_article_in_category.url}}">
+              {{ article.next_article_in_category.title }}
+          </a>
+      </li>
+  {% endif %}
+</ul>
+
+{% if article.share_post and article.status != 'draft' %}
+<section>
+  <hr class="pd-5">
+  <p id="post-share-links">
+    <strong> Share on: </strong> <br>
+    <a href="{{article.share_post['email']}}" title="Share via Email">Email</a>
+    ❄
+    <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">Diaspora</a>
+    ❄
+    <a href="{{article.share_post['facebook']}}" title="Share on Facebook">Facebook</a>
+    ❄
+    <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News">Hacker News</a>
+    ❄
+    <a href="{{article.share_post['linkedin']}}" title="Share on LinkedIn">LinkedIn</a>
+    ❄
+    <a href="{{article.share_post['mastodon']}}" title="Share on Mastodon">Mastodon</a>
+    ❄
+    <a href="{{article.share_post['reddit']}}" title="Share via Reddit">Reddit</a>
+    ❄
+    <a href="{{article.share_post['twitter']}}" title="Share on Twitter">Twitter</a>
+  </p>
+</section>
+{% endif %}
+
+{% endblock %} 
+
+{% block scripts %} {% if ADDTHIS_PROFILE %} {% if
 ADDTHIS_DATA_TRACK_ADDRESSBAR|default(true) %}
 <script type="text/javascript">
   var addthis_config = { data_track_addressbar: true };

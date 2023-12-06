@@ -56,6 +56,22 @@ PYGMENTS_STYLE = 'emacs'
 BANNER = "CC_BY"
 BANNER_SUBTITLE = "The Data Science and Programming Hub for Aspiring People"
 BOOTSTRAP_FLUID = True
+SHARE_POST = True
+
+AVATAR = "images/avatar.png"
+GITHUB_USER = "qcversity"
+
+DISPLAY_RECENT_POSTS_ON_SIDEBAR  = True
+
+
+DISPLAY_ARCHIVE_ON_SIDEBAR = True
+# SEO Configuration
+# ================
+# pelicanconf.py or publishconf.py
+SEO_REPORT = True  # SEO report is enabled by default
+SEO_ENHANCER = True  # SEO enhancer is disabled by default
+SEO_ENHANCER_OPEN_GRAPH = True # Subfeature of SEO enhancer
+SEO_ENHANCER_TWITTER_CARDS = True # Subfeature of SEO enhancer
 
 # Creative Commons License Configuration
 # ======================================

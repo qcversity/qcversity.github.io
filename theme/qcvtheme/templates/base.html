@@ -195,19 +195,28 @@
         </div>
         <!-- Sidebar -->
         {% if sidebar_class %}
-            <div class="{{ sidebar_class }}" id="sidebar">
-                <aside>
-                    <div id="about-me-container" style="display: none;">
-                        {% if ABOUT_ME or AVATAR %}
-                            {% include 'includes/aboutme.html' %}
-                        {% endif %}
+        <div class="{{ sidebar_class }}" id="sidebar">
+            <aside>
+                <!-- Separate container for Avatar, always displayed -->
+                <div id="avatar-container">
+                    <div id="avatar-container">
+                        {% include 'includes/avatar.html' %} 
                     </div>
-                    {% if not HIDE_SIDEBAR %}
-                        {% include 'includes/sidebar.html' %}
                     {% endif %}
-                </aside>
-            </div>
-        {% endif %}
+                </div>
+    
+                <!-- About Me container, displayed conditionally -->
+                <div id="about-me-container" style="display: none;">
+                    {% if ABOUT_ME %}
+                        {% include 'includes/aboutme.html' %}
+                    {% endif %}
+                </div>
+    
+                {% if not HIDE_SIDEBAR %}
+                    {% include 'includes/sidebar.html' %}
+                {% endif %}
+            </aside>
+        </div>
     </div>
 </div>
 
@@ -217,11 +226,11 @@
 {% include 'includes/footer.html' %}
 
 <!-- Scripts -->
-<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script> -->
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/respond.min.js"></script> -->
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bootstrap/js/respond.min.js"></script>
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/custom.js"></script>
 
 {% if CUSTOM_JS %}
