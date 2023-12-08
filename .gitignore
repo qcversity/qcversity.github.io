@@ -164,3 +164,8 @@ cython_debug/
 #.idea/
 
 
+Draft Articles
+seo_report.html
+node_modules
+package.json
+package-lock.json

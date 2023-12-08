@@ -108,6 +108,14 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS %}
           </a>
       </li>
   {% endif %}
+  {% if sections %}
+  <h2>Table of Contents</h2>
+  <ul>
+  {% for section in sections %}
+      <li><a href="#{{ section.anchor }}">{{ section.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endif %}
 </ul>
 <ul>
   {% if article.prev_article_in_category %}
@@ -131,21 +139,21 @@ DISPLAY_CATEGORY_IN_BREADCRUMBS %}
   <hr class="pd-5">
   <p id="post-share-links">
     <strong> Share on: </strong> <br>
-    <a href="{{article.share_post['email']}}" title="Share via Email">Email</a>
+    <a href="{{article.share_post['email']}}" title="Share via Email"> <i class="fa fa-envelope"></i> <strong>Email</strong></a>
     ❄
-    <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">Diaspora</a>
+    <!-- <a href="{{article.share_post['diaspora']}}" title="Share on Diaspora">Diaspora</a> -->
     ❄
-    <a href="{{article.share_post['facebook']}}" title="Share on Facebook">Facebook</a>
+    <a href="{{article.share_post['facebook']}}" title="Share on Facebook"><i class="fa fa-facebook"></i> Facebook</a>
     ❄
-    <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News">Hacker News</a>
+    <a href="{{article.share_post['hacker-news']}}" title="Share on Hacker News"><i class="fa fa-hacker-news"></i> Hacker News</a>
     ❄
-    <a href="{{article.share_post['linkedin']}}" title="Share on LinkedIn">LinkedIn</a>
+    <a href="{{article.share_post['linkedin']}}" title="Share on LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
     ❄
-    <a href="{{article.share_post['mastodon']}}" title="Share on Mastodon">Mastodon</a>
+    <!-- <a href="{{article.share_post['mastodon']}}" title="Share on Mastodon">Mastodon</a> -->
     ❄
-    <a href="{{article.share_post['reddit']}}" title="Share via Reddit">Reddit</a>
+    <a href="{{article.share_post['reddit']}}" title="Share via Reddit"><i class="fa fa-reddit"></i> Reddit</a>
     ❄
-    <a href="{{article.share_post['twitter']}}" title="Share on Twitter">Twitter</a>
+    <a href="{{article.share_post['twitter']}}" title="Share on Twitter"> <i class="fa fa-twitter"></i>Twitter</a>
   </p>
 </section>
 {% endif %}
