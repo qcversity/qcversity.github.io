@@ -8,16 +8,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Favicons -->
-<link href="../2023/python-virtual-env-with-venv.html" rel="canonical"/>
+<link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/>
 <meta content="Dr Saad Laouadi" name="author">
 <meta content="python,virtualenv" name="keywords">
-<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. Explore the essentials of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." name="description">
+<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." name="description">
 <!-- Open Graph tags -->
 <meta content="QCVersity" property="og:site_name"/>
 <meta content="article" property="og:type"/>
 <meta content="Creating Python Virtual Environment with Venv Tool" property="og:title"/>
-<meta content="../2023/python-virtual-env-with-venv.html" property="og:url"/>
-<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. Explore the essentials of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." property="og:description"/>
+<meta content="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" property="og:url"/>
+<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." property="og:description"/>
 <meta content="2023-12-11" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
 <meta content="python" property="article:tag"/>
 <meta content="virtualenv" property="article:tag"/>
@@ -25,21 +25,23 @@
 <!-- Twitter Cards -->
 <!-- Flattr ID -->
 <!-- Bootstrap -->
-<!--         <link rel="stylesheet" href="../theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
+<!--         <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
  -->
 <!-- Stylesheets -->
-<link href="../theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="../theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="../theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="../theme/qcvtheme/css/pygments/manni.css" rel="stylesheet"/>
-<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
+<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://qcversity.github.io/theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://qcversity.github.io/theme/qcvtheme/css/pygments/manni.css" rel="stylesheet"/>
+<link href="https://qcversity.github.io/theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
 <!-- -->
-<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<link href="https://qcversity.github.io/theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
 <!-- -->
 <!-- Feeds -->
-<!-- -->
+<!--         <link href="https://qcversity.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity ATOM Feed"/>
+        <link href="https://qcversity.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity SoftTools ATOM Feed"/>
+ -->
 <!-- Analytics -->
 </link></link></meta></meta></meta><link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "2023", "item": "https://qcversity.github.io/2023"}, {"@type": "ListItem", "position": 3, "name": "Python virtual env with venv", "item": "https://qcversity.github.io/2023/python-virtual-env-with-venv.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "Creating Python Virtual Environment with Venv Tool", "about": "SoftTools", "datePublished": "2023-12-11 08:00"}</script></head>
 <body>
@@ -52,7 +54,7 @@
 <button aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target=".navbar-ex1-collapse" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
 </button>
-<a class="navbar-brand" href="../">
+<a class="navbar-brand" href="https://qcversity.github.io/">
 QCVersity                </a>
 </div>
 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -60,20 +62,20 @@ QCVersity                </a>
 <!-- Menu Items -->
 <!-- Pages on Menu -->
 <li class="nav-item">
-<a class="nav-link" href="../pages/home.html">Home</a>
+<a class="nav-link" href="https://qcversity.github.io/pages/home.html">Home</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../pages/about.html">About</a>
+<a class="nav-link" href="https://qcversity.github.io/pages/about.html">About</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="../pages/contact.html">Contact</a>
+<a class="nav-link" href="https://qcversity.github.io/pages/contact.html">Contact</a>
 </li>
 <!-- Categories on Menu -->
 <li class="nav-item">
-<a class="nav-link" href="../category/general.html">General</a>
+<a class="nav-link" href="https://qcversity.github.io/category/general.html">General</a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="../category/softtools.html">Softtools</a>
+<a class="nav-link" href="https://qcversity.github.io/category/softtools.html">Softtools</a>
 </li>
 </ul>
 </div>
@@ -94,7 +96,7 @@ QCVersity                </a>
 <article>
 <header class="page-header">
 <h1>
-<a href="../2023/python-virtual-env-with-venv.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
+<a href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
           Creating Python Virtual Environment with Venv Tool
         </a>
 </h1>
@@ -107,8 +109,8 @@ QCVersity                </a>
 <i class="fa fa-calendar"></i><time datetime="2023-12-11T08:00:00+01:00"> Mon 11 December 2023</time>
 </span>
 <span class="label label-default">Tags</span>
-<a href="../tag/python.html">python</a>
- /  <a href="../tag/virtualenv.html">virtualenv</a>
+<a href="https://qcversity.github.io/tag/python.html">python</a>
+ /  <a href="https://qcversity.github.io/tag/virtualenv.html">virtualenv</a>
 </footer><!-- /.post-info --></div>
 </div>
 <h1>Creating Python Virtual Environment with Venv</h1>
@@ -208,7 +210,7 @@ or you can create a virtual environment in the current working directory like th
 <span class="err">└──</span><span class="w"> </span><span class="n">pyvenv</span><span class="p">.</span><span class="n">cfg</span>
 </code></pre></div>
 <p>Or you can use the <code>dir</code> command on Windows command prompt. </p>
-<h2>Understand the Virtual Environment Creation Process</h2>
+<h2>What Happens when You Create a Virtual Environment</h2>
 <p>When you create a new Python virtual environment using <code>venv</code>, it sets up a basic, isolated environment that is separated from the system’s global Python installation. This isolation ensures that any changes you make within the virtual environment do not affect the system-wide Python setup.</p>
 <p>Upon creation, the virtual environment only includes the bare minimum to get started: the <code>pip</code> and <code>setuptools</code> packages:</p>
 <ul>
@@ -337,31 +339,31 @@ or you can create a virtual environment in the current working directory like th
 <h4>Part 2 of: The Python Development Tools Series</h4>
 <h5>Previous articles</h5>
 <ul>
-<li><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
+<li><a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
 </ul>
 </section>
 </article>
 </section>
 <ul>
 <li>
-<a href="../2023/python-virtual-env-tools.html">
+<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
               Mastering Python Virtual Environment Tools: A Comprehensive Guide
           </a>
 </li>
 <li>
-<a href="../2023/add-python-to-search-path-windows.html">
+<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
               How to Easily Add Python to Your Windows Search Path Using Command Prompt
           </a>
 </li>
 </ul>
 <ul>
 <li>
-<a href="../2023/python-virtual-env-tools.html">
+<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
               Mastering Python Virtual Environment Tools: A Comprehensive Guide
           </a>
 </li>
 <li>
-<a href="../2023/add-python-to-search-path-windows.html">
+<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
               How to Easily Add Python to Your Windows Search Path Using Command Prompt
           </a>
 </li>
@@ -378,7 +380,7 @@ or you can create a virtual environment in the current working directory like th
     ❄
     <a href="https://news.ycombinator.com/submitlink?t=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;u=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on Hacker News"><i class="fa fa-hacker-news"></i> Hacker News</a>
     ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html&amp;title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;summary=A%20Step%20by%20Step%20on%20How%20to%20Create%20an%20isolated%20virtual%20environment%20using%20VENV%20tool.%20Explore%20the%20essentials%20of%20creating%20and%20managing%20isolated%20Python%20environments%20using%20the%20built-in%20venv%20tool%20in%20our%20comprehensive%20guide.%20This%20second%20part%20in%20our%20Python%20Development%20Tools%20series%20delves%20into%20why%20virtual%20environments%20are%20vital%20for%20dependency%20management%2C%20reproducibility%2C%20security%2C%20and%20portability.%20Learn%20step-by-step%20how%20to%20create%2C%20activate%2C%20and%20use%20virtual%20environments%20across%20different%20operating%20systems.%20Discover%20best%20practices%20for%20updating%20pip%2C%20managing%20packages%2C%20and%20using%20requirements.txt%20for%20consistent%20setups.%20This%20article%20offers%20valuable%20insights%20and%20practical%20tips%20to%20enhance%20your%20Python%20development%20experience.&amp;source=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html&amp;title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;summary=A%20Step%20by%20Step%20on%20How%20to%20Create%20an%20isolated%20virtual%20environment%20using%20VENV%20tool.%20This%20articles%20shows%20the%20essentials%20steps%20of%20creating%20and%20managing%20isolated%20Python%20environments%20using%20the%20built-in%20venv%20tool%20in%20our%20comprehensive%20guide.%20This%20second%20part%20in%20our%20Python%20Development%20Tools%20series%20delves%20into%20why%20virtual%20environments%20are%20vital%20for%20dependency%20management%2C%20reproducibility%2C%20security%2C%20and%20portability.%20Learn%20step-by-step%20how%20to%20create%2C%20activate%2C%20and%20use%20virtual%20environments%20across%20different%20operating%20systems.%20Discover%20best%20practices%20for%20updating%20pip%2C%20managing%20packages%2C%20and%20using%20requirements.txt%20for%20consistent%20setups.%20This%20article%20offers%20valuable%20insights%20and%20practical%20tips%20to%20enhance%20your%20Python%20development%20experience.&amp;source=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
     ❄
     <!-- <a href="https://toot.kytta.dev/?text=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%0D%0Ahttps%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html%0D%0A%23python %23virtualenv" title="Share on Mastodon">Mastodon</a> -->
     ❄
@@ -397,7 +399,7 @@ or you can create a virtual environment in the current working directory like th
 <div id="aboutme">
 <div>
 <p>
-<img class="img-thumbnail" src="../images/avatar.png" width="80%"/>
+<img class="img-thumbnail" src="https://qcversity.github.io/images/avatar.png" width="80%"/>
 </p>
 </div>
 </div>
@@ -461,10 +463,10 @@ or you can create a virtual environment in the current working directory like th
 <li class="list-group-item">
 <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
 <ul class="list-group" id="recentposts">
-<li class="list-group-item"><a href="../2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
-<li class="list-group-item"><a href="../2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
-<li class="list-group-item"><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
-<li class="list-group-item"><a href="../2023/Launch Site.html">QuantCoding Versity Launch</a></li>
+<li class="list-group-item"><a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
+<li class="list-group-item"><a href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
+<li class="list-group-item"><a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
+<li class="list-group-item"><a href="https://qcversity.github.io/2023/Launch Site.html">QuantCoding Versity Launch</a></li>
 </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -491,24 +493,24 @@ or you can create a virtual environment in the current working directory like th
           <div class="col-lg-3 col-md-4">
               <h4>Training Options</h4>
               <ul>
-                  <li><a href="../live-online-training/" title="Live Online">Live Online</a></li>
-                  <li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
-                  <li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+                  <li><a href="https://qcversity.github.io/live-online-training/" title="Live Online">Live Online</a></li>
+                  <li><a href="https://qcversity.github.io/customized-private-training/" title="Customized Online">Customized Online</a></li>
+                  <li><a href="https://qcversity.github.io/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
               </ul>
           </div>
           <div class="col-lg-3 col-md-4">
               <h4>Course Catalog</h4>
               <ul>
-                  <li><a href="../static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
+                  <li><a href="https://qcversity.github.io/static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
               </ul>
           </div>
           <div class="col-lg-3 col-md-4">
               <h4>About Us</h4>
               <ul>
-                  <li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
-                  <li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
-                  <li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
-                  <li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
+                  <li><a href="https://qcversity.github.io/pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                  <li><a href="https://qcversity.github.io/about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                  <li><a href="https://qcversity.github.io/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                  <li><a href="https://qcversity.github.io/terms.html" title="Terms of Use">Terms of Use</a></li>
               </ul>
           </div>
       </div>
@@ -520,24 +522,24 @@ or you can create a virtual environment in the current working directory like th
 <div class="col-lg-4 col-md-6">
 <h4>Training Options</h4>
 <ul>
-<li><a href="../pages/live-online-training/" title="Live Online">Live Online</a></li>
-<li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
-<li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+<li><a href="https://qcversity.github.io/pages/live-online-training/" title="Live Online">Live Online</a></li>
+<li><a href="https://qcversity.github.io/customized-private-training/" title="Customized Online">Customized Online</a></li>
+<li><a href="https://qcversity.github.io/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
 </ul>
 </div>
 <div class="col-lg-4 col-md-6">
 <h4>Course Catalog</h4>
 <ul>
-<li><a href="../static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
+<li><a href="https://qcversity.github.io/static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-4">
 <h4>About Us</h4>
 <ul>
-<li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
-<li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
-<li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
-<li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
+<li><a href="https://qcversity.github.io/pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+<li><a href="https://qcversity.github.io/about-us/" title="QCVersity">Quant Coding Versity</a></li>
+<li><a href="https://qcversity.github.io/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+<li><a href="https://qcversity.github.io/terms.html" title="Terms of Use">Terms of Use</a></li>
 </ul>
 </div>
 </div>
@@ -572,13 +574,13 @@ or you can create a virtual environment in the current working directory like th
 </div>
 </footer>
 <!-- Scripts -->
-<script src="../theme/qcvtheme/js/jquery.min.js"></script>
-<script src="../theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
-<script src="../theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
-<script src="../theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../theme/qcvtheme/bootstrap/js/respond.min.js"></script>
-<script src="../theme/qcvtheme/js/custom.js"></script>
-<script src="../theme/qcvtheme/js/bodypadding.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/js/jquery.min.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/respond.min.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/js/custom.js"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/js/bodypadding.js"></script>
 <!-- Additional includes -->
 <!-- GitHub JS Code -->
 <script type="text/javascript">
@@ -586,7 +588,7 @@ $(document).ready(function () {
   if (!window.jXHR) {
     var jxhr = document.createElement('script');
     jxhr.type = 'text/javascript';
-    jxhr.src = '../theme/qcvtheme/js/jXHR.js';
+    jxhr.src = 'https://qcversity.github.io/theme/qcvtheme/js/jXHR.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(jxhr, s);
   }
@@ -599,7 +601,7 @@ $(document).ready(function () {
   });
 });
 </script>
-<script src="../theme/qcvtheme/js/github.js" type="text/javascript"></script>
+<script src="https://qcversity.github.io/theme/qcvtheme/js/github.js" type="text/javascript"></script>
 <!-- End GitHub JS Code -->
 </body>
 </html>
