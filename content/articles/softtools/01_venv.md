@@ -7,7 +7,7 @@ Slug: python-virtual-env-with-venv
 Author: Dr Saad Laouadi
 Series: Python Development Tools
 Series_index: 2
-Summary: A Step by Step on How to Create an isolated virtual environment using VENV tool. Explore the essentials of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using `requirements.txt` for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience.
+Summary: A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using `requirements.txt` for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience.
 
 # Creating Python Virtual Environment with Venv 
 
@@ -107,7 +107,7 @@ tree -L 2 ~/Documents/plenv
 
 Or you can use the `dir` command on Windows command prompt. 
 
-## Understand the Virtual Environment Creation Process
+## What Happens when You Create a Virtual Environment 
 
 When you create a new Python virtual environment using `venv`, it sets up a basic, isolated environment that is separated from the system’s global Python installation. This isolation ensures that any changes you make within the virtual environment do not affect the system-wide Python setup.
 
@@ -246,4 +246,6 @@ rd /S  C:\\Users\\YourUsername\\Documents\\plenv
 - The `/S` option instructs `rd` to remove all directories and files in the specified directory, in addition to the directory itself.
 
 That is it, you are done, and you will be able create a new virtual for a new project by following the previous steps. 
+
+
 
