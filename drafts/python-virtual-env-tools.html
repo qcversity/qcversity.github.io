@@ -2,28 +2,33 @@
 
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-<title>Home - QCVersity</title>
+<title>Creating Python Virtual Environment with `venv` - QCVersity</title>
 <!-- Using the latest rendering mode for IE -->
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Favicons -->
-<link href="https://qcversity.github.io/pages/home.html" rel="canonical"/>
+<link href="https://qcversity.github.io/drafts/python-virtual-env-tools.html" rel="canonical"/>
 <meta content="Dr Saad Laouadi" name="author">
-<meta content="Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field. The …" name="description">
+<meta content="python,virtualenv" name="keywords">
+<meta content="A list of tools for creating Python virtual environment." name="description">
 <!-- Open Graph tags -->
-<meta content="QCVersity" property="og:site_name">
+<meta content="QCVersity" property="og:site_name"/>
 <meta content="article" property="og:type"/>
-<meta content="Home" property="og:title"/>
-<meta content="https://qcversity.github.io/pages/home.html" property="og:url"/>
-<meta content="Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field. The …" property="og:description"/>
+<meta content="Creating Python Virtual Environment with `venv`" property="og:title"/>
+<meta content="https://qcversity.github.io/drafts/python-virtual-env-tools.html" property="og:url"/>
+<meta content="A list of tools for creating Python virtual environment." property="og:description"/>
+<meta content="2023-12-11" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
+<meta content="python" property="article:tag"/>
+<meta content="virtualenv" property="article:tag"/>
+<meta content="Dr Saad Laouadi" property="article:author"/>
 <!-- Twitter Cards -->
 <!-- Flattr ID -->
 <!-- Bootstrap -->
 <!--         <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
  -->
 <!-- Stylesheets -->
-<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/css/pygments/manni.css" rel="stylesheet"/>
@@ -35,9 +40,10 @@
 <!-- -->
 <!-- Feeds -->
 <!--         <link href="https://qcversity.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity ATOM Feed"/>
+        <link href="https://qcversity.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity SoftTools ATOM Feed"/>
  -->
 <!-- Analytics -->
-</link></link></link></meta></meta></meta><link href="https://qcversity.github.io/pages/home.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "Pages", "item": "https://qcversity.github.io/pages"}, {"@type": "ListItem", "position": 3, "name": "Home", "item": "https://qcversity.github.io/pages/home.html"}]}</script></head>
+</link></link></meta></meta></meta><link href="https://qcversity.github.io/drafts/python-virtual-env-tools.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "Drafts", "item": "https://qcversity.github.io/drafts"}, {"@type": "ListItem", "position": 3, "name": "Python virtual env tools", "item": "https://qcversity.github.io/drafts/python-virtual-env-tools.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "Creating Python Virtual Environment with `venv`", "about": "SoftTools", "datePublished": "2023-12-11 08:00"}</script></head>
 <body>
 <!-- Banner -->
 <!-- Navigation Bar -->
@@ -55,7 +61,7 @@ QCVersity                </a>
 <ul class="navbar-nav me-auto mb-2 mb-lg-0 spec-nav-item">
 <!-- Menu Items -->
 <!-- Pages on Menu -->
-<li class="nav-item active">
+<li class="nav-item">
 <a class="nav-link" href="https://qcversity.github.io/pages/home.html">Home</a>
 </li>
 <li class="nav-item">
@@ -68,7 +74,7 @@ QCVersity                </a>
 <li class="nav-item">
 <a class="nav-link" href="https://qcversity.github.io/category/general.html">General</a>
 </li>
-<li class="nav-item">
+<li class="nav-item active">
 <a class="nav-link" href="https://qcversity.github.io/category/softtools.html">Softtools</a>
 </li>
 </ul>
@@ -86,73 +92,112 @@ QCVersity                </a>
 <div class="container-fluid pd-l-35 mb-3" id="content">
 <div class="row mt-5">
 <div class="col-sm-8">
-<section class="body" id="content">
-<!--         <h1 class="entry-title">Home</h1>
- -->
+<section id="content">
+<article>
+<header class="page-header">
+<h1>
+<a href="https://qcversity.github.io/drafts/python-virtual-env-tools.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with `venv`">
+          Creating Python Virtual Environment with `venv`
+        </a>
+</h1>
+</header>
 <div class="entry-content">
-<p><img alt="QCVersity Name" src="../images/qcversity2.png"/></p>
-<p>Welcome to Quant Coding Versity - your premier destination for diving deep into the world of data science, machine learning, deep learning, and a wide array of programming languages. Our mission is to provide high-quality, insightful, and up-to-date content that caters to both beginners and advanced practitioners in the field. <img alt="QCVersity home" src="../images/qcvHome.png"/></p>
-<h2>The Name of Quant Coding Versity Meaning</h2>
-<hr/>
-<p>The name <strong>Quant Coding Versity</strong> is coined by fusing <strong>quantity</strong> and <strong>university,</strong> t0 whisper the essence of this space. It's not just a place to learn the language of machines; it's a university of exploration, where the vast landscapes of data science, statistics, econometrics, applied mathemtics, remote sensing and more become your playground.</p>
-<p>Think of it as your intellectual compass, guiding you through the intricate forests of applied data science, programming, software engineering and beyond. Here, you'll find yourself shoulder-to-shoulder with fellow adventurers, each driven by a thirst for knowledge and a passion for weaving narratives from the threads of data.</p>
-<p>So, whether you're a seasoned data warrior or a wide-eyed explorer on your first quest, QCVersity awaits. Come join us, unravel the mysteries nestled within algorithms, and unlock the power of quantitative coding. The journey starts now, at QCVersity.</p>
-<h2>The Story Behind QCVersity</h2>
-<hr/>
-<p>At the heart of <strong>QCVersity</strong> lies a journey that began with a simple, yet profound, mission: to share knowledge and assist students and researchers across the globe. It all started with online lectures, a small step that marked the beginning of an extraordinary venture.</p>
-<p>As time passed, these sessions evolved into a treasure trove of educational material, a vast repository of knowledge that I had the privilege of creating. Initially, some of these resources found their way to GitHub, reaching a wider audience, eagerly seeking knowledge in the digital world.</p>
-<p>However, a significant portion of my work remained unseen, tucked away in the confines of my laptop. This realization sparked an idea - why not breathe life into these dormant articles and materials? Why not create a space where they can flourish and benefit others?</p>
-<p>Thus, <strong>QCVersity</strong> was born - not just as a website, but as a vibrant educational ecosystem. It's a place where dormant knowledge is awakened and shared, where curious minds come to learn, explore, and grow.</p>
-<p>Moving forward, I am committed to dedicating more time and effort to develop this initiative. <strong>QCVersity</strong> is set to become a cornerstone for those who seek to unravel the complexities of data science, econometrics, programming, and beyond.</p>
-<p>Joining me, I hope this pronoun will become Us sooner, on the journey at QCVersity, where knowledge is not just shared but brought to life, making the experience well-worth the journey, and empowering learners and researchers around the world. 
-<img alt="QCVersity story" src="../images/qcvstory.png"/></p>
-<h2>The QCVersity Objectives</h2>
-<hr/>
-<p>My approach to writing is as diverse as the subjects I cover. I believe that the length of an article should be determined by its content and the level of exploration needed. Hence, I create articles of different lengths – short, medium, and long – customized to capture the core of the subject matter.</p>
-<p>My expertise lies in providing intricate details. With my meticulous attention to detail, I guarantee that each article is a comprehensive source of information. My objective is to provide readers with a complete understanding of the subject, leaving no stone unturned. This typically requires delving into what might be perceived as exaggerated detail. Yet, this thoroughness provides readers with comprehensive answers and a deep comprehension of the subject.</p>
-<p>Beyond just presenting information, I strive to empower my readers. My articles often include insights into the art of gathering information and the skill of learning effectively. These ‘tricks of the trade’ are shared to enhance the reader’s own journey in acquiring knowledge and expertise.</p>
-<p>In every piece, my aim is to not just inform but also to teach and inspire. Whether you’re a seasoned professional or a curious beginner, my articles are designed to guide you through the complexities of the subject and leave you with both knowledge and the means to further your understanding.</p>
-<h2>The Main QCVersity Focus</h2>
-<hr/>
-<p>At Quant Coding Versity, we are passionate about:</p>
-<ul>
-<li>
-<p><strong>Data Science and Machine Learning</strong>: Exploring cutting-edge techniques and applications in data science and machine learning. We delve into various algorithms, methodologies, and their practical implementations.</p>
-</li>
-<li>
-<p><strong>Deep Learning</strong>: Unraveling the complexities of deep learning. Our articles cover neural networks, deep learning frameworks, and real-world applications.</p>
-</li>
-<li>
-<p><strong>Programming Languages</strong>: Offering comprehensive guides and tutorials on languages such as R, Python, Julia, C, C++, Rust, Bash, and more. Whether you're starting out or looking to refine your skills, we have something for everyone.</p>
-</li>
-<li>
-<p><strong>Technical Tools</strong>: Providing insights into a plethora of tools essential for data analysis, visualization, and computational efficiency.</p>
-</li>
-<li>
-<p><strong>Time Series and Econometrics</strong>: Bridging the gap between theory and practice in time series analysis and econometrics. Our content ranges from introductory concepts to advanced modeling techniques.</p>
-</li>
-</ul>
-<p><img alt="QCVersity topics" src="../images/qcvtopics.png"/></p>
-<h2>Our Commitment</h2>
-<hr/>
-<p>We are committed to:</p>
-<ul>
-<li>
-<p><strong>Quality Content</strong>: We are dedicated to providing high-quality content that is comprehensive, accurate, and packed with valuable insights. Our team of experts meticulously crafts each article, tutorial, and guide to ensure it meets the highest standards of excellence.</p>
-</li>
-<li>
-<p><strong>Community Engagement</strong>: We believe in fostering a vibrant and interactive learning community. We actively engage with our readers through comments, forums, and social media, valuing their feedback and incorporating it into our content creation process.</p>
-</li>
-<li>
-<p><strong>Continuous Learning</strong>: We are committed to staying at the forefront of the ever-evolving field of data science and machine learning. Our team continuously engages in professional development and research to bring you the most up-to-date and relevant information.</p>
-</li>
-</ul>
-<h2>Stay Connected</h2>
-<hr/>
-<p>We invite you to explore our site, engage with our content, and join our growing community. For updates, follow us on <a href="https://www.facebook.com/drsaadlaouadi">facebook</a>, join our <a href="https://t.me/+3nlC1pP56uYzMmE0">telegram channel</a> subscribe to our [YouTube Channel] , or reach out to us at <a href="QuantCodingVersty">email address</a>.</p>
-<p>Thank you for choosing <strong>Quant Coding Versity</strong> as your gateway to the world of quantitative and coding excellence!</p>
+<div class="panel">
+<div class="panel-body"><footer class="post-info">
+<span class="label label-default">Date</span>
+<span class="published">
+<i class="fa fa-calendar"></i><time datetime="2023-12-11T08:00:00+01:00"> Mon 11 December 2023</time>
+</span>
+<span class="label label-default">Tags</span>
+<a href="https://qcversity.github.io/tag/python.html">python</a>
+ /  <a href="https://qcversity.github.io/tag/virtualenv.html">virtualenv</a>
+</footer><!-- /.post-info --></div>
 </div>
+<h1>Creating Python Virtual Environment with <code>venv</code></h1>
+<p>This article is the second part in our multi-part series dedicated to Python development tools. Today, we'll be discussing <code>venv</code>, Python's built-in tool for creating virtual environments. This tool makes it easier to create isolated environments for new projects, a crucial step in modern Python development. In our future articles, we will explore more tools and their unique features to enhance your Python programming.</p>
+<h2>Why Virtual Environment</h2>
+<p>In the world of data analysis and programming, setting up a clean and isolated working environment is essential for various reasons:</p>
+<ol>
+<li>
+<p><strong>Dependency Management:</strong> Different projects may require different versions of libraries or Python versions, and conflicts can arise if they share the same environment. Virtual environments allow to manage project-specific dependencies without interfering with each other.</p>
+</li>
+<li>
+<p><strong>Reproducibility:</strong> Virtual environments make it easy to reproduce the exact environment in which your code was developed. This ensures that your code will work the same way across different machines and at different points in time.</p>
+</li>
+<li>
+<p><strong>Security:</strong> Isolating your project in a virtual environment can help prevent security vulnerabilities. It limits the access that your code has to system resources.</p>
+</li>
+<li>
+<p><strong>Portability:</strong> Virtual environments can be easily shared with others, allowing them to set up and run your code on their own systems without compatibility issues.</p>
+</li>
+</ol>
+<h3>Create Virtual Environment Using <code>venv</code></h3>
+<p>It is considered best practice that, when dealing with a command-line tool or utility, the firt step should be to consult its native help documentation. Because the information exists in that page may not be available elsewhere. Here's how you can access the help documentation for venv:</p>
+<ol>
+<li>Launch your command-line interface (CLI).</li>
+<li>Enter the following command:<ul>
+<li><strong>Linux based systems:</strong> <code>python -m venv --help</code> or <code>python -v venv -h</code></li>
+<li><strong>Windows:</strong> I assume that Python is installed and added to the search <code>PATH</code>. You can check if Python is in the search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code>, if it is not in the path, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search path check this <a href="#add-python-to-the-search-path-on-windows">Add Python to the Search Path on Windows</a>. Now you can check the help using this command<ul>
+<li><code>python -m venv --help</code> or just</li>
+<li><code>py -v venv -h</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.</p>
+<ol>
+<li>To create a virtual environment in a given directory, you would run the following command:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>/path/to/directory
+</code></pre></div>
+<p>for example you would like to create a project named <code>plenv</code> (this folder will be the name of your environment) in your documents folder, you would run:</p>
+<ol>
+<li><strong>Linux and Mac OS:</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code>python -m venv ~/Documents/plenv
+</code></pre></div>
+<p>or you can create a virtual environment in the current working directory like this:</p>
+<div class="highlight"><pre><span></span><code>python -m venv . 
+</code></pre></div>
+<p>The name of the virtual environment will be the name of current working directory name. </p>
+<ol>
+<li><strong>Windows:</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code>python -m venv C:\Users\YourUsername\Documents\plenv
+</code></pre></div>
+<p>If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:</p>
+<div class="highlight"><pre><span></span><code>tree<span class="w"> </span>-L<span class="w"> </span><span class="m">2</span><span class="w"> </span>~/Documents/plenv
+
+/Users/trainer/Documents/plenv
+├──<span class="w"> </span>bin
+│<span class="w">   </span>├──<span class="w"> </span>Activate.ps1
+│<span class="w">   </span>├──<span class="w"> </span>activate
+│<span class="w">   </span>├──<span class="w"> </span>activate.csh
+│<span class="w">   </span>├──<span class="w"> </span>activate.fish
+│<span class="w">   </span>├──<span class="w"> </span>pip
+│<span class="w">   </span>├──<span class="w"> </span>pip3
+│<span class="w">   </span>├──<span class="w"> </span>pip3.11
+│<span class="w">   </span>├──<span class="w"> </span>python<span class="w"> </span>-&gt;<span class="w"> </span>/usr/local/anaconda3/bin/python
+│<span class="w">   </span>├──<span class="w"> </span>python3<span class="w"> </span>-&gt;<span class="w"> </span>python
+│<span class="w">   </span>└──<span class="w"> </span>python3.11<span class="w"> </span>-&gt;<span class="w"> </span>python
+├──<span class="w"> </span>include
+│<span class="w">   </span>└──<span class="w"> </span>python3.11
+├──<span class="w"> </span>lib
+│<span class="w">   </span>└──<span class="w"> </span>python3.11
+└──<span class="w"> </span>pyvenv.cfg
+</code></pre></div>
+</div>
+<!-- /.entry-content -->
+<section class="well" id="related-posts">
+<h4>Part <built-in 0x104357af0="" at="" index="" method="" object="" of="" str=""> of: The  Series</built-in></h4>
 </section>
+</article>
+</section>
+<ul>
+</ul>
+<ul>
+</ul>
 </div>
 <!-- Sidebar -->
 <div class="col-sm-4" id="sidebar">
@@ -163,8 +208,8 @@ QCVersity                </a>
 <div id="aboutme">
 <div>
 <p>
-<img class="img-thumbnail" src="https://qcversity.github.io/images/avatar.png" width="80%">
-</img></p>
+<img class="img-thumbnail" src="https://qcversity.github.io/images/avatar.png" width="80%"/>
+</p>
 </div>
 </div>
 </div>
@@ -176,7 +221,7 @@ QCVersity                </a>
 <div class="card-body">
 <h5 class="card-title author">Dr. Saad Laouadi</h5>
 <h4 class="card-subtitle mb-2 light-teal" style="font-family: 'Snell Roundhand', 'cursive';text-align:center"><strong>Data Whisperer, Code Slinger, Knowledge Enthusiast</strong></h4>
-<hr>
+<hr/>
 <div class="text-ff-ddot">
 <p>
         With a PhD in Economics and a fervent passion for programming, I, Dr. Saad Laouadi, have crafted a unique niche in the realm of data science. My academic roots in economics fuel my approach to data analysis, enabling me to unravel the stories behind numbers and economic patterns.
@@ -195,7 +240,7 @@ QCVersity                </a>
         Driven by a thirst for knowledge and innovation, each day is a new adventure at the intersection of data, economics, and technology.
       </p>
 </div>
-</hr></div>
+</div>
 </div>
 </div> </div>
 <!-- Sidebar -->
@@ -317,8 +362,8 @@ QCVersity                </a>
               © 2023 Dr Saad Laouadi                  <p>
 <small>
 <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">
-<img alt="Creative Commons License" class="icon-image" src="../images/by-sa.svg">
-</img></a>
+<img alt="Creative Commons License" class="icon-image" src="../images/by-sa.svg"/>
+</a>
 <!-- <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
         <img alt="Creative Commons License" style="border-width: 0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" />
     </a> -->
