@@ -11,7 +11,7 @@ Welcome to Quant Coding Versity - your premier destination for diving deep into 
 ## The Name of Quant Coding Versity Meaning
 -------------------------------------------
 
-The name **Quant Coding Versity** is coined by fusing **quantity** and **university,** t0 whisper the essence of this space. It's not just a place to learn the language of machines; it's a university of exploration, where the vast landscapes of data science, statistics, econometrics, applied mathemtics, remote sensing and more become your playground.
+The name **Quant Coding Versity** is coined by fusing **quantity** and **university,** to whisper the essence of this space. It's not just a place to learn the language of machines; it's a university of exploration, where the vast landscapes of data science, statistics, econometrics, applied mathemtics, remote sensing and more become your playground.
 
 Think of it as your intellectual compass, guiding you through the intricate forests of applied data science, programming, software engineering and beyond. Here, you'll find yourself shoulder-to-shoulder with fellow adventurers, each driven by a thirst for knowledge and a passion for weaving narratives from the threads of data.
 
