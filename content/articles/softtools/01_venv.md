@@ -32,9 +32,8 @@ When starting with a command-line tool like venv, it's a good idea to first chec
 
 1. Launch your command-line interface (CLI).
 
-2. Enter the following command:
-
-- **Linux based systems:** 
+2. Enter the following commands:
+	- **Linux based systems:** 
 
 ```
 python -m venv --help
@@ -46,11 +45,10 @@ python -v venv -h
 ```
 
 
-- **Windows:** I assume Python is installed and added to the search `PATH`. 
- 	- You can check if Python is in the search `PATH` by typing `python --version` or just `py --version`.
- 	-  if it is not in the system’s search PATH, the command will output an error and you need to add it to the `PATH`. If you need help on how to add Python to the search PATH, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html).  
-
-   - If you are all set, then you can check the `help` manual using one of the following commands:
+- **Windows:** I assume Python is already installed and added to the system's search `PATH`. 
+	 - You can check whether Python is in the system's search `PATH` by typing `python --version` or just `py --version` in the command prompt.
+	 - If it is not in the system’s search `PATH`, the command will output an error and you need to add it to the `PATH`. If you need help on how to add Python to the search `PATH`, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html) for more information.  
+	 - If you are all set, then you can check the `help` manual using one of the following commands:
 
 ```
 python -m venv --help
