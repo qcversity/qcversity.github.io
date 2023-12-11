@@ -31,7 +31,7 @@
 <link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://qcversity.github.io/theme/qcvtheme/css/pygments/manni.css" rel="stylesheet"/>
+<link href="https://qcversity.github.io/theme/qcvtheme/css/pygments/native.css" rel="stylesheet"/>
 <link href="https://qcversity.github.io/theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
 <!-- <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
@@ -139,55 +139,49 @@ QCVersity                </a>
 </li>
 <li>
 <p>Enter the following command:</p>
-<ul>
-<li>
-<p><strong>Linux based systems:</strong> <code>python -m venv --help</code> or <code>python -v venv -h</code></p>
 </li>
+<li>
+<p><strong>Linux based systems:</strong> </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python -m venv --help
+</code></pre></div>
+<p>or </p>
+<div class="highlight"><pre><span></span><code>python -v venv -h
+</code></pre></div>
+<ul>
 <li>
 <p><strong>Windows:</strong> I assume Python is installed and added to the search <code>PATH</code>. </p>
 <ul>
-<li>
-<p>You can check if Python is in the search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code>.</p>
-</li>
-<li>
-<p>if it is not in the system’s search PATH, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search PATH, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a>.  </p>
+<li>You can check if Python is in the search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code>.</li>
+<li>if it is not in the system’s search PATH, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search PATH, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a>.  </li>
+</ul>
 </li>
 <li>
 <p>If you are all set, then you can check the <code>help</code> manual using one of the following commands:</p>
-<ul>
-<li><code>python -m venv --help</code> </li>
+</li>
 </ul>
+<div class="highlight"><pre><span></span><code>python -m venv --help
+</code></pre></div>
 <p>or just</p>
-<ul>
-<li><code>py -v venv -h</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
+<div class="highlight"><pre><span></span><code>py -v venv -h
+</code></pre></div>
 <p>In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.</p>
 <p><strong>To create a virtual environment in a given directory, you would run the following command:</strong></p>
 <div class="highlight"><pre><span></span><code>python -m venv /path/to/directory
 </code></pre></div>
 <p>for example you would like to create a project named <code>plenv</code> (this folder will be the name of your environment) in your documents folder, you would run:</p>
-<ol>
-<li>
-<p><strong>Linux and Mac OS:</strong></p>
-<p><code>python -m venv ~/Documents/plenv</code>
-or you can create a virtual environment in the current working directory like this:</p>
-<p><code>python -m venv .</code></p>
+<h5>Linux and Mac OS</h5>
+<div class="highlight"><pre><span></span><code>python -m venv ~/Documents/plenv
+</code></pre></div>
+<p>or you can create a virtual environment in the current working directory like this:</p>
+<div class="highlight"><pre><span></span><code>python -m venv . 
+</code></pre></div>
 <p>The name of the virtual environment will be the name of the current working directory name. </p>
-</li>
-<li>
-<p><strong>Windows:</strong></p>
-<p><code>python -m venv C:\Users\YourUsername\Documents\plenv</code></p>
-</li>
-</ol>
-<blockquote>
-<p>Note: Some programmers tend to name the virtual environment <code>venv</code>, this can be useful when using other tools, however, I gave a different example to avoid confusion about the <code>venv</code> tool and the newly created environment name, you can name whatever you like though. </p>
-</blockquote>
+<h5>Windows</h5>
+<div class="highlight"><pre><span></span><code>python -m venv C:\Users\YourUsername\Documents\plenv
+</code></pre></div>
+<p><strong>Note</strong>: Some programmers tend to name the virtual environment <code>venv</code>, this can be useful when using other tools, however, I gave a different example to avoid confusion about the <code>venv</code> tool and the newly created environment name, you can name whatever you like though. </p>
 <p>If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:</p>
 <div class="highlight"><pre><span></span><code><span class="n">tree</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">plenv</span>
 
@@ -244,8 +238,13 @@ or you can create a virtual environment in the current working directory like th
 <h2>Configure and Use the Virtual Environment</h2>
 <p>Once you’ve activated the new virtual environment, you can use the <code>pip</code> package manager to add and change packages for it. You’ll find <code>pip</code> in the Scripts subdirectory of the virtual environment on Windows, and in the bin subdirectory on Unix systems.</p>
 <h3>Update <code>pip</code></h3>
-<p>It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the <code>pip</code> package manager using this command <code>python -m pip install -U pip</code>. This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. </p>
-<p>You might be tempted to use the command <code>pip install -U pip</code> to save some typing, however this command may not be able to complete the upgrade properly.</p>
+<p>It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the <code>pip</code> package manager using this command</p>
+<div class="highlight"><pre><span></span><code>python -m pip install -U pip
+</code></pre></div>
+<p>This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. </p>
+<p>You might be tempted to use the next command to save some typing, however this command may not be able to complete the upgrade properly.</p>
+<div class="highlight"><pre><span></span><code>pip install -U pip
+</code></pre></div>
 <p>Following the upgrade process, you can verify that the installed <code>pip</code> version within the activated virtual environment using the command <code>pip -V</code>. This command will display the <code>pip</code> version and indicate the path where the virtual environment is created.</p>
 <h3>Install Packages in a Virtual Environment</h3>
 <p>Once you’ve successfully set up and activated your Python virtual environment using <code>venv</code> and <code>updated pip</code>, the next step is to install the Python packages that your project requires. This process is straightforward, whether you’re familiar with <code>pip</code> or not. <code>Pip</code> is a package manager for Python, allowing you to install and manage additional libraries and dependencies that are not included in the standard Python library.</p>
@@ -273,9 +272,12 @@ or you can create a virtual environment in the current working directory like th
 </li>
 <li>
 <p><strong>Ease of Setup:</strong> In scenarios where you or someone else needs to set up the project afresh (like on a new machine or in a different environment), the <code>requirements.txt</code> file simplifies the process. Instead of installing each package individually, you can use the command while your virtual environment is activated.</p>
-<p><code>pip install -r requirements.txt</code></p>
-<p>This command instructs <code>pip</code> to install automatically all the packages listed in the <code>requirements.txt</code>.</p>
 </li>
+</ul>
+<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
+</code></pre></div>
+<p>This command instructs <code>pip</code> to install automatically all the packages listed in the <code>requirements.txt</code>.</p>
+<ul>
 <li>
 <p><strong>Consistency Across Environments:</strong> By using a <code>requirements.txt</code> file, you ensure that everyone working on the project is using the same versions of packages, which helps in reducing <strong>"it works on my machine"</strong> problems. This consistency is vital for collaborative projects and for maintaining a stable development environment.</p>
 </li>
@@ -290,9 +292,12 @@ or you can create a virtual environment in the current working directory like th
 <p><strong>Ending the Session</strong>: You can terminate the session by closing the terminal or command prompt session in which the virtual environment was activated. This ends the current session, and by extension, deactivates the virtual environment.</p>
 </li>
 <li>
-<p><strong>Using the deactivate Command:</strong> If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command <code>deactivate</code>. This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.</p>
+<p><strong>Using the deactivate Command:</strong> If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command </p>
 </li>
 </ol>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div>
+<p>This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.</p>
 <h3>Removing a Virtual environment:</h3>
 <p>Virtual environments in Python are standalone containers, which means that all the files and configurations specific to a virtual environment are stored in its own directory. This includes the Python interpreter, libraries, and scripts that are installed within the environment. </p>
 <p>Since everything that makes up a virtual environment is confined to its directory, removing a virtual environment is as simple as deleting this directory. This is a straightforward process because there are no system-wide changes or dependencies outside this directory that you need to worry about.</p>
@@ -326,13 +331,13 @@ or you can create a virtual environment in the current working directory like th
 <p>Put together, <code>rm -rf ~/Documents/plenv</code> is a command to forcibly and recursively remove the directory named <code>plenv</code> located in the Documents directory of the current user’s home folder, along with all of its contents (files and subdirectories).</p>
 <h4>Delete the Virtual environment on Windows system:</h4>
 <p>If you are using Windows, you can use the next command to delete the no longer need virtual environment:</p>
-<div class="highlight"><pre><span></span><code>rd<span class="w"> </span>/S<span class="w">  </span>C:<span class="se">\\</span>Users<span class="se">\\</span>YourUsername<span class="se">\\</span>Documents<span class="se">\\</span>plenv
+<div class="highlight"><pre><span></span><code>rd<span class="w"> </span>/S<span class="w">  </span><span class="s2">"C:\Users\YourUsername\Documents\plenv"</span>
 </code></pre></div>
 <ul>
 <li>The <code>rd</code> command is similar to <code>rm</code> command that deletes a directory on Windows.</li>
 <li>The <code>/S</code> option instructs <code>rd</code> to remove all directories and files in the specified directory, in addition to the directory itself.</li>
 </ul>
-<p>That is it, you are done, and you will be able create a new virtual for a new project by following the previous steps. </p>
+<p>In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. </p>
 </div>
 <!-- /.entry-content -->
 <section class="well" id="related-posts">

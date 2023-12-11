@@ -70,56 +70,57 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Enter the following command:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Linux based systems:&lt;/strong&gt; &lt;code&gt;python -m venv --help&lt;/code&gt; or &lt;code&gt;python -v venv -h&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Linux based systems:&lt;/strong&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv --help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -v venv -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt; I assume Python is installed and added to the search &lt;code&gt;PATH&lt;/code&gt;. &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;You can check if Python is in the search &lt;code&gt;PATH&lt;/code&gt; by typing &lt;code&gt;python --version&lt;/code&gt; or just &lt;code&gt;py --version&lt;/code&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;if it is not in the system’s search PATH, the command will output an error and you need to add it to the &lt;code&gt;PATH&lt;/code&gt;. If you need help on how to add Python to the search PATH, you may check this article &lt;a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html"&gt;Add Python to the Search Path on Windows&lt;/a&gt;.  &lt;/p&gt;
+&lt;li&gt;You can check if Python is in the search &lt;code&gt;PATH&lt;/code&gt; by typing &lt;code&gt;python --version&lt;/code&gt; or just &lt;code&gt;py --version&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;if it is not in the system’s search PATH, the command will output an error and you need to add it to the &lt;code&gt;PATH&lt;/code&gt;. If you need help on how to add Python to the search PATH, you may check this article &lt;a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html"&gt;Add Python to the Search Path on Windows&lt;/a&gt;.  &lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;If you are all set, then you can check the &lt;code&gt;help&lt;/code&gt; manual using one of the following commands:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;python -m venv --help&lt;/code&gt; &lt;/li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv --help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;or just&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;py -v venv -h&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;py -v venv -h
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;To create a virtual environment in a given directory, you would run the following command:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv /path/to/directory
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;for example you would like to create a project named &lt;code&gt;plenv&lt;/code&gt; (this folder will be the name of your environment) in your documents folder, you would run:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Linux and Mac OS:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python -m venv ~/Documents/plenv&lt;/code&gt;
-or you can create a virtual environment in the current working directory like this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python -m venv .&lt;/code&gt;&lt;/p&gt;
+&lt;h5&gt;Linux and Mac OS&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv ~/Documents/plenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;or you can create a virtual environment in the current working directory like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv . 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The name of the virtual environment will be the name of the current working directory name. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;python -m venv C:\Users\YourUsername\Documents\plenv&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: Some programmers tend to name the virtual environment &lt;code&gt;venv&lt;/code&gt;, this can be useful when using other tools, however, I gave a different example to avoid confusion about the &lt;code&gt;venv&lt;/code&gt; tool and the newly created environment name, you can name whatever you like though. &lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h5&gt;Windows&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv C:\Users\YourUsername\Documents\plenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Some programmers tend to name the virtual environment &lt;code&gt;venv&lt;/code&gt;, this can be useful when using other tools, however, I gave a different example to avoid confusion about the &lt;code&gt;venv&lt;/code&gt; tool and the newly created environment name, you can name whatever you like though. &lt;/p&gt;
 &lt;p&gt;If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;tree&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;Documents&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;plenv&lt;/span&gt;
 
@@ -177,8 +178,15 @@ or you can create a virtual environment in the current working directory like th
 &lt;h2&gt;Configure and Use the Virtual Environment&lt;/h2&gt;
 &lt;p&gt;Once you’ve activated the new virtual environment, you can use the &lt;code&gt;pip&lt;/code&gt; package manager to add and change packages for it. You’ll find &lt;code&gt;pip&lt;/code&gt; in the Scripts subdirectory of the virtual environment on Windows, and in the bin subdirectory on Unix systems.&lt;/p&gt;
 &lt;h3&gt;Update &lt;code&gt;pip&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the &lt;code&gt;pip&lt;/code&gt; package manager using this command &lt;code&gt;python -m pip install -U pip&lt;/code&gt;. This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. &lt;/p&gt;
-&lt;p&gt;You might be tempted to use the command &lt;code&gt;pip install -U pip&lt;/code&gt; to save some typing, however this command may not be able to complete the upgrade properly.&lt;/p&gt;
+&lt;p&gt;It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the &lt;code&gt;pip&lt;/code&gt; package manager using this command&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m pip install -U pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. &lt;/p&gt;
+&lt;p&gt;You might be tempted to use the next command to save some typing, however this command may not be able to complete the upgrade properly.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install -U pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Following the upgrade process, you can verify that the installed &lt;code&gt;pip&lt;/code&gt; version within the activated virtual environment using the command &lt;code&gt;pip -V&lt;/code&gt;. This command will display the &lt;code&gt;pip&lt;/code&gt; version and indicate the path where the virtual environment is created.&lt;/p&gt;
 &lt;h3&gt;Install Packages in a Virtual Environment&lt;/h3&gt;
 &lt;p&gt;Once you’ve successfully set up and activated your Python virtual environment using &lt;code&gt;venv&lt;/code&gt; and &lt;code&gt;updated pip&lt;/code&gt;, the next step is to install the Python packages that your project requires. This process is straightforward, whether you’re familiar with &lt;code&gt;pip&lt;/code&gt; or not. &lt;code&gt;Pip&lt;/code&gt; is a package manager for Python, allowing you to install and manage additional libraries and dependencies that are not included in the standard Python library.&lt;/p&gt;
@@ -208,9 +216,13 @@ or you can create a virtual environment in the current working directory like th
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Ease of Setup:&lt;/strong&gt; In scenarios where you or someone else needs to set up the project afresh (like on a new machine or in a different environment), the &lt;code&gt;requirements.txt&lt;/code&gt; file simplifies the process. Instead of installing each package individually, you can use the command while your virtual environment is activated.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This command instructs &lt;code&gt;pip&lt;/code&gt; to install automatically all the packages listed in the &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This command instructs &lt;code&gt;pip&lt;/code&gt; to install automatically all the packages listed in the &lt;code&gt;requirements.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Consistency Across Environments:&lt;/strong&gt; By using a &lt;code&gt;requirements.txt&lt;/code&gt; file, you ensure that everyone working on the project is using the same versions of packages, which helps in reducing &lt;strong&gt;"it works on my machine"&lt;/strong&gt; problems. This consistency is vital for collaborative projects and for maintaining a stable development environment.&lt;/p&gt;
 &lt;/li&gt;
@@ -225,9 +237,13 @@ or you can create a virtual environment in the current working directory like th
 &lt;p&gt;&lt;strong&gt;Ending the Session&lt;/strong&gt;: You can terminate the session by closing the terminal or command prompt session in which the virtual environment was activated. This ends the current session, and by extension, deactivates the virtual environment.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Using the deactivate Command:&lt;/strong&gt; If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command &lt;code&gt;deactivate&lt;/code&gt;. This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using the deactivate Command:&lt;/strong&gt; If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;deactivate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.&lt;/p&gt;
 &lt;h3&gt;Removing a Virtual environment:&lt;/h3&gt;
 &lt;p&gt;Virtual environments in Python are standalone containers, which means that all the files and configurations specific to a virtual environment are stored in its own directory. This includes the Python interpreter, libraries, and scripts that are installed within the environment. &lt;/p&gt;
 &lt;p&gt;Since everything that makes up a virtual environment is confined to its directory, removing a virtual environment is as simple as deleting this directory. This is a straightforward process because there are no system-wide changes or dependencies outside this directory that you need to worry about.&lt;/p&gt;
@@ -262,14 +278,14 @@ or you can create a virtual environment in the current working directory like th
 &lt;p&gt;Put together, &lt;code&gt;rm -rf ~/Documents/plenv&lt;/code&gt; is a command to forcibly and recursively remove the directory named &lt;code&gt;plenv&lt;/code&gt; located in the Documents directory of the current user’s home folder, along with all of its contents (files and subdirectories).&lt;/p&gt;
 &lt;h4&gt;Delete the Virtual environment on Windows system:&lt;/h4&gt;
 &lt;p&gt;If you are using Windows, you can use the next command to delete the no longer need virtual environment:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rd&lt;span class="w"&gt; &lt;/span&gt;/S&lt;span class="w"&gt;  &lt;/span&gt;C:&lt;span class="se"&gt;\\&lt;/span&gt;Users&lt;span class="se"&gt;\\&lt;/span&gt;YourUsername&lt;span class="se"&gt;\\&lt;/span&gt;Documents&lt;span class="se"&gt;\\&lt;/span&gt;plenv
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;rd&lt;span class="w"&gt; &lt;/span&gt;/S&lt;span class="w"&gt;  &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;C:\Users\YourUsername\Documents\plenv&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
 &lt;li&gt;The &lt;code&gt;rd&lt;/code&gt; command is similar to &lt;code&gt;rm&lt;/code&gt; command that deletes a directory on Windows.&lt;/li&gt;
 &lt;li&gt;The &lt;code&gt;/S&lt;/code&gt; option instructs &lt;code&gt;rd&lt;/code&gt; to remove all directories and files in the specified directory, in addition to the directory itself.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;That is it, you are done, and you will be able create a new virtual for a new project by following the previous steps. &lt;/p&gt;</content><category term="SoftTools"></category><category term="python"></category><category term="virtualenv"></category></entry><entry><title>Mastering Python Virtual Environment Tools: A Comprehensive Guide</title><link href="https://qcversity.github.io/2023/python-virtual-env-tools.html" rel="alternate"></link><published>2023-12-06T08:00:00+01:00</published><updated>2023-12-06T08:00:00+01:00</updated><author><name>Dr Saad Laouadi</name></author><id>tag:qcversity.github.io,2023-12-06:/2023/python-virtual-env-tools.html</id><summary type="html">&lt;p&gt;A list of tools for creating Python virtual environment.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Python Virtual Environment Tools&lt;/h1&gt;
+&lt;p&gt;In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. &lt;/p&gt;</content><category term="SoftTools"></category><category term="python"></category><category term="virtualenv"></category></entry><entry><title>Mastering Python Virtual Environment Tools: A Comprehensive Guide</title><link href="https://qcversity.github.io/2023/python-virtual-env-tools.html" rel="alternate"></link><published>2023-12-06T08:00:00+01:00</published><updated>2023-12-06T08:00:00+01:00</updated><author><name>Dr Saad Laouadi</name></author><id>tag:qcversity.github.io,2023-12-06:/2023/python-virtual-env-tools.html</id><summary type="html">&lt;p&gt;A list of tools for creating Python virtual environment.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Python Virtual Environment Tools&lt;/h1&gt;
 &lt;p&gt;&lt;img alt="Python Development Tools" src="../images/pyenvtools.png"&gt;&lt;/p&gt;
 &lt;p&gt;Have you ever found yourself scratching your head over a Python project, wondering, ‘Why did it suddenly stop working?’ or ‘Where did these errors come from?’ You're definitely not alone. Such moments of frustration are familiar to many developers, from beginners to expert pros.&lt;/p&gt;
 &lt;p&gt;In the ever-evolving field of software development, Python stands as a tool of choice across an array of fields, from data science and artificial intelligence to web development and scientific research. However, Python user have varying levels of programming experience and they come from diverse professional backgrounds.&lt;/p&gt;
