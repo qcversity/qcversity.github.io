@@ -34,25 +34,39 @@ When starting with a command-line tool like venv, it's a good idea to first chec
 
 2. Enter the following command:
 
-    - **Linux based systems:** `python -m venv --help` or `python -v venv -h`
+- **Linux based systems:** 
 
-    - **Windows:** I assume Python is installed and added to the search `PATH`. 
+```
+python -m venv --help
+```
+or 
 
-    	- You can check if Python is in the search `PATH` by typing `python --version` or just `py --version`.
+```
+python -v venv -h
+```
 
-    	-  if it is not in the system’s search PATH, the command will output an error and you need to add it to the `PATH`. If you need help on how to add Python to the search PATH, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html).  
 
-    	- If you are all set, then you can check the `help` manual using one of the following commands:
+- **Windows:** I assume Python is installed and added to the search `PATH`. 
+ 	- You can check if Python is in the search `PATH` by typing `python --version` or just `py --version`.
+ 	-  if it is not in the system’s search PATH, the command will output an error and you need to add it to the `PATH`. If you need help on how to add Python to the search PATH, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html).  
 
-    		- `python -m venv --help` 
-    		
-    		 or just
+   - If you are all set, then you can check the `help` manual using one of the following commands:
+
+```
+python -m venv --help
+```
+
+or just
     		 
-    		- `py -v venv -h`
+```
+py -v venv -h
+```
+
 
 In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.
 
 **To create a virtual environment in a given directory, you would run the following command:**
+
 
 ```
 python -m venv /path/to/directory
@@ -60,26 +74,29 @@ python -m venv /path/to/directory
 
 for example you would like to create a project named `plenv` (this folder will be the name of your environment) in your documents folder, you would run:
 
-1. **Linux and Mac OS:**
+##### Linux and Mac OS
 
-	```
-	python -m venv ~/Documents/plenv
-	```
-	or you can create a virtual environment in the current working directory like this:
 
-	```
-	python -m venv . 
-	```
+```
+python -m venv ~/Documents/plenv
+```
+
+or you can create a virtual environment in the current working directory like this:
+
+```
+python -m venv . 
+```
 	
-	The name of the virtual environment will be the name of the current working directory name. 
 
-2. **Windows:**
+The name of the virtual environment will be the name of the current working directory name. 
 
-	```
-	python -m venv C:\Users\YourUsername\Documents\plenv
-	```
+##### Windows
 
-> Note: Some programmers tend to name the virtual environment `venv`, this can be useful when using other tools, however, I gave a different example to avoid confusion about the `venv` tool and the newly created environment name, you can name whatever you like though. 
+```
+python -m venv C:\Users\YourUsername\Documents\plenv
+```
+
+**Note**: Some programmers tend to name the virtual environment `venv`, this can be useful when using other tools, however, I gave a different example to avoid confusion about the `venv` tool and the newly created environment name, you can name whatever you like though. 
 
 If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:
 
@@ -138,9 +155,21 @@ Once you’ve activated the new virtual environment, you can use the `pip` packa
 
 ### Update `pip`
 
-It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the `pip` package manager using this command `python -m pip install -U pip`. This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. 
+It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the `pip` package manager using this command
 
-You might be tempted to use the command `pip install -U pip` to save some typing, however this command may not be able to complete the upgrade properly.
+```
+python -m pip install -U pip
+```
+
+This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. 
+
+
+You might be tempted to use the next command to save some typing, however this command may not be able to complete the upgrade properly.
+
+```
+pip install -U pip
+```
+
 
 Following the upgrade process, you can verify that the installed `pip` version within the activated virtual environment using the command `pip -V`. This command will display the `pip` version and indicate the path where the virtual environment is created.
 
@@ -149,6 +178,7 @@ Following the upgrade process, you can verify that the installed `pip` version w
 Once you’ve successfully set up and activated your Python virtual environment using `venv` and `updated pip`, the next step is to install the Python packages that your project requires. This process is straightforward, whether you’re familiar with `pip` or not. `Pip` is a package manager for Python, allowing you to install and manage additional libraries and dependencies that are not included in the standard Python library.
 
 To install a package, you simply use the command `pip install` followed by the name of the package. For example, to install the `Flask` web framework, you would type:
+
 
 ```
 pip install flask
@@ -189,11 +219,12 @@ When working on Python projects, especially those with complex dependencies, it 
 
    - **Ease of Setup:** In scenarios where you or someone else needs to set up the project afresh (like on a new machine or in a different environment), the `requirements.txt` file simplifies the process. Instead of installing each package individually, you can use the command while your virtual environment is activated.
 
-	 ```
-    pip install -r requirements.txt
-    ```
+```
+pip install -r requirements.txt
+```
     
-    This command instructs `pip` to install automatically all the packages listed in the `requirements.txt`.
+
+This command instructs `pip` to install automatically all the packages listed in the `requirements.txt`.
 
    - **Consistency Across Environments:** By using a `requirements.txt` file, you ensure that everyone working on the project is using the same versions of packages, which helps in reducing **"it works on my machine"** problems. This consistency is vital for collaborative projects and for maintaining a stable development environment.
 
@@ -205,7 +236,13 @@ Once you have finished working within the virtual environment, you deactivate it
 
 1. **Ending the Session**: You can terminate the session by closing the terminal or command prompt session in which the virtual environment was activated. This ends the current session, and by extension, deactivates the virtual environment.
 
-2. **Using the deactivate Command:** If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command `deactivate`. This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.
+2. **Using the deactivate Command:** If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command 
+
+```
+deactivate
+```
+
+This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.
 
 ### Removing a Virtual environment:
 
@@ -239,13 +276,10 @@ Put together, `rm -rf ~/Documents/plenv` is a command to forcibly and recursivel
 If you are using Windows, you can use the next command to delete the no longer need virtual environment:
 
 ```bash
-rd /S  C:\\Users\\YourUsername\\Documents\\plenv
+rd /S  "C:\Users\YourUsername\Documents\plenv"
 ```
 
 - The `rd` command is similar to `rm` command that deletes a directory on Windows.
 - The `/S` option instructs `rd` to remove all directories and files in the specified directory, in addition to the directory itself.
 
-That is it, you are done, and you will be able create a new virtual for a new project by following the previous steps. 
-
-
-
+In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. 

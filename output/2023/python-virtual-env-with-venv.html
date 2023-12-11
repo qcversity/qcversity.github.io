@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Favicons -->
-<link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/>
+<link href="../2023/python-virtual-env-with-venv.html" rel="canonical"/>
 <meta content="Dr Saad Laouadi" name="author">
 <meta content="python,virtualenv" name="keywords">
 <meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." name="description">
@@ -16,7 +16,7 @@
 <meta content="QCVersity" property="og:site_name"/>
 <meta content="article" property="og:type"/>
 <meta content="Creating Python Virtual Environment with Venv Tool" property="og:title"/>
-<meta content="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" property="og:url"/>
+<meta content="../2023/python-virtual-env-with-venv.html" property="og:url"/>
 <meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." property="og:description"/>
 <meta content="2023-12-11" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
 <meta content="python" property="article:tag"/>
@@ -25,23 +25,21 @@
 <!-- Twitter Cards -->
 <!-- Flattr ID -->
 <!-- Bootstrap -->
-<!--         <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
+<!--         <link rel="stylesheet" href="../theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
  -->
 <!-- Stylesheets -->
-<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="https://qcversity.github.io/theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="https://qcversity.github.io/theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
-<link href="https://qcversity.github.io/theme/qcvtheme/css/pygments/manni.css" rel="stylesheet"/>
-<link href="https://qcversity.github.io/theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
-<!-- <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
-    <link rel="stylesheet" href="https://qcversity.github.io/theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
+<link href="../theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../theme/qcvtheme/css/pygments/native.css" rel="stylesheet"/>
+<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
 <!-- -->
-<link href="https://qcversity.github.io/theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
 <!-- -->
 <!-- Feeds -->
-<!--         <link href="https://qcversity.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity ATOM Feed"/>
-        <link href="https://qcversity.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity SoftTools ATOM Feed"/>
- -->
+<!-- -->
 <!-- Analytics -->
 </link></link></meta></meta></meta><link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "2023", "item": "https://qcversity.github.io/2023"}, {"@type": "ListItem", "position": 3, "name": "Python virtual env with venv", "item": "https://qcversity.github.io/2023/python-virtual-env-with-venv.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "Creating Python Virtual Environment with Venv Tool", "about": "SoftTools", "datePublished": "2023-12-11 08:00"}</script></head>
 <body>
@@ -54,7 +52,7 @@
 <button aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target=".navbar-ex1-collapse" data-bs-toggle="collapse" type="button">
 <span class="navbar-toggler-icon"></span>
 </button>
-<a class="navbar-brand" href="https://qcversity.github.io/">
+<a class="navbar-brand" href="../">
 QCVersity                </a>
 </div>
 <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -62,20 +60,23 @@ QCVersity                </a>
 <!-- Menu Items -->
 <!-- Pages on Menu -->
 <li class="nav-item">
-<a class="nav-link" href="https://qcversity.github.io/pages/home.html">Home</a>
+<a class="nav-link" href="../pages/home.html">Home</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="https://qcversity.github.io/pages/about.html">About</a>
+<a class="nav-link" href="../pages/about.html">About</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="https://qcversity.github.io/pages/contact.html">Contact</a>
+<a class="nav-link" href="../pages/contact.html">Contact</a>
 </li>
 <!-- Categories on Menu -->
 <li class="nav-item">
-<a class="nav-link" href="https://qcversity.github.io/category/general.html">General</a>
+<a class="nav-link" href="../category/general.html">General</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../category/programming.html">Programming</a>
 </li>
 <li class="nav-item active">
-<a class="nav-link" href="https://qcversity.github.io/category/softtools.html">Softtools</a>
+<a class="nav-link" href="../category/softtools.html">Softtools</a>
 </li>
 </ul>
 </div>
@@ -96,7 +97,7 @@ QCVersity                </a>
 <article>
 <header class="page-header">
 <h1>
-<a href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
+<a href="../2023/python-virtual-env-with-venv.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
           Creating Python Virtual Environment with Venv Tool
         </a>
 </h1>
@@ -109,8 +110,8 @@ QCVersity                </a>
 <i class="fa fa-calendar"></i><time datetime="2023-12-11T08:00:00+01:00"> Mon 11 December 2023</time>
 </span>
 <span class="label label-default">Tags</span>
-<a href="https://qcversity.github.io/tag/python.html">python</a>
- /  <a href="https://qcversity.github.io/tag/virtualenv.html">virtualenv</a>
+<a href="../tag/python.html">python</a>
+ /  <a href="../tag/virtualenv.html">virtualenv</a>
 </footer><!-- /.post-info --></div>
 </div>
 <h1>Creating Python Virtual Environment with Venv</h1>
@@ -139,55 +140,49 @@ QCVersity                </a>
 </li>
 <li>
 <p>Enter the following command:</p>
-<ul>
-<li>
-<p><strong>Linux based systems:</strong> <code>python -m venv --help</code> or <code>python -v venv -h</code></p>
 </li>
+<li>
+<p><strong>Linux based systems:</strong> </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python -m venv --help
+</code></pre></div>
+<p>or </p>
+<div class="highlight"><pre><span></span><code>python -v venv -h
+</code></pre></div>
+<ul>
 <li>
 <p><strong>Windows:</strong> I assume Python is installed and added to the search <code>PATH</code>. </p>
 <ul>
-<li>
-<p>You can check if Python is in the search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code>.</p>
-</li>
-<li>
-<p>if it is not in the system’s search PATH, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search PATH, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a>.  </p>
+<li>You can check if Python is in the search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code>.</li>
+<li>if it is not in the system’s search PATH, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search PATH, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a>.  </li>
+</ul>
 </li>
 <li>
 <p>If you are all set, then you can check the <code>help</code> manual using one of the following commands:</p>
-<ul>
-<li><code>python -m venv --help</code> </li>
+</li>
 </ul>
+<div class="highlight"><pre><span></span><code>python -m venv --help
+</code></pre></div>
 <p>or just</p>
-<ul>
-<li><code>py -v venv -h</code></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
+<div class="highlight"><pre><span></span><code>py -v venv -h
+</code></pre></div>
 <p>In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.</p>
 <p><strong>To create a virtual environment in a given directory, you would run the following command:</strong></p>
 <div class="highlight"><pre><span></span><code>python -m venv /path/to/directory
 </code></pre></div>
 <p>for example you would like to create a project named <code>plenv</code> (this folder will be the name of your environment) in your documents folder, you would run:</p>
-<ol>
-<li>
-<p><strong>Linux and Mac OS:</strong></p>
-<p><code>python -m venv ~/Documents/plenv</code>
-or you can create a virtual environment in the current working directory like this:</p>
-<p><code>python -m venv .</code></p>
+<h5>Linux and Mac OS</h5>
+<div class="highlight"><pre><span></span><code>python -m venv ~/Documents/plenv
+</code></pre></div>
+<p>or you can create a virtual environment in the current working directory like this:</p>
+<div class="highlight"><pre><span></span><code>python -m venv . 
+</code></pre></div>
 <p>The name of the virtual environment will be the name of the current working directory name. </p>
-</li>
-<li>
-<p><strong>Windows:</strong></p>
-<p><code>python -m venv C:\Users\YourUsername\Documents\plenv</code></p>
-</li>
-</ol>
-<blockquote>
-<p>Note: Some programmers tend to name the virtual environment <code>venv</code>, this can be useful when using other tools, however, I gave a different example to avoid confusion about the <code>venv</code> tool and the newly created environment name, you can name whatever you like though. </p>
-</blockquote>
+<h5>Windows</h5>
+<div class="highlight"><pre><span></span><code>python -m venv C:\Users\YourUsername\Documents\plenv
+</code></pre></div>
+<p><strong>Note</strong>: Some programmers tend to name the virtual environment <code>venv</code>, this can be useful when using other tools, however, I gave a different example to avoid confusion about the <code>venv</code> tool and the newly created environment name, you can name whatever you like though. </p>
 <p>If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:</p>
 <div class="highlight"><pre><span></span><code><span class="n">tree</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">plenv</span>
 
@@ -244,8 +239,13 @@ or you can create a virtual environment in the current working directory like th
 <h2>Configure and Use the Virtual Environment</h2>
 <p>Once you’ve activated the new virtual environment, you can use the <code>pip</code> package manager to add and change packages for it. You’ll find <code>pip</code> in the Scripts subdirectory of the virtual environment on Windows, and in the bin subdirectory on Unix systems.</p>
 <h3>Update <code>pip</code></h3>
-<p>It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the <code>pip</code> package manager using this command <code>python -m pip install -U pip</code>. This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. </p>
-<p>You might be tempted to use the command <code>pip install -U pip</code> to save some typing, however this command may not be able to complete the upgrade properly.</p>
+<p>It is considered best practice in the technical world to use the most up-to-date version of a tool for obvious reasons. Thus, after you have created a new virtual environment, you should upgrade the <code>pip</code> package manager using this command</p>
+<div class="highlight"><pre><span></span><code>python -m pip install -U pip
+</code></pre></div>
+<p>This ensures the upgrade process is run in such a way that Python doesn’t lock crucial files. </p>
+<p>You might be tempted to use the next command to save some typing, however this command may not be able to complete the upgrade properly.</p>
+<div class="highlight"><pre><span></span><code>pip install -U pip
+</code></pre></div>
 <p>Following the upgrade process, you can verify that the installed <code>pip</code> version within the activated virtual environment using the command <code>pip -V</code>. This command will display the <code>pip</code> version and indicate the path where the virtual environment is created.</p>
 <h3>Install Packages in a Virtual Environment</h3>
 <p>Once you’ve successfully set up and activated your Python virtual environment using <code>venv</code> and <code>updated pip</code>, the next step is to install the Python packages that your project requires. This process is straightforward, whether you’re familiar with <code>pip</code> or not. <code>Pip</code> is a package manager for Python, allowing you to install and manage additional libraries and dependencies that are not included in the standard Python library.</p>
@@ -273,9 +273,12 @@ or you can create a virtual environment in the current working directory like th
 </li>
 <li>
 <p><strong>Ease of Setup:</strong> In scenarios where you or someone else needs to set up the project afresh (like on a new machine or in a different environment), the <code>requirements.txt</code> file simplifies the process. Instead of installing each package individually, you can use the command while your virtual environment is activated.</p>
-<p><code>pip install -r requirements.txt</code></p>
-<p>This command instructs <code>pip</code> to install automatically all the packages listed in the <code>requirements.txt</code>.</p>
 </li>
+</ul>
+<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
+</code></pre></div>
+<p>This command instructs <code>pip</code> to install automatically all the packages listed in the <code>requirements.txt</code>.</p>
+<ul>
 <li>
 <p><strong>Consistency Across Environments:</strong> By using a <code>requirements.txt</code> file, you ensure that everyone working on the project is using the same versions of packages, which helps in reducing <strong>"it works on my machine"</strong> problems. This consistency is vital for collaborative projects and for maintaining a stable development environment.</p>
 </li>
@@ -290,9 +293,12 @@ or you can create a virtual environment in the current working directory like th
 <p><strong>Ending the Session</strong>: You can terminate the session by closing the terminal or command prompt session in which the virtual environment was activated. This ends the current session, and by extension, deactivates the virtual environment.</p>
 </li>
 <li>
-<p><strong>Using the deactivate Command:</strong> If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command <code>deactivate</code>. This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.</p>
+<p><strong>Using the deactivate Command:</strong> If you want to continue using the same terminal or command prompt session but return to the default Python interpreter (i.e., exit the virtual environment without closing the session), you you can simply type the command </p>
 </li>
 </ol>
+<div class="highlight"><pre><span></span><code>deactivate
+</code></pre></div>
+<p>This command reverses the changes made to your environment when you activated the virtual environment, returning you to the system’s default Python settings.</p>
 <h3>Removing a Virtual environment:</h3>
 <p>Virtual environments in Python are standalone containers, which means that all the files and configurations specific to a virtual environment are stored in its own directory. This includes the Python interpreter, libraries, and scripts that are installed within the environment. </p>
 <p>Since everything that makes up a virtual environment is confined to its directory, removing a virtual environment is as simple as deleting this directory. This is a straightforward process because there are no system-wide changes or dependencies outside this directory that you need to worry about.</p>
@@ -326,44 +332,44 @@ or you can create a virtual environment in the current working directory like th
 <p>Put together, <code>rm -rf ~/Documents/plenv</code> is a command to forcibly and recursively remove the directory named <code>plenv</code> located in the Documents directory of the current user’s home folder, along with all of its contents (files and subdirectories).</p>
 <h4>Delete the Virtual environment on Windows system:</h4>
 <p>If you are using Windows, you can use the next command to delete the no longer need virtual environment:</p>
-<div class="highlight"><pre><span></span><code>rd<span class="w"> </span>/S<span class="w">  </span>C:<span class="se">\\</span>Users<span class="se">\\</span>YourUsername<span class="se">\\</span>Documents<span class="se">\\</span>plenv
+<div class="highlight"><pre><span></span><code>rd<span class="w"> </span>/S<span class="w">  </span><span class="s2">"C:\Users\YourUsername\Documents\plenv"</span>
 </code></pre></div>
 <ul>
 <li>The <code>rd</code> command is similar to <code>rm</code> command that deletes a directory on Windows.</li>
 <li>The <code>/S</code> option instructs <code>rd</code> to remove all directories and files in the specified directory, in addition to the directory itself.</li>
 </ul>
-<p>That is it, you are done, and you will be able create a new virtual for a new project by following the previous steps. </p>
+<p>In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. </p>
 </div>
 <!-- /.entry-content -->
 <section class="well" id="related-posts">
 <h4>Part 2 of: The Python Development Tools Series</h4>
 <h5>Previous articles</h5>
 <ul>
-<li><a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
+<li><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
 </ul>
 </section>
 </article>
 </section>
 <ul>
 <li>
-<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
+<a href="../2023/python-virtual-env-tools.html">
               Mastering Python Virtual Environment Tools: A Comprehensive Guide
           </a>
 </li>
 <li>
-<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
+<a href="../2023/add-python-to-search-path-windows.html">
               How to Easily Add Python to Your Windows Search Path Using Command Prompt
           </a>
 </li>
 </ul>
 <ul>
 <li>
-<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
+<a href="../2023/python-virtual-env-tools.html">
               Mastering Python Virtual Environment Tools: A Comprehensive Guide
           </a>
 </li>
 <li>
-<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
+<a href="../2023/add-python-to-search-path-windows.html">
               How to Easily Add Python to Your Windows Search Path Using Command Prompt
           </a>
 </li>
@@ -399,7 +405,7 @@ or you can create a virtual environment in the current working directory like th
 <div id="aboutme">
 <div>
 <p>
-<img class="img-thumbnail" src="https://qcversity.github.io/images/avatar.png" width="80%"/>
+<img class="img-thumbnail" src="../images/avatar.png" width="80%"/>
 </p>
 </div>
 </div>
@@ -463,10 +469,11 @@ or you can create a virtual environment in the current working directory like th
 <li class="list-group-item">
 <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
 <ul class="list-group" id="recentposts">
-<li class="list-group-item"><a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
-<li class="list-group-item"><a href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
-<li class="list-group-item"><a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
-<li class="list-group-item"><a href="https://qcversity.github.io/2023/Launch Site.html">QuantCoding Versity Launch</a></li>
+<li class="list-group-item"><a href="../2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
+<li class="list-group-item"><a href="../2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
+<li class="list-group-item"><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
+<li class="list-group-item"><a href="../2023/Launch Site.html">QuantCoding Versity Launch</a></li>
+<li class="list-group-item"><a href="../2023/python-code-example.html">Python Code Example</a></li>
 </ul>
 </li>
 <!-- End Sidebar/Recent Posts -->
@@ -493,24 +500,24 @@ or you can create a virtual environment in the current working directory like th
           <div class="col-lg-3 col-md-4">
               <h4>Training Options</h4>
               <ul>
-                  <li><a href="https://qcversity.github.io/live-online-training/" title="Live Online">Live Online</a></li>
-                  <li><a href="https://qcversity.github.io/customized-private-training/" title="Customized Online">Customized Online</a></li>
-                  <li><a href="https://qcversity.github.io/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+                  <li><a href="../live-online-training/" title="Live Online">Live Online</a></li>
+                  <li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
+                  <li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
               </ul>
           </div>
           <div class="col-lg-3 col-md-4">
               <h4>Course Catalog</h4>
               <ul>
-                  <li><a href="https://qcversity.github.io/static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
+                  <li><a href="../static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
               </ul>
           </div>
           <div class="col-lg-3 col-md-4">
               <h4>About Us</h4>
               <ul>
-                  <li><a href="https://qcversity.github.io/pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
-                  <li><a href="https://qcversity.github.io/about-us/" title="QCVersity">Quant Coding Versity</a></li>
-                  <li><a href="https://qcversity.github.io/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
-                  <li><a href="https://qcversity.github.io/terms.html" title="Terms of Use">Terms of Use</a></li>
+                  <li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                  <li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                  <li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                  <li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
               </ul>
           </div>
       </div>
@@ -522,24 +529,24 @@ or you can create a virtual environment in the current working directory like th
 <div class="col-lg-4 col-md-6">
 <h4>Training Options</h4>
 <ul>
-<li><a href="https://qcversity.github.io/pages/live-online-training/" title="Live Online">Live Online</a></li>
-<li><a href="https://qcversity.github.io/customized-private-training/" title="Customized Online">Customized Online</a></li>
-<li><a href="https://qcversity.github.io/enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+<li><a href="../pages/live-online-training/" title="Live Online">Live Online</a></li>
+<li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
+<li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
 </ul>
 </div>
 <div class="col-lg-4 col-md-6">
 <h4>Course Catalog</h4>
 <ul>
-<li><a href="https://qcversity.github.io/static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
+<li><a href="../static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
 </ul>
 </div>
 <div class="col-lg-3 col-md-4">
 <h4>About Us</h4>
 <ul>
-<li><a href="https://qcversity.github.io/pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
-<li><a href="https://qcversity.github.io/about-us/" title="QCVersity">Quant Coding Versity</a></li>
-<li><a href="https://qcversity.github.io/privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
-<li><a href="https://qcversity.github.io/terms.html" title="Terms of Use">Terms of Use</a></li>
+<li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+<li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
+<li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+<li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
 </ul>
 </div>
 </div>
@@ -574,13 +581,13 @@ or you can create a virtual environment in the current working directory like th
 </div>
 </footer>
 <!-- Scripts -->
-<script src="https://qcversity.github.io/theme/qcvtheme/js/jquery.min.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/bootstrap/js/respond.min.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/js/custom.js"></script>
-<script src="https://qcversity.github.io/theme/qcvtheme/js/bodypadding.js"></script>
+<script src="../theme/qcvtheme/js/jquery.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/respond.min.js"></script>
+<script src="../theme/qcvtheme/js/custom.js"></script>
+<script src="../theme/qcvtheme/js/bodypadding.js"></script>
 <!-- Additional includes -->
 <!-- GitHub JS Code -->
 <script type="text/javascript">
@@ -588,7 +595,7 @@ $(document).ready(function () {
   if (!window.jXHR) {
     var jxhr = document.createElement('script');
     jxhr.type = 'text/javascript';
-    jxhr.src = 'https://qcversity.github.io/theme/qcvtheme/js/jXHR.js';
+    jxhr.src = '../theme/qcvtheme/js/jXHR.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(jxhr, s);
   }
@@ -601,7 +608,7 @@ $(document).ready(function () {
   });
 });
 </script>
-<script src="https://qcversity.github.io/theme/qcvtheme/js/github.js" type="text/javascript"></script>
+<script src="../theme/qcvtheme/js/github.js" type="text/javascript"></script>
 <!-- End GitHub JS Code -->
 </body>
 </html>
