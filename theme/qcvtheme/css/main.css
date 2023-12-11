@@ -100,6 +100,7 @@ a:hover {
 .entry-content img {
   max-width: 100%;
   height: auto;
+  padding: 15px 0px;
 }
 
 .entry-content figcaption,
@@ -537,7 +538,8 @@ ol ul,
 ul ol,
 ol ol {
   margin-bottom: 0;
-  color: #008cba;
+/*  color: #008cba;*/
+color:#000000;
 }
 
 .navbar-brand {
