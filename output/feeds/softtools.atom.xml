@@ -69,10 +69,10 @@
 &lt;p&gt;Launch your command-line interface (CLI).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Enter the following command:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Linux based systems:&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;Enter the following commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Linux based systems:&lt;/strong&gt; &lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv --help
@@ -83,15 +83,11 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt; I assume Python is installed and added to the search &lt;code&gt;PATH&lt;/code&gt;. &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You can check if Python is in the search &lt;code&gt;PATH&lt;/code&gt; by typing &lt;code&gt;python --version&lt;/code&gt; or just &lt;code&gt;py --version&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;if it is not in the system’s search PATH, the command will output an error and you need to add it to the &lt;code&gt;PATH&lt;/code&gt;. If you need help on how to add Python to the search PATH, you may check this article &lt;a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html"&gt;Add Python to the Search Path on Windows&lt;/a&gt;.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows:&lt;/strong&gt; I assume Python is already installed and added to the system's search &lt;code&gt;PATH&lt;/code&gt;. &lt;ul&gt;
+&lt;li&gt;You can check whether Python is in the system's search &lt;code&gt;PATH&lt;/code&gt; by typing &lt;code&gt;python --version&lt;/code&gt; or just &lt;code&gt;py --version&lt;/code&gt; in the command prompt.&lt;/li&gt;
+&lt;li&gt;If it is not in the system’s search &lt;code&gt;PATH&lt;/code&gt;, the command will output an error and you need to add it to the &lt;code&gt;PATH&lt;/code&gt;. If you need help on how to add Python to the search &lt;code&gt;PATH&lt;/code&gt;, you may check this article &lt;a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html"&gt;Add Python to the Search Path on Windows&lt;/a&gt; for more information.  &lt;/li&gt;
+&lt;li&gt;If you are all set, then you can check the &lt;code&gt;help&lt;/code&gt; manual using one of the following commands:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you are all set, then you can check the &lt;code&gt;help&lt;/code&gt; manual using one of the following commands:&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv --help
