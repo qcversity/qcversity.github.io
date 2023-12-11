@@ -51,7 +51,7 @@ THEME = 'theme/qcvtheme'
 
 
 
-PYGMENTS_STYLE = 'emacs'
+PYGMENTS_STYLE = 'manni'
 
 BANNER = "CC_BY"
 BANNER_SUBTITLE = "The Data Science and Programming Hub for Aspiring People"
