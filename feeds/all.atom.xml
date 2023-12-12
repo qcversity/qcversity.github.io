@@ -111,7 +111,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv . 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The name of the virtual environment will be the name of the current working directory name. &lt;/p&gt;
+&lt;p&gt;The name of the current working directory will be the name of the virtual environment, which appears of the left side of the command line prompt once the virtual environment is activated.     &lt;/p&gt;
 &lt;h5&gt;Windows&lt;/h5&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m venv C:\Users\YourUsername\Documents\plenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -166,8 +166,8 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Windows&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Command Prompt&lt;/strong&gt;: &lt;code&gt;C:\Users\YourUsername\Documents\plenv\bin\activate.bat&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Powershell&lt;/strong&gt;: &lt;code&gt;C:\Users\YourUsername\Documents\plenv\bin\activate.ps1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Command Prompt&lt;/strong&gt;: &lt;code&gt;C:\Users\YourUsername\Documents\plenv\Script\activate.bat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Powershell&lt;/strong&gt;: &lt;code&gt;C:\Users\YourUsername\Documents\plenv\Script\activate.ps1&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

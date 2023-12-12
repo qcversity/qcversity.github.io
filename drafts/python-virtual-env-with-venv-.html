@@ -8,17 +8,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Favicons -->
-<link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/>
+<link href="https://qcversity.github.io/drafts/python-virtual-env-with-venv-.html" rel="canonical"/>
 <meta content="Dr Saad Laouadi" name="author">
 <meta content="python,virtualenv" name="keywords">
-<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." name="description">
 <!-- Open Graph tags -->
-<meta content="QCVersity" property="og:site_name"/>
+<meta content="QCVersity" property="og:site_name">
 <meta content="article" property="og:type"/>
 <meta content="Creating Python Virtual Environment with Venv Tool" property="og:title"/>
-<meta content="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" property="og:url"/>
-<meta content="A Step by Step on How to Create an isolated virtual environment using VENV tool. This articles shows the essentials steps of creating and managing isolated Python environments using the built-in venv tool in our comprehensive guide. This second part in our Python Development Tools series delves into why virtual environments are vital for dependency management, reproducibility, security, and portability. Learn step-by-step how to create, activate, and use virtual environments across different operating systems. Discover best practices for updating pip, managing packages, and using requirements.txt for consistent setups. This article offers valuable insights and practical tips to enhance your Python development experience." property="og:description"/>
-<meta content="2023-12-11" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
+<meta content="https://qcversity.github.io/drafts/python-virtual-env-with-venv-.html" property="og:url"/>
+<meta content="" property="og:description"/>
+<meta content="2023-12-12" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
 <meta content="python" property="article:tag"/>
 <meta content="virtualenv" property="article:tag"/>
 <meta content="Dr Saad Laouadi" property="article:author"/>
@@ -43,7 +42,7 @@
         <link href="https://qcversity.github.io/feeds/{slug}.atom.xml" type="application/atom+xml" rel="alternate" title="QCVersity SoftTools ATOM Feed"/>
  -->
 <!-- Analytics -->
-</link></link></meta></meta></meta><link href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "2023", "item": "https://qcversity.github.io/2023"}, {"@type": "ListItem", "position": 3, "name": "Python virtual env with venv", "item": "https://qcversity.github.io/2023/python-virtual-env-with-venv.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "Creating Python Virtual Environment with Venv Tool", "about": "SoftTools", "datePublished": "2023-12-11 08:00"}</script></head>
+</link></link></meta></meta></meta><link href="https://qcversity.github.io/drafts/python-virtual-env-with-venv-.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "Drafts", "item": "https://qcversity.github.io/drafts"}, {"@type": "ListItem", "position": 3, "name": "Python virtual env with venv ", "item": "https://qcversity.github.io/drafts/python-virtual-env-with-venv-.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "Creating Python Virtual Environment with Venv Tool", "about": "SoftTools", "datePublished": "2023-12-12 09:00"}</script></head>
 <body>
 <!-- Banner -->
 <!-- Navigation Bar -->
@@ -96,7 +95,7 @@ QCVersity                </a>
 <article>
 <header class="page-header">
 <h1>
-<a href="https://qcversity.github.io/2023/python-virtual-env-with-venv.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
+<a href="https://qcversity.github.io/drafts/python-virtual-env-with-venv-.html" rel="bookmark" title="Permalink to Creating Python Virtual Environment with Venv Tool">
           Creating Python Virtual Environment with Venv Tool
         </a>
 </h1>
@@ -106,7 +105,7 @@ QCVersity                </a>
 <div class="panel-body"><footer class="post-info">
 <span class="label label-default">Date</span>
 <span class="published">
-<i class="fa fa-calendar"></i><time datetime="2023-12-11T08:00:00+01:00"> Mon 11 December 2023</time>
+<i class="fa fa-calendar"></i><time datetime="2023-12-12T09:00:00+01:00"> Tue 12 December 2023</time>
 </span>
 <span class="label label-default">Tags</span>
 <a href="https://qcversity.github.io/tag/python.html">python</a>
@@ -114,103 +113,40 @@ QCVersity                </a>
 </footer><!-- /.post-info --></div>
 </div>
 <h1>Creating Python Virtual Environment with Venv</h1>
+<p>This is article is the short version of the previously published. This articles contains the steps on how to create a virtual environment using <code>venv</code> tool. </p>
+<p>In this article we wiil make use of the command line interface (CLI), <strong>Terminal</strong> app on Unix-Based systems (Mac OS and Linux), and command prompt on windows. </p>
+<p>Some commands work on both systems, while there are few other command that are system specific. We assume that a command works on both systems unless I say so. </p>
+<p>There will be a series of articles on how to use the CLI on both systems. </p>
 <p>This article is the second part in our multi-part series dedicated to Python development tools. Today, we’ll be discussing <code>venv</code>, Python’s built-in tool for creating virtual environments. This tool makes it easier to create isolated environments for new projects, a crucial step in modern Python development. In our future articles, we will explore more tools and their unique features to enhance your experience in the Python programming world.</p>
-<h2>Why Virtual Environment?</h2>
-<p>In the world of data analysis and programming, setting up a clean and isolated working environment is essential for various reasons:</p>
-<ol>
-<li>
-<p><strong>Dependency Management:</strong> Different projects may require different versions of libraries or Python versions, and conflicts can arise if they share the same environment. Virtual environments allow to manage project-specific dependencies without interfering with each other.</p>
-</li>
-<li>
-<p><strong>Reproducibility:</strong> Virtual environments make it easy to reproduce the exact environment in which your code was developed. This ensures that your code will work the same way across different machines and at different points in time.</p>
-</li>
-<li>
-<p><strong>Security:</strong> Isolating your project in a virtual environment can help prevent security vulnerabilities. It limits the access that your code has to system resources.</p>
-</li>
-<li>
-<p><strong>Portability:</strong> You can easily share virtual environments with others, enabling them to set up and run your code on their own systems without compatibility issues.</p>
-</li>
-</ol>
 <h3>Create a Virtual Environment Using <code>venv</code></h3>
-<p>When starting with a command-line tool like venv, it's a good idea to first check its help page. This can provide useful information not found elsewhere. Here’s how you can access the help documentation for <code>venv</code>:</p>
-<ol>
-<li>
-<p>Launch your command-line interface (CLI).</p>
-</li>
-<li>
-<p>Enter the following commands:</p>
-<ul>
-<li><strong>Linux based systems:</strong> </li>
-</ul>
-</li>
-</ol>
+<p>you may want to check the help page of the <code>venv</code> tool first. Here is how you can do that from the command line interface:</p>
 <div class="highlight"><pre><span></span><code>python -m venv --help
 </code></pre></div>
-<p>or </p>
-<div class="highlight"><pre><span></span><code>python -v venv -h
+<p>The previous won't work if Python is not in the system's search PATH on windows. If the command prompt complained about <code>python</code> command is not recognized, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a> on how resolve the issue</p>
+<h4>Create a Virtual Environment</h4>
+<p>To create a virtual environment easily, you need to navigate to the folder where you want to create a virtual environment and use the following command: </p>
+<p>Create a new directory (folder) for your project. If you use the command line, you can use the following command to do so, </p>
+<p>Let us create a new folder for our project in the <code>Documents</code> folder, (My Documents on Windows) and name it "Test" (give your project an meaningful name).</p>
+<p>First we navigate to the <code>Documents</code> (My Documents) folder using the <code>cd</code> command </p>
+<div class="highlight"><pre><span></span><code>cd Documents
 </code></pre></div>
-<ul>
-<li><strong>Windows:</strong> I assume Python is already installed and added to the system's search <code>PATH</code>. <ul>
-<li>You can check whether Python is in the system's search <code>PATH</code> by typing <code>python --version</code> or just <code>py --version</code> in the command prompt.</li>
-<li>If it is not in the system’s search <code>PATH</code>, the command will output an error and you need to add it to the <code>PATH</code>. If you need help on how to add Python to the search <code>PATH</code>, you may check this article <a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a> for more information.  </li>
-<li>If you are all set, then you can check the <code>help</code> manual using one of the following commands:</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>python -m venv --help
+<p>On Windows </p>
+<div class="highlight"><pre><span></span><code>cd "My Documents"
 </code></pre></div>
-<p>or just</p>
-<div class="highlight"><pre><span></span><code>py -v venv -h
+<p>Then use the <code>mkdir</code> command followed the name of the your project, both for Windows and Unix-Based Systems.</p>
+<div class="highlight"><pre><span></span><code>mkdir Test
 </code></pre></div>
-<p>In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.</p>
-<p><strong>To create a virtual environment in a given directory, you would run the following command:</strong></p>
-<div class="highlight"><pre><span></span><code>python -m venv /path/to/directory
+<p>Let us navigate to this directory using the <code>cd</code> command again</p>
+<div class="highlight"><pre><span></span><code>cd Test
 </code></pre></div>
-<p>for example you would like to create a project named <code>plenv</code> (this folder will be the name of your environment) in your documents folder, you would run:</p>
-<h5>Linux and Mac OS</h5>
-<div class="highlight"><pre><span></span><code>python -m venv ~/Documents/plenv
+<p>The name of this directory will be the name <code>Test</code> will be the name of virtual environment. </p>
+<p>The name of the virtual environment will be the name of the current working directory name. </p>
+<p>after you create the virtual environment, you can check what happened using the command:</p>
+<div class="highlight"><pre><span></span><code>tree
 </code></pre></div>
-<p>or you can create a virtual environment in the current working directory like this:</p>
-<div class="highlight"><pre><span></span><code>python -m venv . 
+<p>or on Windows</p>
+<div class="highlight"><pre><span></span><code>dir
 </code></pre></div>
-<p>The name of the current working directory will be the name of the virtual environment, which appears of the left side of the command line prompt once the virtual environment is activated.     </p>
-<h5>Windows</h5>
-<div class="highlight"><pre><span></span><code>python -m venv C:\Users\YourUsername\Documents\plenv
-</code></pre></div>
-<p><strong>Note</strong>: Some programmers tend to name the virtual environment <code>venv</code>, this can be useful when using other tools, however, I gave a different example to avoid confusion about the <code>venv</code> tool and the newly created environment name, you can name whatever you like though. </p>
-<p>If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:</p>
-<div class="highlight"><pre><span></span><code><span class="n">tree</span><span class="w"> </span><span class="o">-</span><span class="n">L</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">~/</span><span class="n">Documents</span><span class="o">/</span><span class="n">plenv</span>
-
-<span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">trainer</span><span class="o">/</span><span class="n">Documents</span><span class="o">/</span><span class="n">plenv</span>
-<span class="err">├──</span><span class="w"> </span><span class="n">bin</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">activate</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">activate</span><span class="p">.</span><span class="n">csh</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">activate</span><span class="p">.</span><span class="n">fish</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">pip</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">pip3</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">pip3</span><span class="mf">.11</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">python</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="kr">local</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python</span>
-<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">python3</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">python</span>
-<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">python3</span><span class="mf">.11</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">python</span>
-<span class="err">├──</span><span class="w"> </span><span class="n">include</span>
-<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">python3</span><span class="mf">.11</span>
-<span class="err">├──</span><span class="w"> </span><span class="n">lib</span>
-<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">python3</span><span class="mf">.11</span>
-<span class="err">└──</span><span class="w"> </span><span class="n">pyvenv</span><span class="p">.</span><span class="n">cfg</span>
-</code></pre></div>
-<p>Or you can use the <code>dir</code> command on Windows command prompt. </p>
-<h2>What Happens when You Create a Virtual Environment</h2>
-<p>When you create a new Python virtual environment using <code>venv</code>, it sets up a basic, isolated environment that is separated from the system’s global Python installation. This isolation ensures that any changes you make within the virtual environment do not affect the system-wide Python setup.</p>
-<p>Upon creation, the virtual environment only includes the bare minimum to get started: the <code>pip</code> and <code>setuptools</code> packages:</p>
-<ul>
-<li>
-<p><strong>Pip</strong> is a tool used to install Python packages from sources like the Python Package Index (PyPI).</p>
-</li>
-<li>
-<p>The <code>setuptools</code> is a package that provides tools for packaging Python projects. It allows you to build and distribute Python packages easily, especially those that have dependencies on other packages.</p>
-</li>
-</ul>
 <h2>Activate the virtual environment:</h2>
 <p>After creating the virtual environment, you need to activate it. This means you'll use the Python interpreter and other tools located within this environment, isolated from your main system.</p>
 <p>The activation syntax differs from one platform to another and depends on which shell used by a CLI. Here are a few syntaxes for different platforms and different shells: </p>
@@ -226,8 +162,8 @@ QCVersity                </a>
 <li>
 <p><strong>Windows</strong>:</p>
 <ul>
-<li><strong>Command Prompt</strong>: <code>C:\Users\YourUsername\Documents\plenv\Script\activate.bat</code></li>
-<li><strong>Powershell</strong>: <code>C:\Users\YourUsername\Documents\plenv\Script\activate.ps1</code></li>
+<li><strong>Command Prompt</strong>: <code>C:\Users\YourUsername\Documents\plenv\bin\activate.bat</code></li>
+<li><strong>Powershell</strong>: <code>C:\Users\YourUsername\Documents\plenv\bin\activate.ps1</code></li>
 </ul>
 </li>
 </ol>
@@ -334,62 +270,27 @@ QCVersity                </a>
 <li>The <code>/S</code> option instructs <code>rd</code> to remove all directories and files in the specified directory, in addition to the directory itself.</li>
 </ul>
 <p>In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. </p>
+<p>Creating and Managing Python Virtual Environments with Venv: A Tutorial</p>
+<p>This tutorial, part of our Python Development Tools series, focuses on venv, the built-in tool for creating isolated Python environments. Follow these essential steps to set up, manage, and remove virtual environments effectively:</p>
+<p>Creating a Virtual Environment: Use python -m venv /path/to/directory to create a new virtual environment. Choose a directory that will contain the environment, like plenv in your Documents folder.</p>
+<p>Activating the Virtual Environment: Activate your virtual environment to use its isolated Python interpreter. On Linux or Mac, use source ~/Documents/plenv/bin/activate. On Windows, use C:\Users\YourUsername\Documents\plenv\bin\activate.bat for Command Prompt or C:\Users\YourUsername\Documents\plenv\bin\activate.ps1 for PowerShell.</p>
+<p>Installing Packages with Pip: After activation, use pip install package_name to install necessary packages within your isolated environment. This ensures that your project's dependencies are kept separate from the global Python installation.</p>
+<p>Managing Dependencies: Maintain a requirements.txt file in your project root. This file should list all necessary Python packages and their versions for your project. Use pip install -r requirements.txt to install all dependencies at once, ensuring consistency across different setups.</p>
+<p>Updating Pip: Regularly update pip within your virtual environment using python -m pip install -U pip to ensure you have the latest features and security fixes.</p>
+<p>Deactivating the Virtual Environment: When done, deactivate the virtual environment to return to the system's default Python settings. Simply use the deactivate command in your shell.</p>
+<p>Removing a Virtual Environment: To remove a virtual environment, delete its directory. On Linux, use rm -rf ~/Documents/plenv, and on Windows, use rd /S "C:\Users\YourUsername\Documents\plenv".</p>
+<p>By following these steps, you can efficiently create, configure, and manage isolated Python environments, enhancing your Python development process.</p>
 </div>
 <!-- /.entry-content -->
 <section class="well" id="related-posts">
-<h4>Part 2 of: The Python Development Tools Series</h4>
-<h5>Previous articles</h5>
-<ul>
-<li><a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
-</ul>
+<h4>Part <built-in 0x1138d7910="" at="" index="" method="" object="" of="" str=""> of: The  Series</built-in></h4>
 </section>
 </article>
 </section>
 <ul>
-<li>
-<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
-              Mastering Python Virtual Environment Tools: A Comprehensive Guide
-          </a>
-</li>
-<li>
-<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
-              How to Easily Add Python to Your Windows Search Path Using Command Prompt
-          </a>
-</li>
 </ul>
 <ul>
-<li>
-<a href="https://qcversity.github.io/2023/python-virtual-env-tools.html">
-              Mastering Python Virtual Environment Tools: A Comprehensive Guide
-          </a>
-</li>
-<li>
-<a href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">
-              How to Easily Add Python to Your Windows Search Path Using Command Prompt
-          </a>
-</li>
 </ul>
-<section>
-<hr class="pd-5"/>
-<p id="post-share-links">
-<strong> Share on: </strong> <br/>
-<a href="mailto:?subject=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;body=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share via Email"> <i class="fa fa-envelope"></i> <strong>Email</strong></a>
-    ❄
-    <!-- <a href="https://sharetodiaspora.github.io/?title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on Diaspora">Diaspora</a> -->
-    ❄
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on Facebook"><i class="fa fa-facebook"></i> Facebook</a>
-    ❄
-    <a href="https://news.ycombinator.com/submitlink?t=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;u=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on Hacker News"><i class="fa fa-hacker-news"></i> Hacker News</a>
-    ❄
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html&amp;title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;summary=A%20Step%20by%20Step%20on%20How%20to%20Create%20an%20isolated%20virtual%20environment%20using%20VENV%20tool.%20This%20articles%20shows%20the%20essentials%20steps%20of%20creating%20and%20managing%20isolated%20Python%20environments%20using%20the%20built-in%20venv%20tool%20in%20our%20comprehensive%20guide.%20This%20second%20part%20in%20our%20Python%20Development%20Tools%20series%20delves%20into%20why%20virtual%20environments%20are%20vital%20for%20dependency%20management%2C%20reproducibility%2C%20security%2C%20and%20portability.%20Learn%20step-by-step%20how%20to%20create%2C%20activate%2C%20and%20use%20virtual%20environments%20across%20different%20operating%20systems.%20Discover%20best%20practices%20for%20updating%20pip%2C%20managing%20packages%2C%20and%20using%20requirements.txt%20for%20consistent%20setups.%20This%20article%20offers%20valuable%20insights%20and%20practical%20tips%20to%20enhance%20your%20Python%20development%20experience.&amp;source=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html" title="Share on LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
-    ❄
-    <!-- <a href="https://toot.kytta.dev/?text=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%0D%0Ahttps%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html%0D%0A%23python %23virtualenv" title="Share on Mastodon">Mastodon</a> -->
-    ❄
-    <a href="https://www.reddit.com/submit?url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html&amp;title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool" title="Share via Reddit"><i class="fa fa-reddit"></i> Reddit</a>
-    ❄
-    <a href="https://twitter.com/intent/tweet?text=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool&amp;url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv.html&amp;hashtags=python,virtualenv" title="Share on Twitter"> <i class="fa fa-twitter"></i>Twitter</a>
-</p>
-</section>
 </div>
 <!-- Sidebar -->
 <div class="col-sm-4" id="sidebar">
@@ -413,7 +314,7 @@ QCVersity                </a>
 <div class="card-body">
 <h5 class="card-title author">Dr. Saad Laouadi</h5>
 <h4 class="card-subtitle mb-2 light-teal" style="font-family: 'Snell Roundhand', 'cursive';text-align:center"><strong>Data Whisperer, Code Slinger, Knowledge Enthusiast</strong></h4>
-<hr>
+<hr/>
 <div class="text-ff-ddot">
 <p>
         With a PhD in Economics and a fervent passion for programming, I, Dr. Saad Laouadi, have crafted a unique niche in the realm of data science. My academic roots in economics fuel my approach to data analysis, enabling me to unravel the stories behind numbers and economic patterns.
@@ -432,7 +333,7 @@ QCVersity                </a>
         Driven by a thirst for knowledge and innovation, each day is a new adventure at the intersection of data, economics, and technology.
       </p>
 </div>
-</hr></div>
+</div>
 </div>
 </div> </div>
 <!-- Sidebar -->
