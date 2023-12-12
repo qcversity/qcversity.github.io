@@ -1,9 +1,9 @@
 Title: Creating Python Virtual Environment with Venv Tool
-Date: 2023-12-11 08:00
+Date: 2023-12-12 09:00
 Category: SoftTools
 Tags: python, virtualenv
-Status: published
-Slug: python-virtual-env-with-venv
+Status: draft
+Slug: python-virtual-env-with-venv-
 Author: Dr Saad Laouadi
 Series: Python Development Tools
 Series_index: 2
@@ -12,124 +12,75 @@ Summary: A Step by Step on How to Create an isolated virtual environment using V
 # Creating Python Virtual Environment with Venv 
 
 
+This is article is the short version of the previously published. This articles contains the steps on how to create a virtual environment using `venv` tool. 
+
+In this article we wiil make use of the command line interface (CLI), **Terminal** app on Unix-Based systems (Mac OS and Linux), and command prompt on windows. 
+
+Some commands work on both systems, while there are few other command that are system specific. We assume that a command works on both systems unless I say so. 
+
+There will be a series of articles on how to use the CLI on both systems. 
+
+
 This article is the second part in our multi-part series dedicated to Python development tools. Today, we’ll be discussing `venv`, Python’s built-in tool for creating virtual environments. This tool makes it easier to create isolated environments for new projects, a crucial step in modern Python development. In our future articles, we will explore more tools and their unique features to enhance your experience in the Python programming world.
 
-## Why Virtual Environment?
-
-In the world of data analysis and programming, setting up a clean and isolated working environment is essential for various reasons:
-
-1. **Dependency Management:** Different projects may require different versions of libraries or Python versions, and conflicts can arise if they share the same environment. Virtual environments allow to manage project-specific dependencies without interfering with each other.
-
-2. **Reproducibility:** Virtual environments make it easy to reproduce the exact environment in which your code was developed. This ensures that your code will work the same way across different machines and at different points in time.
-
-3. **Security:** Isolating your project in a virtual environment can help prevent security vulnerabilities. It limits the access that your code has to system resources.
-
-4. **Portability:** You can easily share virtual environments with others, enabling them to set up and run your code on their own systems without compatibility issues.
 
 ### Create a Virtual Environment Using `venv`
 
-When starting with a command-line tool like venv, it's a good idea to first check its help page. This can provide useful information not found elsewhere. Here’s how you can access the help documentation for `venv`:
-
-1. Launch your command-line interface (CLI).
-
-2. Enter the following commands:
-	- **Linux based systems:** 
-
-```
-python -m venv --help
-```
-or 
-
-```
-python -v venv -h
-```
-
-
-- **Windows:** I assume Python is already installed and added to the system's search `PATH`. 
-	 - You can check whether Python is in the system's search `PATH` by typing `python --version` or just `py --version` in the command prompt.
-	 - If it is not in the system’s search `PATH`, the command will output an error and you need to add it to the `PATH`. If you need help on how to add Python to the search `PATH`, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html) for more information.  
-	 - If you are all set, then you can check the `help` manual using one of the following commands:
+you may want to check the help page of the `venv` tool first. Here is how you can do that from the command line interface:
 
 ```
 python -m venv --help
 ```
 
-or just
-    		 
-```
-py -v venv -h
-```
+The previous won't work if Python is not in the system's search PATH on windows. If the command prompt complained about `python` command is not recognized, you may check this article [Add Python to the Search Path on Windows](https://qcversity.github.io/2023/add-python-to-search-path-windows.html) on how resolve the issue
 
+#### Create a Virtual Environment
 
-In the upcoming sections, most commands will function across major platforms unless a command is platform-specific, where I will provide guidance specific to that particular operating system.
+To create a virtual environment easily, you need to navigate to the folder where you want to create a virtual environment and use the following command: 
 
-**To create a virtual environment in a given directory, you would run the following command:**
+Create a new directory (folder) for your project. If you use the command line, you can use the following command to do so, 
 
+Let us create a new folder for our project in the `Documents` folder, (My Documents on Windows) and name it "Test" (give your project an meaningful name).
 
-```
-python -m venv /path/to/directory
-```
-
-for example you would like to create a project named `plenv` (this folder will be the name of your environment) in your documents folder, you would run:
-
-##### Linux and Mac OS
-
+First we navigate to the `Documents` (My Documents) folder using the `cd` command 
 
 ```
-python -m venv ~/Documents/plenv
+cd Documents
 ```
 
-or you can create a virtual environment in the current working directory like this:
+On Windows 
 
 ```
-python -m venv . 
+cd "My Documents"
 ```
 
-The name of the current working directory will be the name of the virtual environment, which appears of the left side of the command line prompt once activated. 	
-
-##### Windows
+Then use the `mkdir` command followed the name of the your project, both for Windows and Unix-Based Systems.
 
 ```
-python -m venv C:\Users\YourUsername\Documents\plenv
+mkdir Test
 ```
-
-**Note**: Some programmers tend to name the virtual environment `venv`, this can be useful when using other tools, however, I gave a different example to avoid confusion about the `venv` tool and the newly created environment name, you can name whatever you like though. 
-
-If you are curious what happened after executing this command, you can navigate to this directory and display the content of, here is an example from Mac OS:
+	
+Let us navigate to this directory using the `cd` command again
 
 ```
-tree -L 2 ~/Documents/plenv
-
-/Users/trainer/Documents/plenv
-├── bin
-│   ├── Activate.ps1
-│   ├── activate
-│   ├── activate.csh
-│   ├── activate.fish
-│   ├── pip
-│   ├── pip3
-│   ├── pip3.11
-│   ├── python -> /usr/local/anaconda3/bin/python
-│   ├── python3 -> python
-│   └── python3.11 -> python
-├── include
-│   └── python3.11
-├── lib
-│   └── python3.11
-└── pyvenv.cfg
+cd Test
 ```
 
-Or you can use the `dir` command on Windows command prompt. 
+The name of this directory will be the name `Test` will be the name of virtual environment. 
 
-## What Happens when You Create a Virtual Environment 
+The name of the virtual environment will be the name of the current working directory name. 
 
-When you create a new Python virtual environment using `venv`, it sets up a basic, isolated environment that is separated from the system’s global Python installation. This isolation ensures that any changes you make within the virtual environment do not affect the system-wide Python setup.
+after you create the virtual environment, you can check what happened using the command:
 
-Upon creation, the virtual environment only includes the bare minimum to get started: the `pip` and `setuptools` packages:
+```
+tree
+```
 
-- **Pip** is a tool used to install Python packages from sources like the Python Package Index (PyPI).
+or on Windows
 
-- The `setuptools` is a package that provides tools for packaging Python projects. It allows you to build and distribute Python packages easily, especially those that have dependencies on other packages.
+```
+dir
+```
 
 ## Activate the virtual environment:
 
@@ -143,8 +94,8 @@ The activation syntax differs from one platform to another and depends on which 
     - **Fish shell**: `source ~/Documents/plenv/bin/activate.fish`
    
 2. **Windows**:
-	- **Command Prompt**: `C:\Users\YourUsername\Documents\plenv\Script\activate.bat`
-	- **Powershell**: `C:\Users\YourUsername\Documents\plenv\Script\activate.ps1`
+	- **Command Prompt**: `C:\Users\YourUsername\Documents\plenv\bin\activate.bat`
+	- **Powershell**: `C:\Users\YourUsername\Documents\plenv\bin\activate.ps1`
 
 ## Configure and Use the Virtual Environment
 
@@ -280,3 +231,24 @@ rd /S  "C:\Users\YourUsername\Documents\plenv"
 - The `/S` option instructs `rd` to remove all directories and files in the specified directory, in addition to the directory itself.
 
 In conclusion, you now have what it takes to create new virtual environments for your future projects. By following the steps outlined in this guide, you can set up a well-structured and isolated development environment for Python programming. Take advantage of Python virtual environments to begin your next project confidently. 
+
+
+Creating and Managing Python Virtual Environments with Venv: A Tutorial
+
+This tutorial, part of our Python Development Tools series, focuses on venv, the built-in tool for creating isolated Python environments. Follow these essential steps to set up, manage, and remove virtual environments effectively:
+
+Creating a Virtual Environment: Use python -m venv /path/to/directory to create a new virtual environment. Choose a directory that will contain the environment, like plenv in your Documents folder.
+
+Activating the Virtual Environment: Activate your virtual environment to use its isolated Python interpreter. On Linux or Mac, use source ~/Documents/plenv/bin/activate. On Windows, use C:\Users\YourUsername\Documents\plenv\bin\activate.bat for Command Prompt or C:\Users\YourUsername\Documents\plenv\bin\activate.ps1 for PowerShell.
+
+Installing Packages with Pip: After activation, use pip install package_name to install necessary packages within your isolated environment. This ensures that your project's dependencies are kept separate from the global Python installation.
+
+Managing Dependencies: Maintain a requirements.txt file in your project root. This file should list all necessary Python packages and their versions for your project. Use pip install -r requirements.txt to install all dependencies at once, ensuring consistency across different setups.
+
+Updating Pip: Regularly update pip within your virtual environment using python -m pip install -U pip to ensure you have the latest features and security fixes.
+
+Deactivating the Virtual Environment: When done, deactivate the virtual environment to return to the system's default Python settings. Simply use the deactivate command in your shell.
+
+Removing a Virtual Environment: To remove a virtual environment, delete its directory. On Linux, use rm -rf ~/Documents/plenv, and on Windows, use rd /S "C:\Users\YourUsername\Documents\plenv".
+
+By following these steps, you can efficiently create, configure, and manage isolated Python environments, enhancing your Python development process.
