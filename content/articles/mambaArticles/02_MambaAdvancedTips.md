@@ -1,3 +1,14 @@
+Title: `Mamba` Command Under Investigation
+Date: 2023-12-12 09:00
+Category: SoftTools
+Tags: python, virtualenv
+Status: draft
+Slug: understanding-mamba-under-the-hood
+Author: Dr Saad Laouadi
+Series: Python Development Tools
+Series_index: 2
+Summary: 
+
 ## `Mamba` Command Under Investigation
 
 

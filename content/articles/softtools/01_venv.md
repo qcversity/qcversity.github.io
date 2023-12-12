@@ -85,7 +85,7 @@ or you can create a virtual environment in the current working directory like th
 python -m venv . 
 ```
 
-The name of the current working directory will be the name of the virtual environment, which appears of the left side of the command line prompt once activated. 	
+The name of the current working directory will be the name of the virtual environment, which appears of the left side of the command line prompt once the virtual environment is activated. 	
 
 ##### Windows
 

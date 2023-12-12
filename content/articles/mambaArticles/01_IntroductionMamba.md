@@ -1,3 +1,14 @@
+Title: Introduction to Mamba distribution
+Date: 2023-12-12 09:00
+Category: SoftTools
+Tags: python, virtualenv
+Status: draft
+Slug:mamba-distribution
+Author: Dr Saad Laouadi
+Series: Python Development Tools
+Series_index: 2
+Summary: 
+
 # Creating Virtual Environments with Mamba: A Short User Guide
 
 Virtual environments are a fundamental tool for isolating and managing dependencies in your Python projects. While Python's built-in `venv` and `pip` can serve this purpose, there are other package managers that offer enhanced capabilities. One such package manager is **Mamba**. In this guide, we'll explore how to create virtual environments using Mamba.

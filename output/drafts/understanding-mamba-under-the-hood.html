@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+<title>`Mamba` Command Under Investigation - QCVersity</title>
+<!-- Using the latest rendering mode for IE -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- Favicons -->
+<link href="../drafts/understanding-mamba-under-the-hood.html" rel="canonical"/>
+<meta content="Dr Saad Laouadi" name="author">
+<meta content="python,virtualenv" name="keywords">
+<!-- Open Graph tags -->
+<meta content="QCVersity" property="og:site_name">
+<meta content="article" property="og:type"/>
+<meta content="`Mamba` Command Under Investigation" property="og:title"/>
+<meta content="../drafts/understanding-mamba-under-the-hood.html" property="og:url"/>
+<meta content="" property="og:description"/>
+<meta content="2023-12-12" property="article:published_time"/> <meta content="SoftTools" property="article:section"/>
+<meta content="python" property="article:tag"/>
+<meta content="virtualenv" property="article:tag"/>
+<meta content="Dr Saad Laouadi" property="article:author"/>
+<!-- Twitter Cards -->
+<!-- Flattr ID -->
+<!-- Bootstrap -->
+<!--         <link rel="stylesheet" href="../theme/qcvtheme/css/bootstrap.min.css" type="text/css"/>
+ -->
+<!-- Stylesheets -->
+<link href="../theme/qcvtheme/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../theme/qcvtheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="../theme/qcvtheme/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../theme/qcvtheme/css/pygments/native.css" rel="stylesheet"/>
+<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../theme/qcvtheme/bootsrap/css/bootstrap.min.css" type="text/css"/> -->
+<!-- -->
+<link href="../theme/qcvtheme/css/main.css" rel="stylesheet" type="text/css">
+<!-- -->
+<!-- Feeds -->
+<!-- -->
+<!-- Analytics -->
+</link></link></meta></meta></meta><link href="https://qcversity.github.io/drafts/understanding-mamba-under-the-hood.html" rel="canonical"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "QCVersity", "item": "https://qcversity.github.io"}, {"@type": "ListItem", "position": 2, "name": "Drafts", "item": "https://qcversity.github.io/drafts"}, {"@type": "ListItem", "position": 3, "name": "Understanding mamba under the hood", "item": "https://qcversity.github.io/drafts/understanding-mamba-under-the-hood.html"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "author": {"@type": "Person", "name": "Dr Saad Laouadi"}, "publisher": {"@type": "Organization", "name": "QCVersity"}, "headline": "`Mamba` Command Under Investigation", "about": "SoftTools", "datePublished": "2023-12-12 09:00"}</script></head>
+<body>
+<!-- Banner -->
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-bg fixed-top pd-0">
+<div class="container-fluid">
+<!-- Navbar Header -->
+<div class="navbar-nav me-auto mb-2 mb-lg-0">
+<button aria-controls="navbar-ex1-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target=".navbar-ex1-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="../">
+QCVersity                </a>
+</div>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0 spec-nav-item">
+<!-- Menu Items -->
+<!-- Pages on Menu -->
+<li class="nav-item">
+<a class="nav-link" href="../pages/home.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../pages/about.html">About</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../pages/contact.html">Contact</a>
+</li>
+<!-- Categories on Menu -->
+<li class="nav-item">
+<a class="nav-link" href="../category/general.html">General</a>
+</li>
+<li class="nav-item active">
+<a class="nav-link" href="../category/softtools.html">Softtools</a>
+</li>
+</ul>
+</div>
+<ul class="nav navbar-nav navbar-right">
+<!-- Search -->
+<!-- Archives -->
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+
+</nav>
+<!-- /.navbar -->
+<!-- Content Container -->
+<div class="container-fluid pd-l-35 mb-3" id="content">
+<div class="row mt-5">
+<div class="col-sm-8">
+<section id="content">
+<article>
+<header class="page-header">
+<h1>
+<a href="../drafts/understanding-mamba-under-the-hood.html" rel="bookmark" title="Permalink to `Mamba` Command Under Investigation">
+          `Mamba` Command Under Investigation
+        </a>
+</h1>
+</header>
+<div class="entry-content">
+<div class="panel">
+<div class="panel-body"><footer class="post-info">
+<span class="label label-default">Date</span>
+<span class="published">
+<i class="fa fa-calendar"></i><time datetime="2023-12-12T09:00:00+01:00"> Tue 12 December 2023</time>
+</span>
+<span class="label label-default">Tags</span>
+<a href="../tag/python.html">python</a>
+ /  <a href="../tag/virtualenv.html">virtualenv</a>
+</footer><!-- /.post-info --></div>
+</div>
+<h2><code>Mamba</code> Command Under Investigation</h2>
+<p>While installing <code>mambaforge</code> or <code>miniforge</code> via a command-line tool like <strong>Terminal</strong> on Unix-based systems such as Linux and Mac OS (at the time of writing this article, I installed <code>mambaforge</code> on Mac OS, my primary system, and on <code>Fedora</code>, my secondary system), you will be prompted to run <code>mamba init</code>. You have the option to proceed by typing 'yes' to accept the initialization, or you can choose not to initialize it at that moment, deferring the process for later by typing 'no'.</p>
+<p>Assuming you opt for initialization, executing <code>mamba init</code> will create a shell function <code>mamba</code> and append it into the runtime configuration file of your system's default shell. In the case of Fedora, where the default shell is <strong>Bash</strong>, the <code>mamba init</code> will add the following script to the <code>.bashrc</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
+<span class="c1"># !! Contents within this block are managed by 'conda init' !!</span>
+<span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="s1">'/home/trainer/mambaforge/bin/conda'</span><span class="w"> </span><span class="s1">'shell.bash'</span><span class="w"> </span><span class="s1">'hook'</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">"</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="nv">$__conda_setup</span><span class="s2">"</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"/home/trainer/mambaforge/etc/profile.d/conda.sh"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>.<span class="w"> </span><span class="s2">"/home/trainer/mambaforge/etc/profile.d/conda.sh"</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/home/trainer/mambaforge/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">fi</span>
+<span class="nb">unset</span><span class="w"> </span>__conda_setup
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"/home/trainer/mambaforge/etc/profile.d/mamba.sh"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>.<span class="w"> </span><span class="s2">"/home/trainer/mambaforge/etc/profile.d/mamba.sh"</span>
+<span class="k">fi</span>
+<span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
+</code></pre></div>
+<p>When using Mac OS, where <strong>Zsh</strong> is the default shell, and the previous command will append the script shown bellow to the <code>.zshrc</code> file. Note that I installed <strong>mambaforge</strong> using the <strong>Homebrew</strong> utility, which installs software and places it in a specific location on Mac OS machines.</p>
+<p>The installation command used was <code>brew install --cask mambaforge</code>. Here's a snippet of the code that was added to the <code>.zshrc</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
+<span class="c1"># !! Contents within this block are managed by 'conda init' !!</span>
+<span class="nv">__conda_setup</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span><span class="s1">'/usr/local/Caskroom/mambaforge/base/bin/conda'</span><span class="w"> </span><span class="s1">'shell.zsh'</span><span class="w"> </span><span class="s1">'hook'</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>/dev/null<span class="k">)</span><span class="s2">"</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="nv">$__conda_setup</span><span class="s2">"</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"/usr/local/Caskroom/mambaforge/base/etc/profile.d/conda.sh"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>.<span class="w"> </span><span class="s2">"/usr/local/Caskroom/mambaforge/base/etc/profile.d/conda.sh"</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/usr/local/Caskroom/mambaforge/base/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">fi</span>
+<span class="nb">unset</span><span class="w"> </span>__conda_setup
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">"/usr/local/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>.<span class="w"> </span><span class="s2">"/usr/local/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"</span>
+<span class="k">fi</span>
+<span class="c1"># &lt;&lt;&lt; conda initialize &lt;&lt;&lt;</span>
+</code></pre></div>
+<p>If you use a different shell as your main shell and wish to initialize <code>mamba</code>, the <code>mamba init</code> command accetps different types of shells, including 'bash,' 'fish,' and 'zsh.' For instance, if you intend to initialize mamba for <strong>Zsh</strong>, you would use the following command: </p>
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span>init<span class="w"> </span>zsh
+</code></pre></div>
+<p>For more detailed information and options related to initializing mamba with different shells, you can access the help documentation by typing <code>mamba init --help</code> in your command-line interface. </p>
+<hr/>
+<h2>The <code>Mamba</code> Executable File</h2>
+<p>Now it is the time to discuss where to find the executable file of <code>mamba</code> command. After installing a software that works on a command line tool on the system, you might have the habit of checking the location of the executable file by running <code>which</code> command. Reading messages and the prompts while installing a new software is useful and gives a broader overview of what happened and may save you a good amount of time reading the documentation. While installing <code>Mamba</code> I did just that, and I essentially understood that the <code>.zshrc</code> on Mac OS and <code>.bashrc</code> or/and <code>.bash_profile</code> on Fedora were changed; however, I did not check those files to investigate the change. Instead, after the installation has finished I ran <code>which mamba</code>, and here is the output from Fedora:</p>
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span><span class="o">()</span>
+<span class="o">{</span><span class="w"> </span>
+<span class="w">    </span><span class="se">\l</span>ocal<span class="w"> </span><span class="nv">cmd</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">1</span><span class="p">-__missing__</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"</span><span class="nv">$cmd</span><span class="s2">"</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>
+<span class="w">        </span>activate<span class="w"> </span><span class="p">|</span><span class="w"> </span>deactivate<span class="o">)</span>
+<span class="w">            </span>__conda_activate<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">        </span>install<span class="w"> </span><span class="p">|</span><span class="w"> </span>update<span class="w"> </span><span class="p">|</span><span class="w"> </span>upgrade<span class="w"> </span><span class="p">|</span><span class="w"> </span>remove<span class="w"> </span><span class="p">|</span><span class="w"> </span>uninstall<span class="o">)</span>
+<span class="w">            </span>__mamba_exe<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="se">\r</span>eturn<span class="p">;</span>
+<span class="w">            </span>__conda_reactivate
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">        </span>*<span class="o">)</span>
+<span class="w">            </span>__mamba_exe<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>And the output from Mac OS:</p>
+<div class="highlight"><pre><span></span><code>mamba<span class="w"> </span><span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="se">\l</span>ocal<span class="w"> </span><span class="nv">cmd</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">1</span><span class="p">-__missing__</span><span class="si">}</span><span class="s2">"</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">"</span><span class="nv">$cmd</span><span class="s2">"</span><span class="w"> </span><span class="k">in</span>
+<span class="w">        </span><span class="o">(</span>activate<span class="w"> </span><span class="p">|</span><span class="w"> </span>deactivate<span class="o">)</span><span class="w"> </span>__conda_activate<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="p">;;</span>
+<span class="w">        </span><span class="o">(</span>install<span class="w"> </span><span class="p">|</span><span class="w"> </span>update<span class="w"> </span><span class="p">|</span><span class="w"> </span>upgrade<span class="w"> </span><span class="p">|</span><span class="w"> </span>remove<span class="w"> </span><span class="p">|</span><span class="w"> </span>uninstall<span class="o">)</span><span class="w"> </span>__mamba_exe<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="se">\r</span>eturn
+<span class="w">            </span>__conda_reactivate<span class="w"> </span><span class="p">;;</span>
+<span class="w">        </span><span class="o">(</span>*<span class="o">)</span><span class="w"> </span>__mamba_exe<span class="w"> </span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="w"> </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>At this time, I had to check the changes that happened to <code>rc</code> files to have more understanding of the situation. The changes I started the previous section with. Although the function script gives us much information, I prefer to see just the executable path of the specific command. After checking the manual page of <code>which</code> and <code>type</code> commands, I narrowed down few commands that would display the <code>mamba</code> executable path. These commands are tested on Mac OS and Fedora systems and on two shells <strong>Bash and Zsh</strong> </p>
+<ul>
+<li>The <strong>Bash</strong> Shell:</li>
+<li>
+<p><strong>Fedora</strong></p>
+<ol>
+<li><code>which mamba</code> or <code>type mamba</code>: This shows the <code>mamba</code> function script</li>
+<li><code>which -a mamba</code> or <code>type -a mamba</code>: This shows the functions script as well as the executable paths of <code>mamba</code></li>
+<li><code>which -a --skip-functions mamba</code>: If you want to skip the function script you can add the <code>--skip-function</code> flag. </li>
+</ol>
+</li>
+<li>
+<p><strong>Mac OS</strong>:</p>
+<ol>
+<li><code>which mamba</code>: It shows the executable path.</li>
+<li><code>which -a mamba</code>: It shows all paths where <code>mamba</code> exists</li>
+<li><code>type mamba</code>: This also outputs the executable path prededed with <code>mamba is</code> text.</li>
+<li><code>type -p mamba</code>: Using the <code>-p</code> flag will give the absolute path.</li>
+</ol>
+</li>
+<li>
+<p>The <strong>Zsh</strong> Shell On Mac OS:</p>
+</li>
+<li><code>which mamba</code>: It displays the function script</li>
+<li><code>which -a mamba</code>: The function script along the <code>mamba</code> paths </li>
+<li><code>which -p mamba</code>: It displays only the <code>mamba</code> path.</li>
+<li><code>whence -p mamba</code>: Just like <code>which -p mamba</code> </li>
+<li><code>type mamba</code>: It shows the shell function path.</li>
+<li><code>type -p mamba</code>: It shows the executable path of <code>mamba</code> path. -p flag is used, `type' either returns the name of the disk
+    file that would be executed</li>
+<li><code>type -a mamba</code>: It displays all paths for executable <code>mamba</code> files as well the function.  (The <code>-a</code> flag is used to display everything including aliases, functions and all of the places that contain an executable named `file'). </li>
+</ul>
+<hr/>
+<h2>Conda Environment Variables</h2>
+<p>You check the environment variable using the command <code>mamba info -s</code></p>
+<ol>
+<li>CONDA_DEFAULT_ENV: The "base" conda default environment </li>
+<li>CONDA_EXE: </li>
+<li>CONDA_PREFIX</li>
+<li>CONDA_PYTHON_EXE</li>
+<li>CONDA_PROMPT_MODIFIER</li>
+<li>CONDA_SHLVL</li>
+</ol>
+<h2>Conclusion</h2>
+<p>Creating and managing virtual environments is essential for organizing and isolating Python projects. Mamba, with its improved speed and compatibility with the Conda ecosystem, is a powerful package manager for this purpose. By following the steps outlined in this guide, you can efficiently create and manage virtual environments for your Python projects using Mamba.</p>
+</div>
+<!-- /.entry-content -->
+<section class="well" id="related-posts">
+<h4>Part <built-in 0x110d4aa10="" at="" index="" method="" object="" of="" str=""> of: The  Series</built-in></h4>
+</section>
+</article>
+</section>
+<ul>
+</ul>
+<ul>
+</ul>
+</div>
+<!-- Sidebar -->
+<div class="col-sm-4" id="sidebar">
+<aside>
+<!-- Separate container for Avatar, always displayed -->
+<div id="avatar-container">
+<div id="avatar-container">
+<div id="aboutme">
+<div>
+<p>
+<img class="img-thumbnail" src="../images/avatar.png" width="80%"/>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- About Me container, displayed conditionally -->
+<div id="about-me-container" style="display: none;">
+<div id="aboutme">
+<div class="card custom-bio-card">
+<div class="card-body">
+<h5 class="card-title author">Dr. Saad Laouadi</h5>
+<h4 class="card-subtitle mb-2 light-teal" style="font-family: 'Snell Roundhand', 'cursive';text-align:center"><strong>Data Whisperer, Code Slinger, Knowledge Enthusiast</strong></h4>
+<hr>
+<div class="text-ff-ddot">
+<p>
+        With a PhD in Economics and a fervent passion for programming, I, Dr. Saad Laouadi, have crafted a unique niche in the realm of data science. My academic roots in economics fuel my approach to data analysis, enabling me to unravel the stories behind numbers and economic patterns.
+      </p>
+<p>
+        Beyond economics, my curiosity led me to master various programming languages, including Python, Rust, Julia, R, and C++. My expertise lies in turning complex data into meaningful insights and innovative strategies.
+
+      </p>
+<p>
+        As a data scientist and software developer, I revel in the challenges of creating tools that enhance our interaction with data. For me, the synergy of economics, data science, and technology is not just a career – it's a playground of endless possibilities and learning.
+      </p>
+<p>
+        In addition to my work in data science, I have a profound passion for teaching. Sharing knowledge is a joy for me, and I am dedicated to inspiring and educating others in the fields of data science and programming. My goal is to make complex concepts accessible and engaging, helping students and professionals alike to unlock their potential in this ever-evolving digital world.
+      </p>
+<p>
+        Driven by a thirst for knowledge and innovation, each day is a new adventure at the intersection of data, economics, and technology.
+      </p>
+</div>
+</hr></div>
+</div>
+</div> </div>
+<!-- Sidebar -->
+<section class="well well-sm">
+<ul class="list-group list-group-flush">
+<!-- Sidebar/Social -->
+<li class="list-group-item">
+<h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+<ul class="list-group" id="social">
+<li class="list-group-item">
+<a href="https://www.linkedin.com/in/saadlaouadi"><i class="" fa="" fa-lg""="" fa-linkedin-square=""></i> LinkedIn</a>
+</li>
+<li class="list-group-item">
+<a href="https://www.facebook.com/drsaadlaouadi"><i class="" fa="" fa-facebook-square="" fa-lg""=""></i> Facebook</a>
+</li>
+<li class="list-group-item">
+<a href="https://www.instagram.com/drsaadl"><i class="" fa="" fa-instagram="" fa-lg""=""></i> Instagram</a>
+</li>
+<li class="list-group-item">
+<a href="https://github.com/DrSaadLa"><i class="" fa="" fa-github-square="" fa-lg""=""></i> GitHub</a>
+</li>
+<li class="list-group-item">
+<a href="https://www.youtube.com/@QuantCodingSpace"><i class="" fa="" fa-lg""="" fa-youtube-square=""></i> YouTube</a>
+</li>
+</ul>
+</li>
+<!-- End Sidebar/Social -->
+<!-- Sidebar/Recent Posts -->
+<li class="list-group-item">
+<h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+<ul class="list-group" id="recentposts">
+<li class="list-group-item"><a href="../2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
+<li class="list-group-item"><a href="../2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
+<li class="list-group-item"><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
+<li class="list-group-item"><a href="../2023/Launch Site.html">QuantCoding Versity Launch</a></li>
+</ul>
+</li>
+<!-- End Sidebar/Recent Posts -->
+<!-- Sidebar/Github -->
+<li class="list-group-item">
+<h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+<div id="gh_repos">
+<p class="list-group-item">Status updating...</p>
+</div>
+</li>
+<!-- End Sidebar/Github -->
+</ul>
+</section>
+<!-- End Sidebar --> </aside>
+</div>
+</div>
+</div>
+<!-- End Content Container -->
+<!-- Footer -->
+<!-- First Footer -->
+<!-- <footer id="footer" class="no-print">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 col-md-4">
+              <h4>Training Options</h4>
+              <ul>
+                  <li><a href="../live-online-training/" title="Live Online">Live Online</a></li>
+                  <li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
+                  <li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+              <h4>Course Catalog</h4>
+              <ul>
+                  <li><a href="../static/courses/full-catalogue.html"" title="Full Catalog">Full Catalog</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3 col-md-4">
+              <h4>About Us</h4>
+              <ul>
+                  <li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+                  <li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
+                  <li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+                  <li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer> -->
+<footer class="no-print" id="footer">
+<div class="container-lg">
+<div class="row d-flex justify-content-evenly">
+<div class="col-lg-4 col-md-6">
+<h4>Training Options</h4>
+<ul>
+<li><a href="../pages/live-online-training/" title="Live Online">Live Online</a></li>
+<li><a href="../customized-private-training/" title="Customized Online">Customized Online</a></li>
+<li><a href="../enterprise-training/" title="Enterprise Solutions">Enterprise Solutions</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-6">
+<h4>Course Catalog</h4>
+<ul>
+<li><a href="../static/courses/full-catalogue.html" title="Full Catalog">Full Catalog</a></li>
+</ul>
+</div>
+<div class="col-lg-3 col-md-4">
+<h4>About Us</h4>
+<ul>
+<li><a href="../pages/contact.html" title="Contact QCVersity">Contact Us</a></li>
+<li><a href="../about-us/" title="QCVersity">Quant Coding Versity</a></li>
+<li><a href="../privacy_policy.html" title="Privacy Policy">Privacy Policy</a></li>
+<li><a href="../terms.html" title="Terms of Use">Terms of Use</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- Second Footer -->
+<footer class="spec-footer copyright">
+<div class="container-lg-fluid">
+<hr class="spec-hr-footer"/>
+<div class="row">
+<div class="col-xs-10">
+              © 2023 Dr Saad Laouadi                  <p>
+<small>
+<a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+<img alt="Creative Commons License" class="icon-image" src="../images/by-sa.svg"/>
+</a>
+<!-- <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width: 0" src="https://licensebuttons.net/l/by-sa/4.0/80x15.png" />
+    </a> -->
+        Content
+    licensed under a
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
+    except where indicated otherwise. </small>
+</p>
+</div>
+<div class="col-xs-2">
+<p class="pull-right">
+<i class="fa fa-arrow-up"></i> <a href="#">Back to top</a>
+</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Scripts -->
+<script src="../theme/qcvtheme/js/jquery.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../theme/qcvtheme/bootstrap/js/respond.min.js"></script>
+<script src="../theme/qcvtheme/js/custom.js"></script>
+<script src="../theme/qcvtheme/js/bodypadding.js"></script>
+<!-- Additional includes -->
+<!-- GitHub JS Code -->
+<script type="text/javascript">
+$(document).ready(function () {
+  if (!window.jXHR) {
+    var jxhr = document.createElement('script');
+    jxhr.type = 'text/javascript';
+    jxhr.src = '../theme/qcvtheme/js/jXHR.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(jxhr, s);
+  }
+
+  github.showRepos({
+    user: 'qcversity',
+    count: 5,
+    skip_forks: false,
+    target: '#gh_repos'
+  });
+});
+</script>
+<script src="../theme/qcvtheme/js/github.js" type="text/javascript"></script>
+<!-- End GitHub JS Code -->
+</body>
+</html>

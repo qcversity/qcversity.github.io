@@ -14,6 +14,8 @@ PAGE_PATHS = ['pages']
 ARTICLE_PATHS = ['articles']
 STATIC_PATHS = ['static', 'images']
 
+CACHE_CONTENT = False
+
 
 ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{slug}.html'
@@ -49,6 +51,7 @@ THEME = 'theme/qcvtheme'
 # SITELOGO = 'images/ba-sa.svg'
 # SITELOGO_SIZE = 64, 64
 
+IGNORE_FILES = ['content/mambaArticles/*']
 
 
 PYGMENTS_STYLE = 'native'

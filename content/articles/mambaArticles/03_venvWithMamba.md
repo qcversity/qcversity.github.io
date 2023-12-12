@@ -1,3 +1,14 @@
+Title: Creating a Virtual Environment with Mamba
+Date: 2023-12-12 09:00
+Category: SoftTools
+Tags: python, virtualenv
+Status: draft
+Slug: python-virtual-env-with-mamba
+Author: Dr Saad Laouadi
+Series: Python Development Tools
+Series_index: 2
+Summary: 
+
 ## Creating a Virtual Environment with Mamba
 
 Now that you have Mamba installed, you can create virtual environments. The process is similar to using `Conda` but with some improvements in speed and reliability.
