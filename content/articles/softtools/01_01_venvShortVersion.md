@@ -5,7 +5,7 @@ Tags: python, virtualenv
 Status: published
 Slug: python-virtual-env-with-venv-flaskproject
 Author: Dr Saad Laouadi
-Series: Python Development Tools
+Series: Python Development Tools 
 Series_index: 3
 Summary: This tutorial covers creating, using, and managing Python virtual environments with the `venv` tool. Beginning with the fundamentals of setting up a virtual environment, the article walks you through activating it, using `pip` for package management, and making the most of the `requirements.txt` file. The tutorial is also designed for both Unix-based and Windows systems. 
 
