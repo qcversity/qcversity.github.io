@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Creating Python Virtual Environment with Venv Tool - QCVersity</title>
+    <title>Creating Python Virtual Environment with Venv Tool Using Real Project - QCVersity</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
-<link rel="canonical" href="../drafts/python-virtual-env-with-venv-.html" />
+<link rel="canonical" href="../2023/python-virtual-env-with-venv-.html" />
  <meta name="author" content="Dr Saad Laouadi" />
  <meta name="keywords" content="python,virtualenv" />
-      <!-- Open Graph tags -->
+ <meta name="description" content="A step by step creating a virtual environment using venv. We also show to install, update and manage dependencies of a real world project on both Linux-based systems as well as Windows." />
+     <!-- Open Graph tags -->
   <meta property="og:site_name" content="QCVersity" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Creating Python Virtual Environment with Venv Tool" />
-<meta property="og:url" content="../drafts/python-virtual-env-with-venv-.html" />
+<meta property="og:title" content="Creating Python Virtual Environment with Venv Tool Using Real Project" />
+<meta property="og:url" content="../2023/python-virtual-env-with-venv-.html" />
 <meta
   property="og:description"
-  content=""
+  content="A step by step creating a virtual environment using venv. We also show to install, update and manage dependencies of a real world project on both Linux-based systems as well as Windows."
 />
 <meta property="article:published_time" content="2023-12-13" /> <meta property="article:section" content="SoftTools" />
  <meta property="article:tag" content="python" />
@@ -107,11 +108,11 @@ QCVersity                </a>
     <header class="page-header">
       <h1>
         <a
-          href="../drafts/python-virtual-env-with-venv-.html"
+          href="../2023/python-virtual-env-with-venv-.html"
           rel="bookmark"
-          title="Permalink to Creating Python Virtual Environment with Venv Tool"
+          title="Permalink to Creating Python Virtual Environment with Venv Tool Using Real Project"
         >
-          Creating Python Virtual Environment with Venv Tool
+          Creating Python Virtual Environment with Venv Tool Using Real Project
         </a>
       </h1>
     </header>
@@ -133,23 +134,32 @@ QCVersity                </a>
         
 </footer><!-- /.post-info --></div>
       </div>
-      <h1>Creating Python Virtual Environment with Venv</h1>
-<p>This is article is a short version of the previously published article, it contains a step-by-step guide on how to create a virtual environment using <code>venv</code> tool. </p>
-<p>In this article we wiil make use of the command line interface (CLI), <strong>Terminal</strong> app on Unix-Based systems (Mac OS and Linux), and command prompt on windows. </p>
-<h4>Notes about the article</h4>
-<p>Some commands work on both systems, while there are few other command that are system specific. We assume that a command works on both systems unless I say so. </p>
-<p>Please note that I use the term <code>directory</code> and <code>folder</code> interchangeably. </p>
-<p>There will be a series of articles on how to use the CLI on both systems on this blog in the future. </p>
+      <h1>Creating Python Virtual Environments using Venv.</h1>
+<p>This article provides a brief tutorial on creating a virtual environment with the <code>venv</code> tool in Python. With the help of the command line interface (CLI), you can create isolated environments for each project, ensuring orderly and organized development workflows.</p>
+<h3>Prerequisits</h3>
+<p>This guide assumes you have a basic understanding of Python and how to navigate the CLI using Terminal (macOS/Linux) or Command Prompt (Windows).</p>
+<h4>Notes</h4>
+<ul>
+<li>
+<p>Most commands work on both Unix-based and Windows systems, but system-specific commands are indicated when necessary.</p>
+</li>
+<li>
+<p>The terms "directory" and "folder" are used interchangeably throughout this article.</p>
+</li>
+<li>
+<p>Stay tuned for future blog series that will explore CLI usage and command functionalities in more detail.</p>
+</li>
+</ul>
 <h3>Create a Virtual Environment Using <code>venv</code></h3>
-<p>It is a good idea the check the help page of the <code>venv</code> tool first. Rrom the command line interface, type the command: </p>
+<p>Before anything else, it's a good idea to consult the help page of the <code>venv</code> tool. Use the command line interface to type the next command.</p>
 <div class="highlight"><pre><span></span><code>python -m venv --help
 </code></pre></div>
 
-<p>For windows users, the previous command won't work unless Python is in the system's search PATH. Type <code>python</code> command in the command prompt to check if is recognized, if it is not, then a message shows that the command is not recognized. Check this article <a class="external" href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a> to add the <code>Python</code> to the <code>PATH</code>. This step is necessary if want to follow along this article. </p>
+<p>For windows users, the previous command won’t work unless Python is in the system’s ’s search PATH. To check if the <code>python</code> command is recognized, type it in the command prompt. If not recognized, a message will indicate so. To add <code>Python</code> to the <code>PATH</code>, check out this article: <a class="external" href="https://qcversity.github.io/2023/add-python-to-search-path-windows.html">Add Python to the Search Path on Windows</a>. In order to follow along this article, you need to take this step. </p>
 <h4>Create a Virtual Environment</h4>
-<p>We will go a step by step on how to create a virtual environment for a web development project using <code>Flask</code> framework -it is a Python library designed for webdevelopment-. </p>
-<p>Let us create a folder in <code>Documents</code> or (<code>My Documents</code> on Windows) directory that holds our project, we name it flaskblog (please give a meaningful name that reflets your project's purpose).</p>
-<p>First we navigate to the <code>Documents</code> (My Documents) folder using the <code>cd</code> command </p>
+<p>We will guide you through the process of creating a virtual environment for a web development project using the <code>Flask</code> framework, a Python library for web development. </p>
+<p>Let's create a folder called "flaskblog" in the <code>Documents</code> or (<code>My Documents</code> on Windows) directory to hold our project.</p>
+<p>The first step is to use the <code>cd</code> command to navigate to the <code>Documents</code> (My Documents) folder.</p>
 <div class="highlight"><pre><span></span><code>cd Documents
 </code></pre></div>
 
@@ -157,33 +167,33 @@ QCVersity                </a>
 <div class="highlight"><pre><span></span><code>cd &quot;My Documents&quot;
 </code></pre></div>
 
-<p>Then use the <code>mkdir</code> command followed by the name of your project, both for Windows and Unix-Based Systems.</p>
+<p>To create a project folder, use the <code>mkdir</code> command followed by the project name, whether on Windows or Unix-based systems.</p>
 <div class="highlight"><pre><span></span><code>mkdir flaskblog
 </code></pre></div>
 
-<p>Let us navigate to this directory using the <code>cd</code> command:</p>
+<p>Navigate to this directory by using the <code>cd</code> command.</p>
 <div class="highlight"><pre><span></span><code>cd flaskblog
 </code></pre></div>
 
 <h3>Creating the Virtual Environment</h3>
-<p>To create a virtual environment easily, navigate to the folder where you want to create a virtual environment and use the following command: </p>
-<p>Now it is time to create a new virtual enviroment in the <code>flaskblog</code> directory, and I will name my virtual environment <code>flaskvenv</code></p>
+<p>Creating a virtual environment is simple. Just go to the folder where you want to create it and enter this command:</p>
+<p>Time to create a new virtual environment named <code>flaskvenv</code> in the <code>flaskblog</code> directory.</p>
 <div class="highlight"><pre><span></span><code>python -m venv flaskvenv
 </code></pre></div>
 
-<p>When we active the virtual environment, the the name of this directory <code>flaskvenv</code> will appear of the left side of the command line prompt.</p>
-<p>By convention, people call the virtual environment <code>venv</code> or <code>.venv</code>, you could do so by creating the virtual environment in the target project directory like this:</p>
+<p>The directory name <code>flaskvenv</code> will appear on the left side of the command line prompt when we activate the virtual environment.</p>
+<p>People conventionally refer to the virtual environment as <code>venv</code> or <code>.venv</code>, and you can create it in the target project directory like this.</p>
 <div class="highlight"><pre><span></span><code>python -m venv venv
 </code></pre></div>
 
-<p>Pay attention, the first <code>venv</code> is the tool responsible for creating the virtual environment, and the second <code>venv</code> is the folder name where the content of new environment will be created. </p>
-<p>Whether to name your virtual environment <code>venv</code> or a different name, it is entirely up to you, however, do your best to follow what is conventional as this will serve you well in the future if you move to use other advanced tools.</p>
-<p>I will keep using <code>flaskvenv</code> for the rest of this article to avoid confusion between the <code>venv</code> tool and the name of the virtual environment. </p>
-<p>after you create the virtual environment, you can check the content of the newly created folder using the next command on Linux or Mac OS:</p>
+<p>Pay attention, the initial 'venv' creates the virtual environment, and the subsequent 'venv' is the folder name for the new environment's contents. </p>
+<p>Naming your virtual environment <code>venv</code> or another name is your choice, but sticking to conventions is beneficial for future use of advanced tools.</p>
+<p>To avoid confusion, I'll continue using <code>flaskvenv</code> throughout this article instead of <code>venv</code>. </p>
+<p>After creating the virtual environment, you can verify the folder's contents using this command on Linux or Mac OS:</p>
 <div class="highlight"><pre><span></span><code>~/Documents/flaskblog/ tree -L 3
 </code></pre></div>
 
-<p>I used the <code>-L 3</code> flag to show three levels of the directory content, otherwise the output will be quite long, here is the output from Mac OS System:</p>
+<p>To avoid lengthy output, I used the <code>-L 3</code> flag to limit the directory content display to three levels. Here's the output from Mac OS System.</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span>
 <span class="err">└──</span><span class="w"> </span><span class="n">flaskvenv</span>
 <span class="w">    </span><span class="err">├──</span><span class="w"> </span><span class="n">bin</span>
@@ -207,7 +217,7 @@ QCVersity                </a>
 <div class="highlight"><pre><span></span><code>C:\Users\Public\My Documents\flaskblog&gt; dir flaskvenv 
 </code></pre></div>
 
-<p>The output will be something like this (Python 3.12 is used to create this virtual environment on Windows machine):</p>
+<p>The output will look similar to this (Python 3.12 was used to create the virtual environment on a Windows machine).</p>
 <div class="highlight"><pre><span></span><code><span class="k">Include</span>
 <span class="nv">Lib</span>
 <span class="nv">pyvenv</span>.<span class="nv">cfg</span>
@@ -215,128 +225,92 @@ QCVersity                </a>
 </code></pre></div>
 
 <h3>Activate the virtual environment:</h3>
-<p>Once the virtual environment is created you need to activate it in order to use it. The activation process differs from system to system, and it depends on the specific shell being used.</p>
+<p>Once the virtual environment is set up, you must activate it to use it. The activation process varies depending on the system and the shell being used.</p>
 <h5>Linux and Mac OS Users</h5>
-<p>The activation commands resides in the <code>bin</code> directory, you can check the content of it using the <code>tree</code> command, and then use the appropriate one relevant to your system or shell. For <strong>Zsh</strong> or <strong>Bash</strong> shell users, the command used for activation is</p>
+<p>The <code>bin</code> directory contains the activation commands. Use the <code>tree</code> command to see what's inside and select the appropriate one for your system or shell. For Zsh or Bash shell users, the activation command is as follows.</p>
 <div class="highlight"><pre><span></span><code>source bin/activate
 </code></pre></div>
 
 <h5>Windows User</h5>
-<p>As for Windows users, the activation commands are available in the <code>Scripts</code> directory. If you are using the command prompt, the activation command is:</p>
+<p>The activation commands for Windows users can be found in the <code>Scripts</code> directory. If you’re using the command prompt, the activation command is:</p>
 <div class="highlight"><pre><span></span><code>C:\Users\Public\My Documents\flaskblog&gt; flaksenv\Scripts\activate
 </code></pre></div>
 
-<p>Personally, I prefer not to take something for granted, if you are like me, check the <code>Script</code> folder content using the command:</p>
+<p>If you're like me, don't take anything for granted. Check the contents of the <code>Script</code> folder using this command:</p>
 <div class="highlight"><pre><span></span><code>C:\Users\Public\My Documents\flaskblog&gt; dir flaskvenv\Scripts
 </code></pre></div>
 
-<p>This will output the available command that you can use on PowerShell or for deactivation. </p>
-<p>Check the <a class="external" href="https://docs.python.org/3/library/venv.html#module-venv">Python Official Documentation</a> for in-depth information. </p>
+<p>The output will show the available commands, including activating a virtual environment from PowerShell and deactivation. </p>
+<p>For detailed information, refer to the <a class="external" href="https://docs.python.org/3/library/venv.html#module-venv">Python Official Documentation</a>. </p>
 <h4>The <code>pip</code> Tool</h4>
-<p>If you are not familiar with <code>pip</code>, it is the tool used to manage Python packages such as installing, uninstalling and listing the installed packages in the activated virtual environment. Check <a class="external" href="https://pip.pypa.io/en/stable/">Pip official documentation</a> for more details. </p>
+<p>If you're not familiar with <code>pip</code>, it's the tool for managing Python packages in the activated virtual environment, including installation, uninstallation, and listing. For more details, check the [official Pip documentation]</p>
 <h4>Update the <code>pip</code> Tool</h4>
-<p>It is considered best practice in the technical world to use the most up-to-date version of a tool. Thus, after you have created a new virtual environment, you should upgrade the <code>pip</code> package manager using this command:</p>
+<p>Using the most current version of a tool is considered best practice in the technical world. Thus, after setting up a new virtual environment, don't forget to upgrade the <code>pip</code> package manager with this command:</p>
 <div class="highlight"><pre><span></span><code>python -m pip install --upgrade pip
 </code></pre></div>
 
-<p>Now you can verify that the installed <code>pip</code> version within the activated virtual environment using the command <code>pip -V</code>. </p>
+<p>You can verify the installed <code>pip</code> version in the activated virtual environment using the command:</p>
 <div class="highlight"><pre><span></span><code>pip -V
 </code></pre></div>
 
 <p>This command will display the <code>pip</code> version and indicate the path where the virtual environment is created.</p>
 <h3>Install Packages in a Virtual Environment</h3>
-<p>The next step is to install the Python packages that your project requires. This process is straightforward, to install a package, you simply use the command <code>python -m pip install</code> followed by the name of the package.</p>
-<p>For our project, we need to install the <code>flask</code> library from the terminal or the command prompt while the virtual environment is activated: </p>
+<p>The next step is to install the Python packages that your project requires. Installing a package is simple - just use the command <code>python -m pip install</code> and specify the package name.</p>
+<p>To move forward with our project, we have to install the <code>flask</code> library in the active virtual environment using either the terminal or command prompt:</p>
 <div class="highlight"><pre><span></span><code>(flaskvenv) ~/Documents/flaskblog/ python -m pip install flask
 </code></pre></div>
 
-<p>This command will download and install <code>flask</code> specifically in your virtual environment, without impacting any other Python projects or the global Python installation on your computer.</p>
 <p>It's the same procedure Whenever you need to install a new package, please don't forget to activate your environment first. </p>
-<p>Suppose you want to install other libraries or extensions your project requires such as <code>Flask-SQLAlchemy</code>, <code>Flask-Authorize</code>, <code>flask-login</code> ... , <code>pip</code> enables you to install them all at once by listing them one after another separated by white space like this:</p>
+<p>If you want to install additional libraries or extensions for your project, such as <code>Flask-SQLAlchemy</code>, <code>Flask-Authorize</code>, and <code>flask-login</code>, ..., which obviously you will need , <code>pip</code>  enables you to install them all at once by listing them one after another, separated by a white space like this:</p>
 <div class="highlight"><pre><span></span><code>python -m pip install -U Flask-SQLAlchemy Flask-Authorize flask-login
 </code></pre></div>
 
 <p>The <code>-U</code> flag ensures to install the latest version of the library. </p>
-<h3>Manage Packages in Virtual Environments: The <code>requirements</code> File</h3>
-<p>When you work on the project, it is recommaneded to keep track of your installed packages with their versions. This can be done using a text file usually named <code>requirements.txt</code>. To simply add the names of the installed package along with their version, you can make use of the <code>pip</code> tool as using the following command:</p>
-<div class="highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
+<h3>Managing Dependencies in Virtual Environments: The <code>requirements</code> File</h3>
+<p>Maintain a <code>requirements.txt</code> file in your project root. This file should list all necessary Python packages and their versions for your project. Use</p>
+<div class="highlight"><pre><span></span><code>(flaskvenv) ~/Documents/flaskblog/ pip freeze &gt; requirements.txt
 </code></pre></div>
 
-<p>You need to update this file from time to time after adding new libraries to your virtual environment using the previous command. </p>
+<p>It is important to update this file regularly after adding new libraries to your virtual environment using the previous command, so that it reflects all project dependencies. </p>
+<p>To view the contents of the <code>requirements.txt</code> file, use the <code>cat</code> command on Linux-like systems or the <code>type</code> command on Windows. Below is a sample preview of our flask project:</p>
+<div class="highlight"><pre><span></span><code>blinker==1.7.0
+click==8.1.7
+Flask==3.0.0
+itsdangerous==2.1.2
+Jinja2==3.1.2
+MarkupSafe==2.1.3
+Werkzeug==3.0.1
+</code></pre></div>
+
 <h3>The Use of <code>requirements</code> File</h3>
-<p>If you need to reproduce your own project in the future or someone else's project, </p>
-<h2>Managing Packages in Virtual Environments: The <code>requirements</code> File</h2>
-<p>When working on Python projects, especially those with complex dependencies, it is essential to manage your packages effectively within a virtual environment. An excellent practice for achieving this is maintaining a <code>requirements.txt</code> file at the root of your project. This file serves as a comprehensive list of all the Python packages your project depends on. Each package, along with its specific version, is listed in <code>requirements.txt</code>. This organized approach offers several benefits:</p>
-<ul>
-<li>
-<p><strong>Clarity and Documentation</strong>: The <code>requirements.txt</code> file acts as a clear documentation of your project’s dependencies, making it easier for other developers (or even your future self) to understand what packages the project needs.</p>
-</li>
-<li>
-<p><strong>Ease of Setup:</strong> In scenarios where you or someone else needs to set up the project afresh (like on a new machine or in a different environment), the <code>requirements.txt</code> file simplifies the process. Instead of installing each package individually, you can use the command while your virtual environment is activated.</p>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>pip install -r requirements.txt
+<p>The <code>requirements.txt</code> file simplifies of the process of reproduce the project afresh (like on a new machine or in a different environment). So instead of installing each package individually, you can use the command while your virtual environment is activated.</p>
+<div class="highlight"><pre><span></span><code>python -m pip install -r requirements.txt
 </code></pre></div>
 
-<p>This command instructs <code>pip</code> to install automatically all the packages listed in the <code>requirements.txt</code>.</p>
-<ul>
-<li>
-<p><strong>Consistency Across Environments:</strong> By using a <code>requirements.txt</code> file, you ensure that everyone working on the project is using the same versions of packages, which helps in reducing <strong>"it works on my machine"</strong> problems. This consistency is vital for collaborative projects and for maintaining a stable development environment.</p>
-</li>
-<li>
-<p><strong>Efficient Virtual Environment Recreation:</strong> If you need to set up your virtual environment again (like if it gets corrupted or you move to a new computer), you can use the requirements.txt file. It lists all your project's dependencies, making it easy to recreate the environment exactly.</p>
-</li>
-</ul>
 <h3>Deactivating Virtual Environments</h3>
-<p>Once you have finished working within the virtual environment, you deactivate it using the following command:</p>
-<div class="highlight"><pre><span></span><code>deactivate
+<p>Once you have finished working within the virtual environment, you can simply end the session or deactivate it using the following command:</p>
+<div class="highlight"><pre><span></span><code>(flaskvenv) ~/Documents/flaskblog/ deactivate
 </code></pre></div>
 
 <h3>Removing a Virtual environment:</h3>
-<p>Virtual environments in Python are standalone containers, which means that all the files and configurations specific to a virtual environment are stored in its own directory. This includes the Python interpreter, libraries, and scripts that are installed within the environment. </p>
-<p>Since everything that makes up a virtual environment is confined to its directory, removing a virtual environment is as simple as deleting this directory. This is a straightforward process because there are no system-wide changes or dependencies outside this directory that you need to worry about.</p>
-<p>So, if a virtual environment is no longer needed, ensure that you first terminate any active Python instances using the virtual environment to avoid errors, conflicts or crashing running projects that use that virtual environment, then you can safely proceed to delete virtual environment directory. </p>
-<h4>Delete the Virtual environment on Linux-Based systems:</h4>
-<p>Assume we have finished working with a virtual environment named <code>plenv</code>. We can simply delete it using the next command: </p>
-<div class="highlight"><pre><span></span><code>rm -rf ~/Documents/flask
+<p>Virtual environment in Python are self-contained, which means all files are stored in the directory where it is created, in our case, the <code>flaskvenv</code>. So it is safe to delete that direcotory.</p>
+<p>Removing a virtual environment is as simple as deleting that directory. </p>
+<h5>Delete Virtual Environment for Unix-Based Systems</h5>
+<p>You can safely delete the <code>flaskvenv</code> if you no longer need it like this:</p>
+<div class="highlight"><pre><span></span><code>(flaskvenv) ~/Documents/flaskblog/ rm -rf flaskvenv
 </code></pre></div>
 
-<h4>Delete the Virtual environment on Windows system:</h4>
-<p>If you are using Windows, you can use the next command to delete the no longer need virtual environment:</p>
-<div class="highlight"><pre><span></span><code>rd<span class="w"> </span>/S<span class="w"> </span>Test
+<h5>Delete Virtual Environment for Windows System</h5>
+<p>You can use the following command on Windows systems to delete the virtual environment:</p>
+<div class="highlight"><pre><span></span><code>(flaskvenv) C:\Users\Public\My Documents\flaskblog&gt; rm /S flaskvenv
 </code></pre></div>
 
-<p>Creating and Managing Python Virtual Environments with Venv: A Tutorial</p>
-<p>This tutorial, part of our Python Development Tools series, focuses on venv, the built-in tool for creating isolated Python environments. Follow these essential steps to set up, manage, and remove virtual environments effectively:</p>
-<p>Creating a Virtual Environment: Use </p>
-<p>python -m venv /path/to/directory</p>
-<p>to create a new virtual environment. Choose a directory that will contain the environment, like plenv in your Documents folder.</p>
-<p>Activating the Virtual Environment: Activate your virtual environment to use its isolated Python interpreter. On Linux or Mac, use </p>
-<p>source ~/Documents/plenv/bin/activate. </p>
-<p>On Windows, use </p>
-<p>C:\Users\YourUsername\Documents\plenv\bin\activate.bat for Command Prompt or 
-C:\Users\YourUsername\Documents\plenv\bin\activate.ps1 for PowerShell.</p>
-<p>Installing Packages with Pip: After activation, use pip install package_name to install necessary packages within your isolated environment. This ensures that your project's dependencies are kept separate from the global Python installation.</p>
-<p>Managing Dependencies: Maintain a requirements.txt file in your project root. This file should list all necessary Python packages and their versions for your project. Use</p>
-<p>pip install -r requirements.txt </p>
-<p>to install all dependencies at once, ensuring consistency across different setups.</p>
-<p>Updating Pip: </p>
-<p>Regularly update pip within your virtual environment using </p>
-<p>python -m pip install -U pip </p>
-<p>to ensure you have the latest features and security fixes.</p>
-<p>Deactivating the Virtual Environment: </p>
-<p>When done, deactivate the virtual environment to return to the system's default Python settings. Simply use the deactivate command in your shell.</p>
-<p>Removing a Virtual Environment: To remove a virtual environment, delete its directory. On Linux, use </p>
-<div class="highlight"><pre><span></span><code>rm -rf ~/Documents/plenv
-</code></pre></div>
-
-<p>rd /S "C:\Users\YourUsername\Documents\plenv".</p>
 <p>By following these steps, you can efficiently create, configure, and manage isolated Python environments, enhancing your Python development process.</p>
     </div>
     <!-- /.entry-content -->
  
 <section class="well" id="related-posts">
-        <h4>Part <built-in method index of str object at 0x109a9bd70> of: The  Series</h4>
+        <h4>Part <built-in method index of str object at 0x109f96970> of: The  Series</h4>
 </section>
  
  
@@ -348,6 +322,27 @@ C:\Users\YourUsername\Documents\plenv\bin\activate.ps1 for PowerShell.</p>
 <ul>
 </ul>
 
+<section>
+  <hr class="pd-5">
+  <p id="post-share-links">
+    <strong> Share on: </strong> <br>
+    <a href="mailto:?subject=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project&amp;body=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html" title="Share via Email"> <i class="fa fa-envelope"></i> <strong>Email</strong></a>
+    ❄
+    <!-- <a href="https://sharetodiaspora.github.io/?title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project&url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html" title="Share on Diaspora">Diaspora</a> -->
+    ❄
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html" title="Share on Facebook"><i class="fa fa-facebook"></i> Facebook</a>
+    ❄
+    <a href="https://news.ycombinator.com/submitlink?t=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project&u=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html" title="Share on Hacker News"><i class="fa fa-hacker-news"></i> Hacker News</a>
+    ❄
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html&title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project&summary=A%20step%20by%20step%20creating%20a%20virtual%20environment%20using%20venv.%20We%20also%20show%20to%20install%2C%20update%20and%20manage%20dependencies%20of%20a%20real%20world%20project%20on%20both%20Linux-based%20systems%20as%20well%20as%20Windows.&source=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html" title="Share on LinkedIn"><i class="fa fa-linkedin"></i> LinkedIn</a>
+    ❄
+    <!-- <a href="https://toot.kytta.dev/?text=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project%0D%0Ahttps%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html%0D%0A%23python %23virtualenv" title="Share on Mastodon">Mastodon</a> -->
+    ❄
+    <a href="https://www.reddit.com/submit?url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html&title=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project" title="Share via Reddit"><i class="fa fa-reddit"></i> Reddit</a>
+    ❄
+    <a href="https://twitter.com/intent/tweet?text=Creating%20Python%20Virtual%20Environment%20with%20Venv%20Tool%20Using%20Real%20Project&url=https%3A//qcversity.github.io/2023/python-virtual-env-with-venv-.html&hashtags=python,virtualenv" title="Share on Twitter"> <i class="fa fa-twitter"></i>Twitter</a>
+  </p>
+</section>
 
         </div>
         <!-- Sidebar -->
@@ -431,6 +426,7 @@ C:\Users\YourUsername\Documents\plenv\bin\activate.ps1 for PowerShell.</p>
 <li class="list-group-item">
   <h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
   <ul class="list-group" id="recentposts">
+    <li class="list-group-item"><a href="../2023/python-virtual-env-with-venv-.html">Creating Python Virtual Environment with Venv Tool Using Real Project</a></li>
     <li class="list-group-item"><a href="../2023/add-python-to-search-path-windows.html">How to Easily Add Python to Your Windows Search Path Using Command Prompt</a></li>
     <li class="list-group-item"><a href="../2023/python-virtual-env-with-venv.html">Creating Python Virtual Environment with Venv Tool</a></li>
     <li class="list-group-item"><a href="../2023/python-virtual-env-tools.html">Mastering Python Virtual Environment Tools: A Comprehensive Guide</a></li>
