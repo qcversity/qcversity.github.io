@@ -1,7 +1,7 @@
 Title: Introduction to Mamba distribution
 Date: 2023-12-12 09:00
 Category: SoftTools
-Tags: python, virtualenv
+Tags: python, mamba
 Status: published
 Slug:mamba-package-manager
 Author: Dr Saad Laouadi
