@@ -10,7 +10,7 @@ Series_index: 3
 Summary: This tutorial covers creating, using, and managing Python virtual environments with the `venv` tool. Beginning with the fundamentals of setting up a virtual environment, the article walks you through activating it, using `pip` for package management, and making the most of the `requirements.txt` file. The tutorial is also designed for both Unix-based and Windows systems. 
 
 
-# Creating Python Virtual Environments using Venv.
+# Creating Python Virtual Environments using Venv
 
 This article provides a brief tutorial on creating a virtual environment with the `venv` tool in Python. With the help of the command line interface (CLI), you can create isolated environments for each project, ensuring orderly and organized development workflows.
 
@@ -147,7 +147,7 @@ source bin/activate
 ```
 
 
-##### Windows User
+##### Windows Users
 
 The activation commands for Windows users can be found in the `Scripts` directory. If you’re using the command prompt, the activation command is:
 
